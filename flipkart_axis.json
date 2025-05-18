@@ -1,4 +1,5 @@
 {
+  "id": 1,
   "metadata": {
     "schemaVersion": "1.2",
     "lastUpdated": "2025-03-26T12:30:00Z",
@@ -16,8 +17,8 @@
   },
   "presentation": {
     "decoration": {
-      "primaryColor": "#2874f0",
-      "secondaryColor": "#ffffff",
+      "primaryColor": -14390032,
+      "secondaryColor": -1,
       "orientation": "Horizontal",
       "cardImage": "https://www.axisbank.com/images/default-source/revamp_new/cards/flipkart-axis-bank-credit-card.png",
       "material": "Plastic",
@@ -82,7 +83,8 @@
       {
         "type": "Rewards Redemption Fee",
         "value": "Nil",
-        "condition": "Cashback automatically adjusted against statement"
+        "condition": "Cashback automatically adjusted against statement",
+        "details": null
       }
     ]
   },
@@ -92,6 +94,7 @@
       {
         "category": "Flipkart & Cleartrip",
         "rate": "5%",
+        "partners": null,
         "details": "Unlimited cashback on all eligible purchases"
       },
       {
@@ -103,6 +106,7 @@
       {
         "category": "All Other Spends",
         "rate": "1%",
+        "partners": null,
         "details": "On all other eligible transactions"
       }
     ],
@@ -126,13 +130,17 @@
           "name": "Flipkart Voucher",
           "value": "₹500",
           "condition": "Make a transaction within 30 days of card issuance",
-          "expiryPeriod": "3 months from issuance"
+          "expiryPeriod": "3 months from issuance",
+          "locations": null,
+          "programLink": null
         },
         {
           "name": "Swiggy Discount",
           "value": "50% off up to ₹100",
           "condition": "On first order with minimum cart value of ₹129, using code AXISFKNEW",
-          "expiryPeriod": "1 month from issuance"
+          "expiryPeriod": "1 month from issuance",
+          "locations": null,
+          "programLink": null
         }
       ],
       "totalValue": "₹600"
@@ -144,19 +152,28 @@
           "name": "Domestic Airport Lounge Access",
           "value": "4 complimentary visits per year",
           "condition": "Minimum spend of ₹50,000 in previous 3 months",
-          "locations": "All major airports in India"
+          "expiryPeriod": null,
+          "locations": "All major airports in India",
+          "programLink": null
         },
         {
           "name": "Uber Cashback",
           "value": "4% accelerated cashback",
-          "condition": "On all eligible Uber rides"
+          "condition": "On all eligible Uber rides",
+          "expiryPeriod": null,
+          "locations": null,
+          "programLink": null
         },
         {
           "name": "Cleartrip Bookings",
           "value": "5% cashback",
-          "condition": "On flights and hotel bookings"
+          "condition": "On flights and hotel bookings",
+          "expiryPeriod": null,
+          "locations": null,
+          "programLink": null
         }
-      ]
+      ],
+      "totalValue": null
     },
     {
       "type": "Dining",
@@ -165,14 +182,20 @@
           "name": "Axis Bank Dining Delights",
           "value": "15% off up to ₹500",
           "condition": "At 10,000+ partner restaurants across India",
+          "expiryPeriod": null,
+          "locations": null,
           "programLink": "https://www.axisbank.com/diningdelights"
         },
         {
           "name": "Swiggy Cashback",
           "value": "4% cashback",
-          "condition": "Not valid for Instamart or Genie"
+          "condition": "Not valid for Instamart or Genie",
+          "expiryPeriod": null,
+          "locations": null,
+          "programLink": null
         }
-      ]
+      ],
+      "totalValue": null
     },
     {
       "type": "Lifestyle",
@@ -180,14 +203,21 @@
         {
           "name": "PVR Cashback",
           "value": "4% cashback",
-          "condition": "On movie ticket purchases"
+          "condition": "On movie ticket purchases",
+          "expiryPeriod": null,
+          "locations": null,
+          "programLink": null
         },
         {
           "name": "cult.fit Cashback",
           "value": "4% cashback",
-          "condition": "On eligible transactions"
+          "condition": "On eligible transactions",
+          "expiryPeriod": null,
+          "locations": null,
+          "programLink": null
         }
-      ]
+      ],
+      "totalValue": null
     },
     {
       "type": "Fuel",
@@ -195,9 +225,13 @@
         {
           "name": "Fuel Surcharge Waiver",
           "value": "1% waiver",
-          "condition": "For transactions between ₹400-₹4,000, maximum waiver of ₹400 per month"
+          "condition": "For transactions between ₹400-₹4,000, maximum waiver of ₹400 per month",
+          "expiryPeriod": null,
+          "locations": null,
+          "programLink": null
         }
-      ]
+      ],
+      "totalValue": null
     }
   ],
   "eligibility": {
@@ -242,16 +276,19 @@
       {
         "type": "Online",
         "isAvailable": true,
-        "url": "https://web.axisbank.co.in/DigitalChannel/WebForm/?ipa21&axisreferralcode=webs"
+        "url": "https://web.axisbank.co.in/DigitalChannel/WebForm/?ipa21&axisreferralcode=webs",
+        "details": null
       },
       {
         "type": "Branch",
         "isAvailable": true,
+        "url": null,
         "details": "Visit any Axis Bank branch with required documents"
       },
       {
         "type": "App",
         "isAvailable": true,
+        "url": null,
         "details": "Apply through Axis Mobile app"
       }
     ],
@@ -282,17 +319,23 @@
       {
         "type": "Phone",
         "value": "1800-419-8555",
-        "availability": "24x7"
+        "availability": "24x7",
+        "responseTime": null,
+        "isAvailable": null
       },
       {
         "type": "Email",
         "value": "customer.service@axisbank.com",
-        "responseTime": "24-48 hours"
+        "availability": null,
+        "responseTime": "24-48 hours",
+        "isAvailable": null
       },
       {
         "type": "Chat",
-        "isAvailable": true,
-        "availability": "9AM - 6PM, Monday to Saturday"
+        "value": null,
+        "availability": "9AM - 6PM, Monday to Saturday",
+        "responseTime": null,
+        "isAvailable": true
       }
     ],
     "dedicatedSupport": false
