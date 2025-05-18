@@ -1,5 +1,4 @@
 {
-  "id": 1,
   "metadata": {
     "schemaVersion": "1.2",
     "lastUpdated": "2025-03-26T12:30:00Z",
@@ -83,8 +82,7 @@
       {
         "type": "Rewards Redemption Fee",
         "value": "Nil",
-        "condition": "Cashback automatically adjusted against statement",
-        "details": null
+        "condition": "Cashback automatically adjusted against statement"
       }
     ]
   },
@@ -94,7 +92,6 @@
       {
         "category": "Flipkart & Cleartrip",
         "rate": "5%",
-        "partners": null,
         "details": "Unlimited cashback on all eligible purchases"
       },
       {
@@ -106,7 +103,6 @@
       {
         "category": "All Other Spends",
         "rate": "1%",
-        "partners": null,
         "details": "On all other eligible transactions"
       }
     ],
@@ -130,17 +126,13 @@
           "name": "Flipkart Voucher",
           "value": "₹500",
           "condition": "Make a transaction within 30 days of card issuance",
-          "expiryPeriod": "3 months from issuance",
-          "locations": null,
-          "programLink": null
+          "expiryPeriod": "3 months from issuance"
         },
         {
           "name": "Swiggy Discount",
           "value": "50% off up to ₹100",
           "condition": "On first order with minimum cart value of ₹129, using code AXISFKNEW",
-          "expiryPeriod": "1 month from issuance",
-          "locations": null,
-          "programLink": null
+          "expiryPeriod": "1 month from issuance"
         }
       ],
       "totalValue": "₹600"
@@ -152,28 +144,19 @@
           "name": "Domestic Airport Lounge Access",
           "value": "4 complimentary visits per year",
           "condition": "Minimum spend of ₹50,000 in previous 3 months",
-          "expiryPeriod": null,
-          "locations": "All major airports in India",
-          "programLink": null
+          "locations": "All major airports in India"
         },
         {
           "name": "Uber Cashback",
           "value": "4% accelerated cashback",
-          "condition": "On all eligible Uber rides",
-          "expiryPeriod": null,
-          "locations": null,
-          "programLink": null
+          "condition": "On all eligible Uber rides"
         },
         {
           "name": "Cleartrip Bookings",
           "value": "5% cashback",
-          "condition": "On flights and hotel bookings",
-          "expiryPeriod": null,
-          "locations": null,
-          "programLink": null
+          "condition": "On flights and hotel bookings"
         }
-      ],
-      "totalValue": null
+      ]
     },
     {
       "type": "Dining",
@@ -182,20 +165,14 @@
           "name": "Axis Bank Dining Delights",
           "value": "15% off up to ₹500",
           "condition": "At 10,000+ partner restaurants across India",
-          "expiryPeriod": null,
-          "locations": null,
           "programLink": "https://www.axisbank.com/diningdelights"
         },
         {
           "name": "Swiggy Cashback",
           "value": "4% cashback",
-          "condition": "Not valid for Instamart or Genie",
-          "expiryPeriod": null,
-          "locations": null,
-          "programLink": null
+          "condition": "Not valid for Instamart or Genie"
         }
-      ],
-      "totalValue": null
+      ]
     },
     {
       "type": "Lifestyle",
@@ -203,21 +180,14 @@
         {
           "name": "PVR Cashback",
           "value": "4% cashback",
-          "condition": "On movie ticket purchases",
-          "expiryPeriod": null,
-          "locations": null,
-          "programLink": null
+          "condition": "On movie ticket purchases"
         },
         {
           "name": "cult.fit Cashback",
           "value": "4% cashback",
-          "condition": "On eligible transactions",
-          "expiryPeriod": null,
-          "locations": null,
-          "programLink": null
+          "condition": "On eligible transactions"
         }
-      ],
-      "totalValue": null
+      ]
     },
     {
       "type": "Fuel",
@@ -225,13 +195,9 @@
         {
           "name": "Fuel Surcharge Waiver",
           "value": "1% waiver",
-          "condition": "For transactions between ₹400-₹4,000, maximum waiver of ₹400 per month",
-          "expiryPeriod": null,
-          "locations": null,
-          "programLink": null
+          "condition": "For transactions between ₹400-₹4,000, maximum waiver of ₹400 per month"
         }
-      ],
-      "totalValue": null
+      ]
     }
   ],
   "eligibility": {
@@ -276,19 +242,16 @@
       {
         "type": "Online",
         "isAvailable": true,
-        "url": "https://web.axisbank.co.in/DigitalChannel/WebForm/?ipa21&axisreferralcode=webs",
-        "details": null
+        "url": "https://web.axisbank.co.in/DigitalChannel/WebForm/?ipa21&axisreferralcode=webs"
       },
       {
         "type": "Branch",
         "isAvailable": true,
-        "url": null,
         "details": "Visit any Axis Bank branch with required documents"
       },
       {
         "type": "App",
         "isAvailable": true,
-        "url": null,
         "details": "Apply through Axis Mobile app"
       }
     ],
@@ -319,23 +282,17 @@
       {
         "type": "Phone",
         "value": "1800-419-8555",
-        "availability": "24x7",
-        "responseTime": null,
-        "isAvailable": null
+        "availability": "24x7"
       },
       {
         "type": "Email",
         "value": "customer.service@axisbank.com",
-        "availability": null,
-        "responseTime": "24-48 hours",
-        "isAvailable": null
+        "responseTime": "24-48 hours"
       },
       {
         "type": "Chat",
-        "value": null,
-        "availability": "9AM - 6PM, Monday to Saturday",
-        "responseTime": null,
-        "isAvailable": true
+        "isAvailable": true,
+        "availability": "9AM - 6PM, Monday to Saturday"
       }
     ],
     "dedicatedSupport": false
