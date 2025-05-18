@@ -1,0 +1,194 @@
+{
+    "id" : 1,
+    "card": {
+      "id": "au_bank_lit",
+      "cardName": "AU Bank LIT Credit Card",
+      "cardIssuer": "AU Small Finance Bank",
+      "ratings": "4.5/5",
+      "categories": ["Movies", "Travel", "Dining", "Fuel", "Shopping"],
+      "targetAudience": "Customization-seeking consumers"
+    },
+    "presentation": {
+      "description": "India's first customizable credit card allowing users to choose and pay for specific features",
+      "highlightFeatures": [
+        "Customizable features",
+        "No joining or annual fee",
+        "Reward points on all spends",
+        "Multiple cashback options"
+      ],
+      "marketingTagline": "Choose your benefits, pay only for what you use!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "Nil"
+        },
+        "renewal": {
+          "amount": "Nil"
+        }
+      },
+      "charges": [
+        {
+          "type": "Feature charges",
+          "details": "Vary based on selected features"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Reward Points",
+      "structure": [
+        {
+          "rate": "1 Reward Point",
+          "per": "₹100 spent",
+          "exclusions": ["Cash withdrawal", "EMI", "Rent", "Education", "Fuel transactions"]
+        }
+      ],
+      "acceleratedRewards": [
+        {
+          "rate": "10X or 5X Reward Points",
+          "condition": "On selected paid features"
+        }
+      ],
+      "redemptionOptions": [
+        "Merchandise",
+        "Flight tickets",
+        "Hotel bookings",
+        "Bus tickets",
+        "Movie tickets",
+        "Mobile recharge",
+        "DTH recharge",
+        "Golf sessions",
+        "E-gift vouchers",
+        "Air miles conversion"
+      ]
+    },
+    "features": [
+      {
+        "category": "Airport Lounge Access",
+        "details": [
+          {
+            "name": "Domestic Lounge Access",
+            "value": "1 visit per quarter",
+            "price": "₹399 for 90 days"
+          }
+        ]
+      },
+      {
+        "category": "Memberships",
+        "details": [
+          {
+            "name": "Zee5 Membership",
+            "duration": "3 months",
+            "price": "₹99 for 90 days",
+            "condition": "Minimum spend of ₹5000 required"
+          },
+          {
+            "name": "Amazon Prime Membership",
+            "duration": "3 months",
+            "price": "₹199 for 90 days",
+            "condition": "Minimum spend of ₹10,000 required"
+          }
+        ]
+      },
+      {
+        "category": "Fuel Surcharge Waiver",
+        "details": [
+          {
+            "value": "1% waiver",
+            "price": "₹49 for 90 days",
+            "condition": "On transactions between ₹400 to ₹5000"
+          }
+        ]
+      },
+      {
+        "category": "Milestone Cashback",
+        "details": [
+          {
+            "name": "5% Additional Cashback",
+            "price": "₹299 for 30 days",
+            "condition": "On minimum spend of ₹10,000",
+            "maxCashback": "₹500 per month"
+          },
+          {
+            "name": "2% Additional Cashback",
+            "price": "₹199 for 30 days",
+            "condition": "On minimum spend of ₹15,000",
+            "maxCashback": "₹1,000 per month"
+          }
+        ]
+      },
+      {
+        "category": "Category Cashback",
+        "details": [
+          {
+            "name": "5% Cashback on Grocery",
+            "price": "₹299 for 90 days",
+            "maxCashback": "₹1,000 per month"
+          },
+          {
+            "name": "5% Cashback on Apparel",
+            "price": "₹199 for 90 days",
+            "maxCashback": "₹500 per month"
+          }
+        ]
+      },
+      {
+        "category": "Accelerated Rewards",
+        "details": [
+          {
+            "name": "10X Reward Points on Online Spends",
+            "price": "₹299 for 90 days"
+          },
+          {
+            "name": "5X Reward Points on Online Spends",
+            "price": "₹199 for 90 days"
+          },
+          {
+            "name": "10X Reward Points on Offline Spends",
+            "price": "₹299 for 90 days"
+          },
+          {
+            "name": "5X Reward Points on Offline Spends",
+            "price": "₹199 for 90 days"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "ageRequirement": {
+        "primary": {
+          "minimum": 21,
+          "maximum": 60
+        },
+        "addOn": {
+          "minimum": 18
+        }
+      },
+      "residencyStatus": ["Indian"]
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Online",
+          "isAvailable": true
+        },
+        {
+          "type": "Offline",
+          "isAvailable": true,
+          "details": "Visit nearest AU Bank branch"
+        }
+      ]
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Those who want customizable credit card features",
+        "Users looking for flexibility in rewards and benefits",
+        "People who want to pay only for the features they use"
+      ],
+      "notRecommendedFor": [
+        "Those who prefer a fixed set of benefits",
+        "Users looking for premium travel benefits",
+        "People who don't want to manage their card features regularly"
+      ]
+    }
+  }

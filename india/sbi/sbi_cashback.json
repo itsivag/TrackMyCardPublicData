@@ -1,0 +1,166 @@
+{
+    "id": 1,
+    "card": {
+      "id": "sbi_cashback_credit",
+      "cardName": "Cashback SBI Credit Card",
+      "cardIssuer": "SBI Card",
+      "ratings": "4.7/5",
+      "categories": ["Cashback", "Shopping", "Food"],
+      "networkType": "Visa",
+      "targetAudience": "Online shoppers, general spenders",
+      "applyLink": "https://www.sbicard.com/en/personal/credit-cards/shopping/sbi-card-cashback.page"
+    },
+    "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/shopping/sbi-card-cashback/sbi-card-cashback.png",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment"]
+      },
+      "description": "A cashback reward card providing cash back for every transaction made with the card",
+      "highlightFeatures": [
+        "5% cashback on all online spending",
+        "1% cashback on offline spends",
+        "Fuel surcharge waiver"
+      ],
+      "marketingTagline": "Earn cashback on every swipe!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "₹999",
+          "tax": "Plus applicable GST",
+          "waiverConditions": []
+        },
+        "renewal": {
+          "amount": "₹999",
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Annual fee waived on spends of ₹2 lakhs in the previous year"]
+        },
+        "additionalCards": {
+          "amount": "Free",
+          "details": "Up to 2 add-on cards free for lifetime"
+        }
+      },
+      "charges": [
+        {
+          "type": "Interest Rate",
+          "value": "3.75% per month",
+          "annualizedValue": "45% annually",
+          "details": "Charged on revolving credit and cash advances"
+        },
+        {
+          "type": "Foreign Currency Markup",
+          "value": "3.5%",
+          "condition": "On all international transactions"
+        },
+        {
+          "type": "Cash Advance Fee",
+          "value": "2.5%",
+          "condition": "Minimum of ₹500",
+          "details": "On cash withdrawals from ATMs"
+        },
+        {
+          "type": "Late Payment Fee",
+          "value": "Variable",
+          "condition": "Based on outstanding amount",
+          "details": "Ranges from ₹400 to ₹1,300 depending on outstanding balance"
+        },
+        {
+          "type": "Fuel Surcharge",
+          "value": "1% waiver",
+          "condition": "For transactions between ₹500-₹3,000",
+          "details": "Maximum waiver of ₹100 per statement cycle"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Cashback",
+      "structure": [
+        {
+          "category": "Online Spends",
+          "rate": "5%",
+          "details": "On all eligible online transactions"
+        },
+        {
+          "category": "Offline Spends",
+          "rate": "1%",
+          "details": "On all eligible offline transactions"
+        }
+      ],
+      "caps": {
+        "overall": "₹5,000 per statement cycle"
+      },
+      "redemptionOptions": [
+        {
+          "method": "Statement Credit",
+          "description": "Automatically credited within two days of the following statement"
+        }
+      ],
+      "excludedCategories": [
+        "Jewelry", "Rental", "Wallet", "Fuel", "School and Educational Services", 
+        "Insurance Services", "Utilities", "Railways", "Card, Gift, Novelty & Souvenir Shops", 
+        "Quasi Cash/Member Financial Institution"
+      ]
+    },
+    "benefits": [
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "1% waiver",
+            "condition": "For transactions between ₹500-₹3,000, maximum waiver of ₹100 per statement cycle"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "ageRequirement": {
+        "minimum": 21,
+        "maximum": 65
+      },
+      "incomeRequirement": [
+        {
+          "employmentType": "All",
+          "details": "Stable source of income required"
+        }
+      ],
+      "creditScore": {
+        "details": "Decent credit history required"
+      }
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Online",
+          "isAvailable": true,
+          "url": "https://www.sbicard.com/en/personal/credit-cards/shopping/sbi-card-cashback.page"
+        },
+        {
+          "type": "Branch",
+          "isAvailable": true,
+          "details": "Visit nearest SBI Branch and fill in the application form"
+        }
+      ]
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Regular online shoppers",
+        "Those who prefer instant cashback over reward points"
+      ],
+      "notRecommendedFor": [
+        "Primarily offline shoppers",
+        "Those looking for travel or lounge benefits"
+      ]
+    },
+    "changeLog": [
+      {
+        "date": "2025-05-12",
+        "type": "Update",
+        "change": "Annual information update"
+      }
+    ]
+  }

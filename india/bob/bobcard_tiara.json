@@ -1,0 +1,174 @@
+{
+    "id": 1,
+    "card": {
+      "id": "bobcard_tiara",
+      "cardName": "BOBCARD Tiara Credit Card",
+      "cardIssuer": "Bank of Baroda",
+      "cardNetwork": "RuPay",
+      "ratings": "4.5/5",
+      "categories": ["Travel", "Shopping", "Food"],
+      "targetAudience": "Women"
+    },
+    "presentation": {
+      "description": "A credit card specially designed for women, offering tailored rewards and benefits",
+      "highlightFeatures": [
+        "5X Reward Points on dining, travel, and international spends",
+        "Low Forex markup charge",
+        "Unlimited domestic airport lounge access",
+        "UPI linkage capability",
+        "Complimentary memberships"
+      ],
+      "marketingTagline": "Empowering your journey, tailored for her."
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "₹2,499",
+          "tax": "Plus applicable GST"
+        },
+        "renewal": {
+          "amount": "₹2,499",
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Specific spending milestones"]
+        }
+      },
+      "charges": [
+        {
+          "type": "Foreign Currency Markup",
+          "value": "2%"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Reward Points",
+      "structure": [
+        {
+          "category": "Travel, Dining, International Spends",
+          "rate": "15 Reward Points",
+          "per": "₹100 spent",
+          "cap": "5,000 points per statement cycle"
+        },
+        {
+          "category": "All Other Eligible Spends",
+          "rate": "3 Reward Points",
+          "per": "₹100 spent"
+        }
+      ],
+      "exclusions": ["Fuel transactions"],
+      "pointValue": "1 Reward Point = ₹0.25",
+      "upiTransactions": {
+        "cap": "₹500 worth of Reward Points per statement cycle"
+      }
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Complimentary Memberships",
+            "items": [
+              "Swiggy One (3 Months)",
+              "FitPass Pro (6 Months)",
+              "Amazon Prime/Disney Hotstar (Annual)",
+              "Gaana Plus (Annual)"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Health",
+        "details": [
+          {
+            "name": "Health Package",
+            "items": ["Mammogram", "Pap smear"]
+          },
+          {
+            "name": "FitPass Pro",
+            "duration": "6 months",
+            "details": "Access to 2,500+ premium gyms and fitness centers"
+          }
+        ]
+      },
+      {
+        "type": "Travel",
+        "details": [
+          {
+            "name": "Domestic Airport Lounge Access",
+            "value": "Unlimited",
+            "condition": "On spends of ₹40,000 in the previous quarter"
+          }
+        ]
+      },
+      {
+        "type": "Quarterly Discounts",
+        "details": [
+          {
+            "brand": "Myntra",
+            "value": "₹500 quarterly"
+          },
+          {
+            "brand": "Nykaa",
+            "value": "₹500 quarterly"
+          },
+          {
+            "brand": "Flipkart",
+            "value": "₹500 quarterly"
+          },
+          {
+            "brand": "BigBasket",
+            "value": "₹250 quarterly"
+          },
+          {
+            "brand": "Lakmē Salon",
+            "value": "₹1,500 quarterly"
+          }
+        ]
+      },
+      {
+        "type": "Entertainment",
+        "details": [
+          {
+            "name": "Movie Ticket Discount",
+            "value": "Up to ₹250 off",
+            "partner": "BookMyShow"
+          }
+        ]
+      },
+      {
+        "type": "Insurance",
+        "details": [
+          {
+            "name": "Zero Liability",
+            "condition": "On lost card"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "targetGender": "Women",
+      "otherCriteria": [
+        "Income requirements not specified in the provided information"
+      ]
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Online",
+          "isAvailable": true
+        }
+      ]
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Women who frequently dine out or travel",
+        "Those looking for health and wellness benefits",
+        "Shoppers who prefer online platforms",
+        "Users seeking domestic airport lounge access"
+      ],
+      "notRecommendedFor": [
+        "Those looking for international lounge access",
+        "Users who prefer cashback over reward points",
+        "Individuals who don't meet the spending criteria for fee waivers"
+      ]
+    }
+  }

@@ -1,0 +1,178 @@
+{
+    "id": "axis_bank_neo",
+    "card": {
+      "cardName": "Axis Bank Neo Credit Card",
+      "cardIssuer": "Axis Bank",
+      "cardNetwork": "RuPay",
+      "ratings": "4.2/5",
+      "categories": ["Shopping", "Food"],
+      "targetAudience": "Millennials, entry-level credit card users"
+    },
+    "presentation": {
+      "description": "An entry-level credit card offering discounts and cashback on shopping and dining",
+      "highlightFeatures": [
+        "No joining or annual fee",
+        "Discounts on partner brands",
+        "Cashback on utility bill payments",
+        "UPI functionality"
+      ],
+      "marketingTagline": "The perfect starter card for young shoppers!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "Nil"
+        },
+        "renewal": {
+          "amount": "Nil"
+        }
+      },
+      "charges": [
+        {
+          "type": "Interest Rate",
+          "value": "3.75% per month"
+        },
+        {
+          "type": "Foreign Currency Markup",
+          "value": "3.5% of the transaction amount"
+        },
+        {
+          "type": "Cash Advance Fee",
+          "value": "2.5% of the withdrawn amount",
+          "minimum": "₹500"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "EDGE REWARD Points",
+      "structure": [
+        {
+          "rate": "1 EDGE REWARD Point",
+          "per": "₹200 spent",
+          "rewardRate": "0.10%"
+        }
+      ],
+      "exclusions": [
+        "Fuel", "Utilities", "Insurance", "EMI", "Wallet reloads", "Rent", "Government", "Education transactions"
+      ],
+      "redemptionOptions": [
+        "Vouchers", "Mobile & accessories", "Home decor items", "Other products"
+      ],
+      "redemptionValue": {
+        "amount": "₹0.20",
+        "per": "1 Edge Reward Point"
+      }
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Utility Bill Payment Cashback",
+            "value": "100% cashback up to ₹300",
+            "condition": "On first utility bill payment within 30 days of card setup"
+          }
+        ]
+      },
+      {
+        "type": "Dining",
+        "details": [
+          {
+            "name": "Restaurant Discount",
+            "value": "15% off",
+            "condition": "At partner restaurants"
+          },
+          {
+            "name": "Zomato Offer",
+            "value": "40% off",
+            "condition": "On food orders worth ₹200 and above, twice a month",
+            "maxDiscount": "₹120 per order",
+            "couponCode": "AXISNEO"
+          }
+        ]
+      },
+      {
+        "type": "Entertainment",
+        "details": [
+          {
+            "name": "BookMyShow Offer",
+            "value": "10% off",
+            "maxBenefit": "₹100 per month",
+            "condition": "On movie ticket bookings"
+          }
+        ]
+      },
+      {
+        "type": "Utility Bills",
+        "details": [
+          {
+            "name": "Paytm Recharge Offer",
+            "value": "5% off",
+            "maxDiscount": "₹150 per month",
+            "condition": "On mobile/broadband and DTH recharge through Paytm, once per month"
+          }
+        ]
+      },
+      {
+        "type": "Shopping",
+        "details": [
+          {
+            "name": "Blinkit Offer",
+            "value": "10% off up to ₹250",
+            "condition": "On minimum spend of ₹750, once a month"
+          },
+          {
+            "name": "Myntra Offer",
+            "value": "₹150 off",
+            "condition": "On minimum shopping of ₹999"
+          }
+        ]
+      },
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "1%",
+            "condition": "On transactions between ₹400 and ₹4,000",
+            "maxBenefit": "₹400 per month"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "ageRequirement": {
+        "minimum": 18,
+        "maximum": 70
+      },
+      "otherCriteria": [
+        "Stable source of income",
+        "Resident of India or Non-Resident Indian"
+      ]
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Online",
+          "isAvailable": true
+        },
+        {
+          "type": "Offline",
+          "isAvailable": true,
+          "details": "Visit nearest Axis Bank branch"
+        }
+      ]
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Young individuals starting their credit journey",
+        "Frequent online shoppers",
+        "Those who often order food or book movie tickets"
+      ],
+      "notRecommendedFor": [
+        "High spenders looking for premium benefits",
+        "Frequent travelers seeking lounge access or travel rewards",
+        "Those looking for high reward rates on all spends"
+      ]
+    }
+  }

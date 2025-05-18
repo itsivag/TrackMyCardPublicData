@@ -1,0 +1,164 @@
+{
+    "id" : 1,
+    "card": {
+      "id": "bpcl_sbi_octane",
+      "cardName": "BPCL SBI Octane Credit Card",
+      "cardIssuer": "SBI Card",
+      "cobranded": {
+        "partner": "Bharat Petroleum Corporation Limited (BPCL)"
+      },
+      "ratings": "4.8/5",
+      "categories": ["Travel", "Fuel", "Food"],
+      "targetAudience": "Frequent fuel purchasers, travelers"
+    },
+    "presentation": {
+      "description": "A premium fuel credit card offering high rewards on BPCL fuel purchases and dining",
+      "highlightFeatures": [
+        "High reward rate on fuel purchases",
+        "Accelerated rewards on dining and movie tickets",
+        "Complimentary domestic airport lounge access",
+        "Annual milestone benefits"
+      ],
+      "marketingTagline": "Fuel your rewards with every purchase!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "₹1,499",
+          "tax": "Plus applicable GST"
+        },
+        "renewal": {
+          "amount": "₹1,499",
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Annual spend of ₹2,00,000 or more"]
+        }
+      },
+      "charges": [
+        {
+          "type": "Interest Rate",
+          "details": "As per SBI Card's standard rates"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Reward Points",
+      "structure": [
+        {
+          "category": "BPCL Fuel Stations",
+          "rate": "25 Reward Points",
+          "per": "₹100 spent",
+          "cap": "Maximum 2500 Reward Points per billing cycle"
+        },
+        {
+          "category": "Dining, Departmental Stores, Movie Tickets",
+          "rate": "10 Reward Points",
+          "per": "₹100 spent",
+          "cap": "Up to 7500 Reward Points per month"
+        },
+        {
+          "category": "All Other Spends",
+          "rate": "1 Reward Point",
+          "per": "₹100 spent"
+        }
+      ],
+      "valueBack": {
+        "bpclFuel": "7.25% (6.25% as reward points + 1% fuel surcharge waiver)"
+      },
+      "exclusions": [
+        "Fuel purchases at non-BPCL stations",
+        "Mobile wallet uploads"
+      ],
+      "redemptionOptions": [
+        "Shop & Smile mobile app for gift vouchers",
+        "Statement credit",
+        "Instant redemption at BPCL fuel stations"
+      ],
+      "redemptionValue": "4 Reward Points = ₹1",
+      "validity": "2 years (24 months) from accumulation date"
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Bonus Reward Points",
+            "value": "6,000 points (worth ₹1,500)",
+            "condition": "On card issuance and every renewal"
+          }
+        ]
+      },
+      {
+        "type": "Milestone",
+        "details": [
+          {
+            "name": "Brand Voucher",
+            "value": "₹2,000",
+            "condition": "On annual spends of ₹3 lakh",
+            "brands": ["Bata", "Yatra", "Hush Puppies", "Aditya Fashion"]
+          }
+        ]
+      },
+      {
+        "type": "Travel",
+        "details": [
+          {
+            "name": "Domestic Airport Lounge Access",
+            "value": "4 complimentary visits per year",
+            "frequency": "1 per quarter"
+          }
+        ]
+      },
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "1%",
+            "condition": "On transactions up to ₹4,000 at all petrol pumps",
+            "maxWaiver": "₹100 per month"
+          }
+        ]
+      },
+      {
+        "type": "Insurance",
+        "details": [
+          {
+            "name": "Fraud Liability Cover",
+            "value": "₹1 Lakh"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "ageRequirement": {
+        "minimum": 18
+      },
+      "incomeRequirement": {
+        "minimumMonthlyIncome": "₹30,000"
+      },
+      "creditScore": {
+        "minimum": 750,
+        "description": "Good credit history/score"
+      }
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Online",
+          "isAvailable": true
+        }
+      ]
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Frequent fuel purchasers, especially at BPCL stations",
+        "Those who often dine out or watch movies",
+        "Travelers who can benefit from domestic lounge access"
+      ],
+      "notRecommendedFor": [
+        "Infrequent drivers or those who don't use BPCL stations",
+        "Those looking for premium travel benefits beyond domestic lounges",
+        "People who prefer cashback over reward points"
+      ]
+    }
+  }

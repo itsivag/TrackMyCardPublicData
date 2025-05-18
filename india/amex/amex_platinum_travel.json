@@ -1,0 +1,154 @@
+{
+    "id": "amex_platinum_travel",
+    "card": {
+      "cardName": "American Express Platinum Travel Credit Card",
+      "cardIssuer": "American Express",
+      "ratings": "4.6/5",
+      "categories": ["Travel", "Shopping"],
+      "targetAudience": "Frequent travelers, Premium card users"
+    },
+    "presentation": {
+      "description": "A premium travel credit card offering attractive rewards and travel benefits",
+      "highlightFeatures": [
+        "Membership Rewards Points on all spends",
+        "Complimentary domestic airport lounge access",
+        "Priority Pass membership",
+        "Milestone benefits including bonus points and hotel vouchers"
+      ],
+      "marketingTagline": "Elevate your travel experience with premium rewards!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "₹5,000",
+          "tax": "Plus applicable GST"
+        },
+        "renewal": {
+          "amount": "₹5,000",
+          "tax": "Plus applicable GST"
+        }
+      },
+      "charges": [
+        {
+          "type": "Interest Rate",
+          "value": "3.5% per month"
+        },
+        {
+          "type": "Foreign Currency Mark-up",
+          "value": "3.5% of the transaction amount"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Membership Rewards Points",
+      "structure": [
+        {
+          "rate": "1 Membership Rewards Point",
+          "per": "₹50 spent"
+        }
+      ],
+      "exclusions": [
+        "Fuel", "Insurance", "Utilities", "Cash transactions", "EMI conversion at point of sale"
+      ],
+      "redemptionOptions": [
+        "E-commerce website vouchers",
+        "INSTA purchases at offline stores",
+        "Credit card bill payments (Cash + Points scheme)",
+        "Transfer to airline and hotel loyalty programs"
+      ]
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Bonus Membership Rewards Points",
+            "value": "10,000 points",
+            "condition": "On spending ₹15,000 in first 3 months"
+          }
+        ]
+      },
+      {
+        "type": "Milestone",
+        "details": [
+          {
+            "spend": "₹1.9 lakh in a year",
+            "reward": "15,000 Membership Rewards Points (worth up to ₹7,500)"
+          },
+          {
+            "spend": "₹4 lakh in a year",
+            "reward": "25,000 Membership Rewards Points (worth up to ₹12,500) + Taj Stay Voucher worth ₹10,000"
+          }
+        ]
+      },
+      {
+        "type": "Travel",
+        "details": [
+          {
+            "name": "Domestic Lounge Access",
+            "value": "8 complimentary visits per year",
+            "frequency": "2 per quarter"
+          },
+          {
+            "name": "Priority Pass Membership",
+            "value": "Complimentary (worth USD 99)",
+            "condition": "Usage fee of USD 35 per visit"
+          }
+        ]
+      },
+      {
+        "type": "Dining",
+        "details": [
+          {
+            "name": "Restaurant Discount",
+            "value": "Up to 20% off",
+            "condition": "At select partner restaurants"
+          }
+        ]
+      },
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "100%",
+            "condition": "At HPCL fuel stations for transactions up to ₹5000"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "ageRequirement": {
+        "minimum": 18
+      },
+      "incomeRequirement": {
+        "minimumAnnualIncome": "₹6 lakh",
+        "applicableFor": ["Salaried", "Self-employed"]
+      },
+      "otherCriteria": [
+        "Resident of India",
+        "For self-employed: Company should have been trading for past 12 months"
+      ]
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Online",
+          "isAvailable": true
+        }
+      ],
+      "processingTime": "Within 15 days"
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Frequent travelers",
+        "Those who value hotel stay benefits",
+        "Users looking for domestic airport lounge access"
+      ],
+      "notRecommendedFor": [
+        "Those seeking high direct reward rates",
+        "Frequent international travelers needing complimentary international lounge access",
+        "Users looking for comprehensive travel insurance"
+      ]
+    }
+  }

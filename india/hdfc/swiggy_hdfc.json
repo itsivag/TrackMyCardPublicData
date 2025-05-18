@@ -1,0 +1,157 @@
+{
+    "id": "swiggy_hdfc_credit",
+    "card": {
+      "cardName": "Swiggy HDFC Bank Credit Card",
+      "cardIssuer": "HDFC Bank",
+      "ratings": "4.8/5",
+      "categories": ["Cashback", "Dining", "Food"],
+      "networkType": "Mastercard World",
+      "targetAudience": "Frequent Swiggy users, online shoppers",
+      "applyLink": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/swiggy-hdfc-bank-credit-card"
+    },
+    "presentation": {
+      "description": "A co-branded cashback card offering high rewards on Swiggy and online spends",
+      "highlightFeatures": [
+        "10% cashback on Swiggy app purchases",
+        "5% cashback on online spends",
+        "Complimentary 3-month Swiggy One membership"
+      ],
+      "marketingTagline": "Feast on rewards with every order!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "₹500",
+          "tax": "Plus applicable GST"
+        },
+        "renewal": {
+          "amount": "₹500",
+          "tax": "Plus applicable GST"
+        }
+      },
+      "charges": [
+        {
+          "type": "Interest Rate",
+          "details": "As per HDFC Bank's standard rates"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Cashback",
+      "structure": [
+        {
+          "category": "Swiggy App Purchases",
+          "rate": "10%",
+          "details": "Including food orders, Instamart, Dineout, and Genie",
+          "cap": "₹1,500 per billing cycle"
+        },
+        {
+          "category": "Online Spends",
+          "rate": "5%",
+          "details": "On select brands and categories",
+          "cap": "₹1,500 per billing cycle"
+        },
+        {
+          "category": "Other Spends",
+          "rate": "1%",
+          "cap": "₹500 per billing cycle"
+        }
+      ],
+      "redemptionOptions": [
+        {
+          "method": "Statement Credit",
+          "description": "Automatically applied to the credit card statement in the following month"
+        }
+      ],
+      "excludedCategories": ["fuel", "rent", "wallet", "EMI", "jewellery", "government transactions"]
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Swiggy One Membership",
+            "value": "3 months complimentary",
+            "condition": "On card activation"
+          }
+        ]
+      },
+      {
+        "type": "Golf",
+        "details": [
+          {
+            "name": "Golf Benefits",
+            "value": "12 free golf lessons, 4 free rounds of green fees, 50% off on golf services"
+          }
+        ]
+      },
+      {
+        "type": "Travel",
+        "details": [
+          {
+            "name": "Agoda Discount",
+            "value": "Up to 12% off"
+          },
+          {
+            "name": "Mastercard Dine & Stay",
+            "value": "Complimentary stay and dinner for one person at select locations"
+          }
+        ]
+      },
+      {
+        "type": "Airline",
+        "details": [
+          {
+            "name": "IndiGo BluChips",
+            "value": "1 BluChip per ₹100 spent on Swiggy platforms"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "ageRequirement": {
+        "minimum": 21,
+        "maximum": {
+          "salaried": 60,
+          "selfEmployed": 65
+        }
+      },
+      "incomeRequirement": [
+        {
+          "employmentType": "Salaried",
+          "minimumIncome": "₹15,000 per month"
+        },
+        {
+          "employmentType": "Self-employed",
+          "minimumIncome": "₹6 Lakhs per annum (ITR)"
+        }
+      ],
+      "otherCriteria": [
+        "Indian citizen",
+        "Existing HDFC Credit Card holders can apply"
+      ]
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Swiggy App",
+          "isAvailable": true
+        },
+        {
+          "type": "HDFC Bank",
+          "isAvailable": true
+        }
+      ]
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Frequent Swiggy users",
+        "Online shoppers",
+        "Food enthusiasts"
+      ],
+      "notRecommendedFor": [
+        "Primarily offline shoppers",
+        "Those who rarely use food delivery services"
+      ]
+    }
+  }

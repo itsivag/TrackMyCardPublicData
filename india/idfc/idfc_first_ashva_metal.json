@@ -1,0 +1,165 @@
+{
+    "id": 1,
+    "card": {
+      "id": "idfc_first_ashva_metal",
+      "cardName": "IDFC First Bank Ashva Metal Credit Card",
+      "cardIssuer": "IDFC First Bank",
+      "cardType": "Metal",
+      "cardNetwork": "Visa Infinite",
+      "ratings": "4.6/5",
+      "categories": ["Travel", "Shopping"],
+      "targetAudience": "Frequent travelers, High spenders"
+    },
+    "presentation": {
+      "description": "A metal credit card inspired by India's traditions, offering a blend of luxury and modern benefits",
+      "highlightFeatures": [
+        "10X rewards on spends above ₹20,000",
+        "Complimentary airport lounge access",
+        "Golf privileges",
+        "Lower forex markup of 1%"
+      ],
+      "marketingTagline": "Experience luxury with every swipe!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "₹2,999",
+          "tax": "Plus applicable GST"
+        },
+        "renewal": {
+          "amount": "₹2,999",
+          "tax": "Plus applicable GST"
+        }
+      },
+      "charges": [
+        {
+          "type": "Forex Markup",
+          "value": "1%"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Reward Points",
+      "structure": [
+        {
+          "rate": "10X Reward Points",
+          "per": "₹150",
+          "condition": "On incremental spends above ₹20,000 per statement cycle"
+        },
+        {
+          "rate": "5X Reward Points",
+          "per": "₹150",
+          "condition": "On spends up to ₹20,000 per statement cycle"
+        },
+        {
+          "rate": "3X Reward Points",
+          "per": "₹150",
+          "categories": ["Rent", "Wallet load", "Education", "Government transactions"]
+        }
+      ],
+      "pointValue": {
+        "amount": "₹0.25",
+        "per": "1 Reward Point"
+      },
+      "redemptionOptions": [
+        "Vouchers",
+        "Statement credit",
+        "Pay with points"
+      ],
+      "exclusions": [
+        "Fuel",
+        "EMI transactions",
+        "Fees or charges",
+        "Loan on card",
+        "Balance transfer",
+        "Cash withdrawal"
+      ]
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Bonus Reward Points",
+            "value": "2,500 points (₹625)"
+          },
+          {
+            "name": "Cashback",
+            "value": "₹2,000",
+            "condition": "On making four transactions of ₹500 or above within 60 days"
+          }
+        ]
+      },
+      {
+        "type": "Movie",
+        "details": [
+          {
+            "name": "BookMyShow Offer",
+            "value": "Buy One Get One free on movie tickets",
+            "maxDiscount": "₹400 per ticket",
+            "frequency": "Twice per month",
+            "annualValue": "₹9,600"
+          }
+        ]
+      },
+      {
+        "type": "Travel",
+        "details": [
+          {
+            "name": "Domestic Lounge Access",
+            "value": "4 complimentary visits per quarter"
+          },
+          {
+            "name": "International Lounge Access",
+            "value": "2 complimentary visits per quarter"
+          },
+          {
+            "name": "Railway Lounge Access",
+            "value": "4 complimentary visits per quarter",
+            "condition": "On spends of ₹20,000 or more in the previous month"
+          }
+        ]
+      },
+      {
+        "type": "Golf",
+        "details": [
+          {
+            "name": "Complimentary Golf",
+            "value": "2 free golf rounds/lessons per month",
+            "condition": "On spends of ₹20,000 each in a statement cycle"
+          }
+        ]
+      },
+      {
+        "type": "Insurance",
+        "details": [
+          {"name": "Purchase Protection", "value": "₹50,000"},
+          {"name": "Personal Accident Cover", "value": "₹10 Lakh"},
+          {"name": "Credit Shield", "value": "₹50,000"},
+          {"name": "Personal Air Accident", "value": "₹10 Lakh"},
+          {"name": "Trip Cancellation Protection", "value": "Up to ₹25,000 twice a year"}
+        ]
+      },
+      {
+        "type": "Annual Milestone",
+        "details": [
+          {
+            "name": "Bonus Reward Points",
+            "value": "7,500 points (₹1,875)",
+            "condition": "On annual spends of ₹8 lakh"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "incomeRequirement": {
+        "minimumAnnualIncome": "₹12 lakh"
+      }
+    },
+    "visaInfiniteBenefits": [
+      "Airport meet and greet discounts",
+      "Personalized concierge services",
+      "Limousine airport transfer discounts",
+      "Premium hotel benefits worldwide"
+    ]
+  }

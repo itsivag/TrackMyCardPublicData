@@ -1,0 +1,164 @@
+{
+    "id": "makemytrip_icici",
+    "card": {
+      "cardName": "MakeMyTrip ICICI Bank Credit Card",
+      "cardIssuer": "ICICI Bank",
+      "cobranded": {
+        "partner": "MakeMyTrip"
+      },
+      "cardNetwork": ["RuPay", "Mastercard"],
+      "ratings": "4.6/5",
+      "categories": ["Travel"],
+      "targetAudience": "Frequent travelers, MakeMyTrip users"
+    },
+    "presentation": {
+      "description": "A travel-focused credit card designed for MakeMyTrip users offering rewards and benefits on travel bookings",
+      "highlightFeatures": [
+        "High rewards on MakeMyTrip bookings",
+        "Complimentary airport lounge access",
+        "Low forex markup",
+        "UPI linkage capability (RuPay variant)",
+        "MMTBLACK Gold Membership"
+      ],
+      "marketingTagline": "Elevate your travel experience with every booking!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "₹999",
+          "tax": "Plus applicable GST"
+        },
+        "renewal": {
+          "amount": "₹999",
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Annual spend of ₹3 lakh or more"]
+        }
+      },
+      "charges": [
+        {
+          "type": "Foreign Currency Markup",
+          "value": "0.99%"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "myCash",
+      "structure": [
+        {
+          "category": "Hotel Bookings on MMT",
+          "rate": "12 myCash",
+          "per": "₹200 spent"
+        },
+        {
+          "category": "Flight, Cab, Bus, and Holiday Bookings on MMT",
+          "rate": "6 myCash",
+          "per": "₹200 spent"
+        },
+        {
+          "category": "Domestic and International Spends Outside of MMT",
+          "rate": "2 myCash",
+          "per": "₹200 spent"
+        },
+        {
+          "category": "Insurance Spends",
+          "rate": "2 myCash",
+          "per": "₹200 spent",
+          "cap": "Maximum 1,000 myCash per year"
+        }
+      ],
+      "exclusions": [
+        "Rent Payments",
+        "Cash",
+        "Fuel",
+        "Gambling",
+        "Commercial Transactions"
+      ],
+      "pointValue": "1 myCash = ₹1",
+      "redemptionOptions": [
+        "Hotel bookings",
+        "Flight bookings",
+        "Holiday bookings",
+        "Other travel bookings on MakeMyTrip",
+        "Partner vouchers via MMT"
+      ]
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "MakeMyTrip Voucher",
+            "value": "₹1,000",
+            "validity": "3 months from issuance",
+            "issuanceTime": "Within 45 days of joining fee realization"
+          },
+          {
+            "name": "MMTBLACK Gold Membership",
+            "duration": "12 months"
+          }
+        ]
+      },
+      {
+        "type": "Travel",
+        "details": [
+          {
+            "name": "Domestic Airport Lounge Access",
+            "value": "8 complimentary visits per year",
+            "frequency": "2 per quarter",
+            "eligibility": "Primary cardholder only"
+          },
+          {
+            "name": "International Airport Lounge Access",
+            "value": "1 complimentary visit per year",
+            "eligibility": "Primary cardholder only"
+          }
+        ]
+      },
+      {
+        "type": "Entertainment",
+        "details": [
+          {
+            "name": "Movie Ticket Offer",
+            "value": "Buy 1 Get 1 free",
+            "partners": ["BookMyShow", "Inox"],
+            "frequency": "Twice per month per card variant",
+            "maxDiscount": "₹150 per ticket"
+          }
+        ]
+      },
+      {
+        "type": "Annual",
+        "details": [
+          {
+            "name": "MakeMyTrip Voucher on Fee Payment",
+            "value": "₹1,000",
+            "condition": "On realization of annual fee"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "details": "Not specified in the provided information"
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Online",
+          "isAvailable": true
+        }
+      ]
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Frequent MakeMyTrip users",
+        "Travelers looking for airport lounge access",
+        "Those who make international purchases",
+        "Users seeking travel-focused rewards"
+      ],
+      "notRecommendedFor": [
+        "Infrequent travelers",
+        "Those who prefer cashback over travel rewards",
+        "Users who don't book through MakeMyTrip"
+      ]
+    }
+  }

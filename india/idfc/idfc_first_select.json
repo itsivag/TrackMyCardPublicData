@@ -1,0 +1,192 @@
+{
+    "id": 1,
+    "card": {
+      "id": "idfc_first_select",
+      "cardName": "IDFC FIRST Select Credit Card",
+      "cardIssuer": "IDFC First Bank",
+      "ratings": "4.6/5",
+      "categories": ["Travel", "Shopping"],
+      "targetAudience": "Premium card users"
+    },
+    "presentation": {
+      "description": "A premium credit card offering diverse benefits across travel, shopping, and dining",
+      "highlightFeatures": [
+        "Lifetime free card",
+        "Accelerated reward points",
+        "Complimentary lounge access",
+        "Low forex markup fee"
+      ],
+      "marketingTagline": "Elevate your lifestyle with premium benefits!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "Nil"
+        },
+        "renewal": {
+          "amount": "Nil"
+        }
+      },
+      "charges": [
+        {
+          "type": "Interest Rate",
+          "value": "0.75% to 3.5% per month"
+        },
+        {
+          "type": "Foreign Currency Markup",
+          "value": "1.99% of the transaction amount"
+        },
+        {
+          "type": "Cash Advance Fee",
+          "value": "₹199 per transaction"
+        },
+        {
+          "type": "Reward Redemption Fee",
+          "value": "₹99 plus taxes"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Reward Points",
+      "structure": [
+        {
+          "rate": "10 Reward Points",
+          "per": "₹150 spent",
+          "condition": "On purchases above ₹20,000"
+        },
+        {
+          "rate": "3 Reward Points",
+          "per": "₹150 spent",
+          "condition": "On purchases up to ₹20,000"
+        },
+        {
+          "rate": "1 Reward Point",
+          "per": "₹150 spent",
+          "condition": "On utility bills and insurance premium payments"
+        }
+      ],
+      "birthdayBonus": "Up to 10x Reward points on every ₹150 spent",
+      "redemptionValue": "1 Reward Point = ₹0.25",
+      "redemptionOptions": [
+        "Poshvine reward portal",
+        "Exclusive merchant stores"
+      ],
+      "validity": "No expiry, can be carried forward"
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Gift Voucher",
+            "value": "₹500",
+            "condition": "On spending ₹5,000 or above within 30 days of card issuance"
+          },
+          {
+            "name": "EMI Cashback",
+            "value": "5% up to ₹1,000",
+            "condition": "On EMI transactions within 30 days of card issuance"
+          }
+        ]
+      },
+      {
+        "type": "Travel",
+        "details": [
+          {
+            "name": "Domestic Airport Lounge Access",
+            "value": "2 free visits per quarter",
+            "condition": "On spending ₹20,000 in a month"
+          },
+          {
+            "name": "Railway Lounge Access",
+            "value": "4 complimentary visits per quarter"
+          },
+          {
+            "name": "Complimentary Roadside Assistance",
+            "value": "Worth ₹1,399"
+          }
+        ]
+      },
+      {
+        "type": "Entertainment",
+        "details": [
+          {
+            "name": "Movie Ticket Offer",
+            "value": "Buy 1 Get 1 up to ₹125",
+            "partner": "District mobile app",
+            "frequency": "Twice every month"
+          }
+        ]
+      },
+      {
+        "type": "Dining",
+        "details": [
+          {
+            "name": "Restaurant Discount",
+            "value": "Up to 20% off",
+            "condition": "At 1500+ participating restaurants"
+          }
+        ]
+      },
+      {
+        "type": "Insurance",
+        "details": [
+          {"name": "Travel Insurance Cover", "value": "Up to ₹22,500"},
+          {"name": "Air Accident Cover", "value": "₹1 Crore"},
+          {"name": "Personal Accident Cover", "value": "Up to ₹5,00,000"},
+          {"name": "Lost Card Liability Cover", "value": "₹50,000"},
+          {"name": "Loss of Checked-in Baggage", "value": "USD 500"},
+          {"name": "Delay in Checked-in Baggage", "value": "USD 100"},
+          {"name": "Loss of Passport", "value": "USD 300"},
+          {"name": "Delay in Flight", "value": "USD 300"}
+        ]
+      },
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "1%",
+            "maxDiscount": "₹300"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "ageRequirement": {
+        "minimum": 21
+      },
+      "incomeRequirement": {
+        "minimumAnnualIncome": "₹12 Lakh",
+        "applicableFor": ["Salaried", "Self-employed"]
+      },
+      "otherCriteria": [
+        "Decent credit score"
+      ]
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Online",
+          "isAvailable": true
+        },
+        {
+          "type": "Offline",
+          "isAvailable": true,
+          "details": "Visit nearest IDFC First Bank branch"
+        }
+      ]
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Frequent travelers",
+        "High spenders",
+        "Those looking for premium benefits without annual fees"
+      ],
+      "notRecommendedFor": [
+        "Low spenders",
+        "Those who rarely travel",
+        "Users looking for specific category-based rewards"
+      ]
+    }
+  }

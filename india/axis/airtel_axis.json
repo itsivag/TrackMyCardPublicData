@@ -1,0 +1,161 @@
+{
+    "id": "airtel_axis_credit",
+    "card": {
+      "cardName": "Airtel Axis Bank Credit Card",
+      "cardIssuer": "Axis Bank",
+      "cobranded": {
+        "partner": "Bharti Airtel"
+      },
+      "cardNetwork": ["Visa", "RuPay"],
+      "ratings": "4.8/5",
+      "categories": ["Travel", "Food", "Utility Bill Payment"],
+      "targetAudience": "Airtel customers, frequent online shoppers"
+    },
+    "presentation": {
+      "description": "A co-branded credit card offering high cashback on Airtel services and partner brands",
+      "highlightFeatures": [
+        "Up to 25% cashback on Airtel services",
+        "10% cashback on utility bill payments and partner brands",
+        "Complimentary airport lounge access",
+        "Amazon voucher as welcome benefit"
+      ],
+      "marketingTagline": "Maximize your savings on Airtel services and everyday spends!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "₹500",
+          "tax": "Plus applicable GST"
+        },
+        "renewal": {
+          "amount": "₹500",
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Annual spend of ₹2 lakhs or more in the previous year"]
+        }
+      },
+      "charges": [
+        {
+          "type": "Interest Rate",
+          "details": "As per Axis Bank's standard rates"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Cashback",
+      "structure": [
+        {
+          "category": "Airtel services",
+          "rate": "25%",
+          "cap": "₹250 per month",
+          "condition": "Via Airtel Thanks app"
+        },
+        {
+          "category": "Utility bill payments",
+          "rate": "10%",
+          "cap": "₹250 per month",
+          "condition": "Via Airtel Thanks app"
+        },
+        {
+          "category": "Partner brands (Swiggy, Zomato, BigBasket)",
+          "rate": "10%",
+          "cap": "₹500 per month"
+        },
+        {
+          "category": "All other retail spends",
+          "rate": "1%",
+          "details": "Unlimited cashback"
+        }
+      ],
+      "exclusions": [
+        "Utility bill payments not made through Airtel Thanks app",
+        "Fuel purchases",
+        "EMI transactions",
+        "Rent payments",
+        "Government services",
+        "Insurance services",
+        "Education services",
+        "Credit card fees & charges",
+        "Wallet loading transactions",
+        "Jewelry purchases",
+        "Cash advances"
+      ],
+      "redemption": "Directly adjusted against next card bill"
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Amazon Gift Voucher",
+            "value": "₹500",
+            "condition": "On first transaction within 30 days of card issuance"
+          }
+        ]
+      },
+      {
+        "type": "Travel",
+        "details": [
+          {
+            "name": "Domestic Lounge Access",
+            "value": "4 complimentary visits per year",
+            "condition": "On quarterly spends of ₹50,000 or more in the previous quarter"
+          }
+        ]
+      },
+      {
+        "type": "Dining",
+        "details": [
+          {
+            "name": "Dining Discount",
+            "value": "15% off up to ₹500",
+            "condition": "At 4000+ participating restaurants, minimum order value ₹2,500"
+          }
+        ]
+      },
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "1%",
+            "condition": "On transactions between ₹400 and ₹4,000",
+            "maxWaiver": "₹500 per month"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "ageRequirement": {
+        "minimum": 18,
+        "maximum": 70
+      },
+      "otherCriteria": [
+        "Stable source of income",
+        "Resident of India"
+      ]
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Airtel Thanks App",
+          "isAvailable": true
+        },
+        {
+          "type": "Axis Bank Website",
+          "isAvailable": true
+        }
+      ]
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Airtel service users",
+        "Frequent online food and grocery shoppers",
+        "Those looking for cashback on utility bill payments"
+      ],
+      "notRecommendedFor": [
+        "Those who don't use Airtel services",
+        "Infrequent credit card users",
+        "Those looking for travel-specific rewards"
+      ]
+    }
+  }

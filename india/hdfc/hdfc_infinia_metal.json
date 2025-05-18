@@ -1,0 +1,227 @@
+{
+    "id": "hdfc_infinia_metal",
+    "card": {
+      "cardName": "HDFC Bank INFINIA Metal Credit Card",
+      "cardIssuer": "HDFC Bank",
+      "cardType": "Super Premium",
+      "ratings": "5/5",
+      "categories": ["Travel", "Dining", "Shopping"],
+      "targetAudience": "High-net-worth individuals"
+    },
+    "presentation": {
+      "description": "A premium invite-only credit card offering luxurious benefits and high rewards",
+      "highlightFeatures": [
+        "High reward points on all spends",
+        "Unlimited domestic and international lounge access",
+        "Golf privileges",
+        "Concierge services",
+        "Low forex markup fee"
+      ],
+      "marketingTagline": "Experience unparalleled luxury and rewards!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "₹12,500",
+          "tax": "Plus applicable GST"
+        },
+        "renewal": {
+          "amount": "₹12,500",
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Annual spend of ₹10,00,000 or more"]
+        }
+      },
+      "charges": [
+        {
+          "type": "Interest Rate",
+          "value": "1.99% per month (23.8% annually)"
+        },
+        {
+          "type": "Foreign Currency Markup",
+          "value": "2% of the transaction amount"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Reward Points",
+      "structure": [
+        {
+          "rate": "5 Reward Points",
+          "per": "₹150 spent",
+          "exclusions": ["Fuel spends"]
+        },
+        {
+          "rate": "10X Reward Points",
+          "condition": "On travel and shopping spending on SmartBuy platform",
+          "cap": "15,000 points per month"
+        }
+      ],
+      "redemptionOptions": [
+        {
+          "method": "SmartBuy platform",
+          "options": [
+            "Hotel/flight bookings (1 RP = ₹1)",
+            "DTH recharges",
+            "Products and vouchers (1 RP = ₹0.50)",
+            "Tanishq and Apple vouchers (1 RP = ₹1)"
+          ]
+        },
+        {
+          "method": "Netbanking",
+          "options": [
+            "AirMiles conversion (1 RP = 1 AirMile)",
+            "Cashback (1 RP = ₹0.30)"
+          ]
+        }
+      ],
+      "transferPartners": [
+        {"name": "Air Canada Aeroplan", "ratio": "1 RP = 0.5 Aeroplan Miles"},
+        {"name": "Club ITC", "ratio": "1 RP = 0.5 Green Points"},
+        {"name": "SpiceClub", "ratio": "1 RP = 1 SC Point"},
+        {"name": "Avianca LifeMiles", "ratio": "1 RP = 0.5 LifeMile"},
+        {"name": "Turkish Airlines Miles & Smiles", "ratio": "1 RP = 0.5 Miles & Smiles"},
+        {"name": "United MileagePlus", "ratio": "1 RP = 0.5 MileagePlus Mile"},
+        {"name": "British Airways Avios", "ratio": "1 RP = 0.5 Avios"},
+        {"name": "Finnair Plus", "ratio": "1 RP = 1 Finnair Plus Point"},
+        {"name": "AirAsia Rewards", "ratio": "1 RP = 1 AirAsia Point"},
+        {"name": "Etihad Guest", "ratio": "1 RP = 0.5 Etihad Guest Points"},
+        {"name": "Hainan Airlines Fortune Wings Club", "ratio": "1 RP = 1 Fortune Wings Club Point"},
+        {"name": "Accor ALL", "ratio": "1 RP = 0.5 ALL Point"},
+        {"name": "IHG One", "ratio": "1 RP = 1 IHG One Point"},
+        {"name": "Wyndham Rewards", "ratio": "1 RP = 1 Wyndham Rewards Point"},
+        {"name": "Maharaja Club", "ratio": "2 RP = 1 Maharaja Club Point"}
+      ]
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Bonus Reward Points",
+            "value": "12,500 points"
+          },
+          {
+            "name": "Club Marriott Membership",
+            "duration": "1 year",
+            "details": "20% off on dining and hotel stays"
+          }
+        ]
+      },
+      {
+        "type": "Travel",
+        "details": [
+          {
+            "name": "Airport Lounge Access",
+            "value": "Unlimited complimentary access",
+            "condition": "For primary and add-on cardholders",
+            "locations": "Domestic and international lounges worldwide"
+          },
+          {
+            "name": "Priority Pass Membership",
+            "value": "Complimentary"
+          },
+          {
+            "name": "ITC Hotels Stay Benefit",
+            "value": "1 complimentary night on 2-night booking"
+          }
+        ]
+      },
+      {
+        "type": "Dining",
+        "details": [
+          {
+            "name": "ITC Hotels Buffet Offer",
+            "value": "1+1 complimentary buffet",
+            "frequency": "Once per month"
+          },
+          {
+            "name": "Swiggy Dineout Offer",
+            "value": "Up to ₹750 off",
+            "condition": "Twice per month on minimum bill of ₹8,000"
+          }
+        ]
+      },
+      {
+        "type": "Golf",
+        "details": [
+          {
+            "name": "Complimentary Golf Games",
+            "value": "Unlimited",
+            "locations": "Leading courses in India and select international courses"
+          },
+          {
+            "name": "Golf Coaching",
+            "value": "Unlimited complimentary",
+            "locations": "Select golf courses in India"
+          }
+        ]
+      },
+      {
+        "type": "Concierge",
+        "details": [
+          "24/7 concierge services",
+          "Golf booking",
+          "Private dining assistance",
+          "Airport VIP service",
+          "Itinerary planning",
+          "International gift delivery",
+          "Event planning and referrals"
+        ]
+      },
+      {
+        "type": "Insurance",
+        "details": [
+          {
+            "name": "Air Accident Cover",
+            "value": "₹3 crores"
+          },
+          {
+            "name": "Medical Emergency Cover",
+            "value": "₹50 lakhs",
+            "condition": "During international air travel"
+          },
+          {
+            "name": "Credit Shield Cover",
+            "value": "₹9 lakhs"
+          }
+        ]
+      },
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "1%",
+            "condition": "On transactions between ₹400 and ₹1,00,000",
+            "maxWaiver": "₹1,000 per month"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "type": "Invite-only",
+      "criteria": [
+        "Age between 21 and 65 years",
+        "High annual income (preferably ₹45 lakh or more)",
+        "Excellent credit history",
+        "Existing relationship with HDFC Bank (Total Relationship Value > ₹25 lakh)",
+        "High credit limit or spends above ₹8 lakh in past six months on existing HDFC Credit Card"
+      ]
+    },
+    "applicationProcess": {
+      "type": "Invitation only"
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "High-net-worth individuals",
+        "Frequent travelers",
+        "Luxury lifestyle enthusiasts",
+        "Those seeking premium concierge services"
+      ],
+      "notRecommendedFor": [
+        "Budget-conscious consumers",
+        "Infrequent credit card users",
+        "Those who don't meet the high income and spending criteria"
+      ]
+    }
+  }

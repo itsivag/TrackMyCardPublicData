@@ -1,0 +1,165 @@
+{
+    "id": "tata_neu_infinity_hdfc",
+    "card": {
+      "cardName": "Tata Neu Infinity HDFC Bank Credit Card",
+      "cardIssuer": "HDFC Bank",
+      "cobranded": {
+        "partner": "Tata Neu"
+      },
+      "cardNetwork": ["Visa", "RuPay"],
+      "ratings": "4.5/5",
+      "categories": ["Travel", "Shopping"],
+      "targetAudience": "Frequent shoppers, Tata brand loyalists"
+    },
+    "presentation": {
+      "description": "A premium co-branded credit card offering high rewards on Tata Neu and partner brand purchases",
+      "highlightFeatures": [
+        "Up to 10% rewards on Tata Neu purchases",
+        "Complimentary airport lounge access",
+        "Insurance benefits",
+        "Fuel surcharge waiver"
+      ],
+      "marketingTagline": "Maximize your rewards with every Tata purchase!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "₹1,499",
+          "tax": "Plus applicable GST"
+        },
+        "renewal": {
+          "amount": "₹1,499",
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Annual spend of ₹3 lakhs or more in the previous year"]
+        }
+      },
+      "charges": [
+        {
+          "type": "Interest Rate",
+          "value": "3.75% per month",
+          "annualizedValue": "45.0% per annum"
+        },
+        {
+          "type": "Cash Advance",
+          "value": "2.5% of withdrawn amount or ₹500, whichever is higher"
+        },
+        {
+          "type": "Foreign Currency Markup",
+          "value": "2% of the transaction amount"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "NeuCoins",
+      "structure": [
+        {
+          "category": "Tata Neu app/website purchases",
+          "rate": "5%"
+        },
+        {
+          "category": "Additional rewards with Neu Pass activation",
+          "rate": "5%"
+        },
+        {
+          "category": "Partner Tata brands",
+          "rate": "5%",
+          "brands": ["AirAsia India", "Tata 1mg", "Tata CLiQ", "Croma", "cult.fit", "Big Basket", "Westside", "IHCL"]
+        },
+        {
+          "category": "UPI spends",
+          "rate": "1.5%",
+          "cap": "500 NeuCoins per calendar month"
+        }
+      ],
+      "exclusions": ["Wallet reloads", "Fuel purchases", "Rent", "Cash withdrawals", "EMI transactions"],
+      "maxEarning": "50,000 NeuCoins per statement cycle",
+      "redemptionValue": "1 NeuCoin = ₹1",
+      "redemptionOptions": ["AirAsia India", "Bigbasket", "Croma", "Westside", "Tata CLiQ", "Tata CLiQ Luxury", "IHCL", "TATA 1MG", "Qmin"]
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Bonus NeuCoins",
+            "value": "1,499 NeuCoins",
+            "condition": "On first transaction within 30 days of card issuance"
+          }
+        ]
+      },
+      {
+        "type": "Travel",
+        "details": [
+          {
+            "name": "Domestic Lounge Access",
+            "value": "8 complimentary visits per year",
+            "frequency": "2 per quarter"
+          },
+          {
+            "name": "International Lounge Access",
+            "value": "4 complimentary visits per year",
+            "frequency": "1 per quarter",
+            "additionalInfo": "Via Priority Pass for Visa variant, direct access for RuPay variant"
+          }
+        ]
+      },
+      {
+        "type": "Insurance",
+        "details": [
+          {
+            "name": "Air Accident Cover",
+            "value": "₹1 Crore"
+          },
+          {
+            "name": "Emergency Overseas Hospitalization Cover",
+            "value": "₹15 Lakhs"
+          },
+          {
+            "name": "Lost Card Liability Cover",
+            "value": "₹9 Lakhs"
+          }
+        ]
+      },
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "1%",
+            "condition": "On transactions between ₹400 and ₹5,000",
+            "maxWaiver": "₹500 per statement cycle"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "ageRequirement": {
+        "minimum": 21,
+        "maximum": {
+          "salaried": 60,
+          "selfEmployed": 65
+        }
+      },
+      "incomeRequirement": [
+        {
+          "employmentType": "Salaried",
+          "minimumIncome": "₹1 lakh per month"
+        },
+        {
+          "employmentType": "Self-employed",
+          "minimumIncome": "₹12 lakhs per annum"
+        }
+      ]
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Frequent shoppers on Tata Neu platform",
+        "Tata brand loyalists",
+        "Travelers seeking lounge access benefits"
+      ],
+      "notRecommendedFor": [
+        "Infrequent credit card users",
+        "Those who rarely shop from Tata brands"
+      ]
+    }
+  }

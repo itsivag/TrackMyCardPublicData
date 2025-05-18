@@ -1,0 +1,167 @@
+{
+    "id": "hsbc_live_plus",
+    "card": {
+      "cardName": "HSBC Live+ Credit Card",
+      "cardIssuer": "HSBC Bank",
+      "ratings": "4.6/5",
+      "categories": ["Shopping", "Food"],
+      "targetAudience": "Online shoppers, Grocery and dining enthusiasts"
+    },
+    "presentation": {
+      "description": "A cashback credit card offering high rewards on grocery, food delivery, and dining spends",
+      "highlightFeatures": [
+        "10% cashback on grocery, food delivery, and dining",
+        "1.5% cashback on other eligible spends",
+        "Complimentary domestic lounge access",
+        "Automatic cashback credit"
+      ],
+      "marketingTagline": "Earn cashback on your everyday spends!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "₹999",
+          "tax": "Plus applicable GST"
+        },
+        "renewal": {
+          "amount": "₹999",
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Annual spend of ₹200,000"]
+        }
+      },
+      "charges": [
+        {
+          "type": "Interest Rate",
+          "details": "As per HSBC Bank's standard rates"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Cashback",
+      "structure": [
+        {
+          "category": "Dining, Grocery, Food Delivery",
+          "rate": "10%",
+          "cap": "₹1,000 per statement cycle"
+        },
+        {
+          "category": "All Other Eligible Transactions",
+          "rate": "1.5%",
+          "details": "Unlimited cashback"
+        }
+      ],
+      "exclusions": [
+        "Fuel", "E-wallets", "Property management fees", "Rental commissions",
+        "Rental payments", "Education", "Government-related", "Insurance",
+        "Jewelry & antique items", "Gambling", "Tolls", "Bridge fees",
+        "Collection agencies", "Charity", "Money transfers", "Wholesale clubs"
+      ],
+      "creditPeriod": "Within 45 days of the card statement date"
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Cashback",
+            "value": "₹1,000",
+            "condition": "On spending ₹20,000 within first 30 days of card issuance"
+          }
+        ]
+      },
+      {
+        "type": "Travel",
+        "details": [
+          {
+            "name": "Domestic Lounge Access",
+            "value": "4 complimentary visits per annum",
+            "frequency": "1 per quarter"
+          }
+        ]
+      },
+      {
+        "type": "Entertainment",
+        "details": [
+          {
+            "name": "Movie Ticket Offer",
+            "value": "Buy 2 Get 1 Free",
+            "partner": "BookMyShow",
+            "condition": "On Saturdays",
+            "maxDiscount": "₹250 per free ticket"
+          }
+        ]
+      },
+      {
+        "type": "Dining",
+        "details": [
+          {
+            "name": "Restaurant Discount",
+            "value": "Up to 15% off",
+            "partner": "EazyDiner",
+            "locations": "Over 1,000 restaurants across major cities in India"
+          }
+        ]
+      },
+      {
+        "type": "Insurance",
+        "details": [
+          {
+            "name": "Card Misuse Protection",
+            "value": "₹3,00,000",
+            "condition": "Up to 24 hours prior to reporting card loss"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "ageRequirement": {
+        "minimum": 18,
+        "maximum": 65
+      },
+      "incomeRequirement": {
+        "minimumAnnualIncome": "₹4,00,000",
+        "applicableFor": ["Salaried individuals"]
+      },
+      "residenceRequirement": [
+        "Chennai", "Gurgaon", "Delhi NCR", "Pune", "Noida", "Hyderabad", 
+        "Mumbai", "Bangalore", "Kochi", "Coimbatore", "Jaipur", "Chandigarh", 
+        "Ahmedabad", "Kolkata"
+      ],
+      "otherCriteria": [
+        "Indian citizen"
+      ]
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Online",
+          "isAvailable": true
+        },
+        {
+          "type": "Phone Banking",
+          "isAvailable": true
+        },
+        {
+          "type": "Branch Visit",
+          "isAvailable": true
+        }
+      ]
+    },
+    "customerSupport": {
+      "phoneNumbers": ["18002673456", "18001212208"],
+      "timings": "6:30 a.m. to 8:40 p.m.",
+      "cardLossReporting": "24x7"
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Frequent online shoppers",
+        "Those who spend heavily on dining and groceries",
+        "Users who prefer automatic cashback over reward points"
+      ],
+      "notRecommendedFor": [
+        "Those who prefer travel rewards",
+        "Users looking for premium lifestyle benefits",
+        "People who mostly spend on excluded categories"
+      ]
+    }
+  }

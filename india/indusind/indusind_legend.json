@@ -1,0 +1,157 @@
+{
+    "id": 1,
+    "card": {
+      "id": "indusind_legend",
+      "cardName": "IndusInd Legend Credit Card",
+      "cardIssuer": "IndusInd Bank",
+      "ratings": "4.5/5",
+      "categories": ["Shopping"],
+      "targetAudience": "General consumers, Entry-level credit card users"
+    },
+    "presentation": {
+      "description": "A basic credit card with decent features and a good reward structure",
+      "highlightFeatures": [
+        "Lifetime free card",
+        "Reward points on all spends",
+        "Movie ticket offers",
+        "Milestone bonus points"
+      ],
+      "marketingTagline": "Enjoy rewards on every purchase!"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "Nil"
+        },
+        "renewal": {
+          "amount": "Nil"
+        }
+      },
+      "charges": [
+        {
+          "type": "Interest Rate",
+          "details": "As per IndusInd Bank's standard rates"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Reward Points",
+      "structure": [
+        {
+          "rate": "1 Reward Point",
+          "per": "₹100 spent",
+          "condition": "On weekdays"
+        },
+        {
+          "rate": "2 Reward Points",
+          "per": "₹100 spent",
+          "condition": "On weekends"
+        },
+        {
+          "rate": "1 Reward Point",
+          "per": "₹100 spent",
+          "condition": "On medical, automobile, and telecom transactions throughout the week"
+        }
+      ],
+      "exclusions": [
+        "Fuel transactions",
+        "Utility bills",
+        "Rental payments",
+        "Education institution fees",
+        "Government charges",
+        "Insurance payments"
+      ],
+      "redemptionOptions": [
+        {
+          "method": "Cash Credit",
+          "rate": "1 Reward Point = ₹0.50",
+          "maxRedemption": "5,000 reward points per statement cycle"
+        },
+        {
+          "method": "Krisflyer Miles",
+          "rate": "400 Reward Points = 100 Krisflyer Miles",
+          "minimumPoints": 500
+        },
+        {
+          "method": "IndusMoments Portal",
+          "options": ["Products", "Gift vouchers"]
+        }
+      ]
+    },
+    "benefits": [
+      {
+        "type": "Movie",
+        "details": [
+          {
+            "name": "BookMyShow Offer",
+            "value": "Buy One Get One free on movie tickets",
+            "frequency": "1 free ticket per month",
+            "maxDiscount": "₹200 per ticket"
+          },
+          {
+            "name": "Food and Beverages Discount",
+            "value": "₹50 off",
+            "condition": "When booking movie tickets on BookMyShow"
+          }
+        ]
+      },
+      {
+        "type": "Milestone",
+        "details": [
+          {
+            "name": "Bonus Reward Points",
+            "value": "3,000 points",
+            "condition": "On annual spend of ₹5 lakhs or more",
+            "creditPeriod": "Within 45 days of one year's completion"
+          }
+        ]
+      },
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "1%",
+            "condition": "On all fuel transactions at authorized fuel stations in India"
+          }
+        ]
+      },
+      {
+        "type": "Insurance",
+        "details": [
+          {
+            "name": "Air Accidental Cover",
+            "value": "₹25 Lakhs"
+          },
+          {
+            "name": "Lost Baggage Insurance",
+            "value": "₹1 Lakh"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "details": "Not specified in the provided information"
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Online",
+          "isAvailable": true
+        }
+      ]
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Entry-level credit card users",
+        "Those looking for a lifetime free card",
+        "Frequent shoppers",
+        "Movie enthusiasts"
+      ],
+      "notRecommendedFor": [
+        "High spenders looking for premium benefits",
+        "Frequent travelers seeking lounge access",
+        "Those looking for high reward rates on all spends"
+      ]
+    }
+  }

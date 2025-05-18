@@ -1,0 +1,164 @@
+{
+    "id": "hdfc_millennia_credit",
+    "card": {
+      "cardName": "HDFC Bank Millennia Credit Card",
+      "cardIssuer": "HDFC Bank",
+      "ratings": "4.8/5",
+      "categories": ["Cashback", "Shopping"],
+      "networkType": "Visa/Mastercard",
+      "targetAudience": "Gen-Y, Millennials, Young Professionals",
+      "applyLink": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/millennia-credit-card"
+    },
+    "presentation": {
+      "description": "A cashback credit card targeting millennials with rewards on popular online merchants",
+      "highlightFeatures": [
+        "5% cashback on popular online merchants",
+        "1% cashback on other eligible spends",
+        "Quarterly spend benefits"
+      ],
+      "marketingTagline": "The credit card for the millennial lifestyle"
+    },
+    "financials": {
+      "fees": {
+        "joining": {
+          "amount": "₹1,000",
+          "tax": "Plus applicable GST"
+        },
+        "renewal": {
+          "amount": "₹1,000",
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Spend ₹1,00,000 or more in an anniversary year"]
+        }
+      },
+      "charges": [
+        {
+          "type": "Interest Rate",
+          "details": "As per HDFC Bank's standard rates"
+        },
+        {
+          "type": "Cash Advance Fee",
+          "details": "2.5% of the amount withdrawn or ₹500, whichever is higher"
+        },
+        {
+          "type": "Late Payment Fee",
+          "details": "Up to ₹950 depending on the outstanding amount"
+        }
+      ]
+    },
+    "rewards": {
+      "type": "Cashback (as CashPoints)",
+      "structure": [
+        {
+          "category": "Partner Online Merchants",
+          "rate": "5%",
+          "merchants": ["Amazon", "BookMyShow", "Cult.fit", "Flipkart", "Myntra", "Sony LIV", "Swiggy", "Tata CLiQ", "Uber", "Zomato"],
+          "cap": "1,000 CashPoints per statement cycle"
+        },
+        {
+          "category": "Other Eligible Spends",
+          "rate": "1%",
+          "cap": "1,000 CashPoints per statement cycle"
+        }
+      ],
+      "redemptionOptions": [
+        {
+          "method": "Statement Credit",
+          "rate": "1 CashPoint = ₹1",
+          "minimumPoints": 500,
+          "fee": "₹50 per redemption"
+        },
+        {
+          "method": "Product Catalog / Flights / Hotels",
+          "rate": "1 CashPoint = ₹0.30"
+        },
+        {
+          "method": "Airmiles",
+          "rate": "1 CashPoint = 0.30 Airmiles"
+        }
+      ],
+      "pointsValidity": "2 years"
+    },
+    "benefits": [
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Bonus CashPoints",
+            "value": "1,000 CashPoints",
+            "condition": "On successful realization of joining fee"
+          }
+        ]
+      },
+      {
+        "type": "Dining",
+        "details": [
+          {
+            "name": "Swiggy Dineout Discount",
+            "value": "₹200 off",
+            "condition": "Minimum order value of ₹2,000, valid twice per month"
+          }
+        ]
+      },
+      {
+        "type": "Quarterly Spend",
+        "details": [
+          {
+            "name": "Gift Vouchers",
+            "value": "₹1,000",
+            "condition": "On spends of ₹1 lakh or more each quarter"
+          }
+        ]
+      },
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "1%",
+            "condition": "Minimum payment of ₹400, maximum waiver of ₹250 per statement cycle"
+          }
+        ]
+      }
+    ],
+    "eligibility": {
+      "ageRequirement": {
+        "minimum": 21,
+        "maximum": 40
+      },
+      "incomeRequirement": [
+        {
+          "employmentType": "Salaried",
+          "minimumIncome": "₹35,000 per month"
+        },
+        {
+          "employmentType": "Self-employed",
+          "minimumIncome": "₹6,00,000 per annum (as per ITR)"
+        }
+      ]
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Online",
+          "isAvailable": true,
+          "url": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/millennia-credit-card"
+        },
+        {
+          "type": "Branch",
+          "isAvailable": true
+        }
+      ]
+    },
+    "customerInsights": {
+      "recommendedFor": [
+        "Young professionals starting their credit journey",
+        "Frequent online shoppers",
+        "Users of partner merchants (Amazon, Flipkart, Swiggy, etc.)"
+      ],
+      "notRecommendedFor": [
+        "High spenders looking for premium benefits",
+        "Those who primarily make offline purchases",
+        "Users seeking travel-specific rewards"
+      ]
+    }
+  }
