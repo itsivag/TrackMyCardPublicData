@@ -1,13 +1,23 @@
 {
-    "id": "hsbc_live_plus",
+    "id": "hsbc_live_plus_credit",
     "card": {
       "cardName": "HSBC Live+ Credit Card",
       "cardIssuer": "HSBC Bank",
       "ratings": "4.6/5",
       "categories": ["Shopping", "Food"],
-      "targetAudience": "Online shoppers, Grocery and dining enthusiasts"
+      "networkType": "Visa",
+      "targetAudience": "Online shoppers, Grocery and dining enthusiasts",
+      "applyLink": "https://www.hsbc.co.in/credit-cards/products/live-plus/"
     },
     "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.hsbc.co.in/content/dam/hsbc/in/en/credit-cards/products/live-plus/live-plus-credit-card.png",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      },
       "description": "A cashback credit card offering high rewards on grocery, food delivery, and dining spends",
       "highlightFeatures": [
         "10% cashback on grocery, food delivery, and dining",
@@ -21,18 +31,42 @@
       "fees": {
         "joining": {
           "amount": "₹999",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Not applicable"]
         },
         "renewal": {
           "amount": "₹999",
           "tax": "Plus applicable GST",
           "waiverConditions": ["Annual spend of ₹200,000"]
+        },
+        "additionalCards": {
+          "amount": "₹0",
+          "tax": "Not applicable"
         }
       },
       "charges": [
         {
           "type": "Interest Rate",
-          "details": "As per HSBC Bank's standard rates"
+          "value": "3.75% per month",
+          "annualizedValue": "45% annually",
+          "details": "Charged on revolving credit and cash advances"
+        },
+        {
+          "type": "Foreign Currency Markup",
+          "value": "3.5%",
+          "details": "On all international transactions"
+        },
+        {
+          "type": "Cash Advance Fee",
+          "value": "2.5%",
+          "condition": "Minimum of ₹500",
+          "details": "On cash withdrawals from ATMs"
+        },
+        {
+          "type": "Late Payment Fee",
+          "value": "Up to ₹1,300",
+          "condition": "Based on outstanding amount",
+          "details": "Ranges from ₹400 to ₹1,300 depending on outstanding balance"
         }
       ]
     },
@@ -42,7 +76,7 @@
         {
           "category": "Dining, Grocery, Food Delivery",
           "rate": "10%",
-          "cap": "₹1,000 per statement cycle"
+          "details": "Maximum cashback of ₹1,000 per statement cycle"
         },
         {
           "category": "All Other Eligible Transactions",
@@ -50,13 +84,27 @@
           "details": "Unlimited cashback"
         }
       ],
-      "exclusions": [
+      "caps": {
+        "overall": "No limit on total cashback",
+        "categorySpecific": [
+          {
+            "category": "Dining, Grocery, Food Delivery",
+            "cap": "₹1,000 per statement cycle"
+          }
+        ]
+      },
+      "redemptionOptions": [
+        {
+          "method": "Automatic Credit",
+          "description": "Cashback automatically credited to card account within 45 days of statement date"
+        }
+      ],
+      "excludedCategories": [
         "Fuel", "E-wallets", "Property management fees", "Rental commissions",
         "Rental payments", "Education", "Government-related", "Insurance",
         "Jewelry & antique items", "Gambling", "Tolls", "Bridge fees",
         "Collection agencies", "Charity", "Money transfers", "Wholesale clubs"
-      ],
-      "creditPeriod": "Within 45 days of the card statement date"
+      ]
     },
     "benefits": [
       {
@@ -67,7 +115,8 @@
             "value": "₹1,000",
             "condition": "On spending ₹20,000 within first 30 days of card issuance"
           }
-        ]
+        ],
+        "totalValue": "₹1,000"
       },
       {
         "type": "Travel",
@@ -75,9 +124,10 @@
           {
             "name": "Domestic Lounge Access",
             "value": "4 complimentary visits per annum",
-            "frequency": "1 per quarter"
+            "condition": "1 visit per quarter"
           }
-        ]
+        ],
+        "totalValue": "₹4,000"
       },
       {
         "type": "Entertainment",
@@ -85,11 +135,10 @@
           {
             "name": "Movie Ticket Offer",
             "value": "Buy 2 Get 1 Free",
-            "partner": "BookMyShow",
-            "condition": "On Saturdays",
-            "maxDiscount": "₹250 per free ticket"
+            "condition": "On Saturdays, maximum discount of ₹250 per free ticket"
           }
-        ]
+        ],
+        "totalValue": "₹250 per month"
       },
       {
         "type": "Dining",
@@ -97,10 +146,10 @@
           {
             "name": "Restaurant Discount",
             "value": "Up to 15% off",
-            "partner": "EazyDiner",
-            "locations": "Over 1,000 restaurants across major cities in India"
+            "condition": "At over 1,000 restaurants across major cities in India"
           }
-        ]
+        ],
+        "totalValue": "₹1,500 per month"
       },
       {
         "type": "Insurance",
@@ -110,47 +159,76 @@
             "value": "₹3,00,000",
             "condition": "Up to 24 hours prior to reporting card loss"
           }
-        ]
+        ],
+        "totalValue": "₹3,00,000"
       }
     ],
     "eligibility": {
       "ageRequirement": {
-        "minimum": 18,
+        "minimum": 21,
         "maximum": 65
       },
-      "incomeRequirement": {
-        "minimumAnnualIncome": "₹4,00,000",
-        "applicableFor": ["Salaried individuals"]
+      "incomeRequirement": [
+        {
+          "employmentType": "Salaried",
+          "minimumIncome": "₹33,333 per month",
+          "preferredIncomeLevel": "₹50,000+ per month"
+        },
+        {
+          "employmentType": "Self-employed",
+          "minimumIncome": "₹4,00,000 per annum",
+          "preferredIncomeLevel": "₹6,00,000+ per annum"
+        }
+      ],
+      "creditScore": {
+        "minimum": "750+",
+        "recommended": "800+"
       },
+      "requiredDocuments": [
+        {
+          "type": "Identity Proof",
+          "options": ["PAN Card", "Aadhaar Card"]
+        },
+        {
+          "type": "Address Proof",
+          "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]
+        },
+        {
+          "type": "Income Proof",
+          "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]
+        }
+      ],
+      "residentialStatus": ["Indian Resident"],
       "residenceRequirement": [
         "Chennai", "Gurgaon", "Delhi NCR", "Pune", "Noida", "Hyderabad", 
         "Mumbai", "Bangalore", "Kochi", "Coimbatore", "Jaipur", "Chandigarh", 
         "Ahmedabad", "Kolkata"
-      ],
-      "otherCriteria": [
-        "Indian citizen"
       ]
     },
     "applicationProcess": {
       "channels": [
         {
           "type": "Online",
-          "isAvailable": true
+          "isAvailable": true,
+          "url": "https://www.hsbc.co.in/credit-cards/products/live-plus/"
         },
         {
           "type": "Phone Banking",
-          "isAvailable": true
+          "isAvailable": true,
+          "details": "Call 18002673456 or 18001212208"
         },
         {
-          "type": "Branch Visit",
-          "isAvailable": true
+          "type": "Branch",
+          "isAvailable": true,
+          "details": "Visit nearest HSBC branch"
         }
-      ]
-    },
-    "customerSupport": {
-      "phoneNumbers": ["18002673456", "18001212208"],
-      "timings": "6:30 a.m. to 8:40 p.m.",
-      "cardLossReporting": "24x7"
+      ],
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through HSBC website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing HSBC Bank customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [
@@ -163,5 +241,37 @@
         "Users looking for premium lifestyle benefits",
         "People who mostly spend on excluded categories"
       ]
-    }
-  }
+    },
+    "customerSupport": {
+      "channels": [
+        {
+          "type": "Phone",
+          "value": "18002673456",
+          "availability": "6:30 AM - 8:40 PM"
+        },
+        {
+          "type": "Email",
+          "value": "hsbc.creditcards@hsbc.co.in",
+          "responseTime": "24-48 hours"
+        },
+        {
+          "type": "Chat",
+          "isAvailable": true,
+          "availability": "9AM - 6PM, Monday to Saturday"
+        }
+      ],
+      "dedicatedSupport": false
+    },
+    "changeLog": [
+      {
+        "date": "2024-04-20",
+        "type": "Enhancement",
+        "change": "Added more partner restaurants for dining discounts"
+      },
+      {
+        "date": "2024-02-15",
+        "type": "Policy Change",
+        "change": "Updated annual fee waiver condition to ₹2,00,000 (increased from ₹1,50,000)"
+      }
+    ]
+}

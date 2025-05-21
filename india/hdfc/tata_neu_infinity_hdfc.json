@@ -3,15 +3,21 @@
     "card": {
       "cardName": "Tata Neu Infinity HDFC Bank Credit Card",
       "cardIssuer": "HDFC Bank",
-      "cobranded": {
-        "partner": "Tata Neu"
-      },
-      "cardNetwork": ["Visa", "RuPay"],
       "ratings": "4.5/5",
       "categories": ["Travel", "Shopping"],
-      "targetAudience": "Frequent shoppers, Tata brand loyalists"
+      "networkType": "Visa/RuPay",
+      "targetAudience": "Frequent shoppers, Tata brand loyalists",
+      "applyLink": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/tata-neu-infinity-hdfc-bank-credit-card"
     },
     "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.hdfcbank.com/static/features/common/images/tata-neu-infinity-credit-card.png",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      },
       "description": "A premium co-branded credit card offering high rewards on Tata Neu and partner brand purchases",
       "highlightFeatures": [
         "Up to 10% rewards on Tata Neu purchases",
@@ -25,27 +31,36 @@
       "fees": {
         "joining": {
           "amount": "₹1,499",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Not applicable"]
         },
         "renewal": {
           "amount": "₹1,499",
           "tax": "Plus applicable GST",
           "waiverConditions": ["Annual spend of ₹3 lakhs or more in the previous year"]
+        },
+        "additionalCards": {
+          "amount": "₹1,499",
+          "tax": "Plus applicable GST"
         }
       },
       "charges": [
         {
           "type": "Interest Rate",
           "value": "3.75% per month",
-          "annualizedValue": "45.0% per annum"
+          "annualizedValue": "45.0% per annum",
+          "details": "Charged on revolving credit and cash advances"
         },
         {
-          "type": "Cash Advance",
-          "value": "2.5% of withdrawn amount or ₹500, whichever is higher"
+          "type": "Cash Advance Fee",
+          "value": "2.5%",
+          "condition": "Minimum of ₹500",
+          "details": "On cash withdrawals from ATMs"
         },
         {
           "type": "Foreign Currency Markup",
-          "value": "2% of the transaction amount"
+          "value": "2%",
+          "details": "On international transactions"
         }
       ]
     },
@@ -54,27 +69,36 @@
       "structure": [
         {
           "category": "Tata Neu app/website purchases",
-          "rate": "5%"
+          "rate": "5%",
+          "details": "On all purchases made through Tata Neu app or website"
         },
         {
           "category": "Additional rewards with Neu Pass activation",
-          "rate": "5%"
+          "rate": "5%",
+          "details": "Additional rewards when Neu Pass is activated"
         },
         {
           "category": "Partner Tata brands",
           "rate": "5%",
-          "brands": ["AirAsia India", "Tata 1mg", "Tata CLiQ", "Croma", "cult.fit", "Big Basket", "Westside", "IHCL"]
+          "details": "On purchases at AirAsia India, Tata 1mg, Tata CLiQ, Croma, cult.fit, Big Basket, Westside, IHCL"
         },
         {
           "category": "UPI spends",
           "rate": "1.5%",
-          "cap": "500 NeuCoins per calendar month"
+          "details": "On all UPI transactions"
         }
       ],
-      "exclusions": ["Wallet reloads", "Fuel purchases", "Rent", "Cash withdrawals", "EMI transactions"],
-      "maxEarning": "50,000 NeuCoins per statement cycle",
-      "redemptionValue": "1 NeuCoin = ₹1",
-      "redemptionOptions": ["AirAsia India", "Bigbasket", "Croma", "Westside", "Tata CLiQ", "Tata CLiQ Luxury", "IHCL", "TATA 1MG", "Qmin"]
+      "caps": {
+        "overall": "50,000 NeuCoins per statement cycle",
+        "categorySpecific": ["500 NeuCoins per calendar month on UPI spends"]
+      },
+      "redemptionOptions": [
+        {
+          "method": "Tata Brands",
+          "description": "Redeem at AirAsia India, Bigbasket, Croma, Westside, Tata CLiQ, Tata CLiQ Luxury, IHCL, TATA 1MG, Qmin"
+        }
+      ],
+      "excludedCategories": ["Wallet reloads", "Fuel purchases", "Rent", "Cash withdrawals", "EMI transactions"]
     },
     "benefits": [
       {
@@ -85,7 +109,8 @@
             "value": "1,499 NeuCoins",
             "condition": "On first transaction within 30 days of card issuance"
           }
-        ]
+        ],
+        "totalValue": "₹1,499"
       },
       {
         "type": "Travel",
@@ -93,13 +118,12 @@
           {
             "name": "Domestic Lounge Access",
             "value": "8 complimentary visits per year",
-            "frequency": "2 per quarter"
+            "condition": "2 visits per quarter"
           },
           {
             "name": "International Lounge Access",
             "value": "4 complimentary visits per year",
-            "frequency": "1 per quarter",
-            "additionalInfo": "Via Priority Pass for Visa variant, direct access for RuPay variant"
+            "condition": "1 visit per quarter, via Priority Pass for Visa variant, direct access for RuPay variant"
           }
         ]
       },
@@ -108,15 +132,18 @@
         "details": [
           {
             "name": "Air Accident Cover",
-            "value": "₹1 Crore"
+            "value": "₹1 Crore",
+            "condition": "Valid on all flights booked using the card"
           },
           {
             "name": "Emergency Overseas Hospitalization Cover",
-            "value": "₹15 Lakhs"
+            "value": "₹15 Lakhs",
+            "condition": "Valid for international travel"
           },
           {
             "name": "Lost Card Liability Cover",
-            "value": "₹9 Lakhs"
+            "value": "₹9 Lakhs",
+            "condition": "Valid from the time of reporting the loss"
           }
         ]
       },
@@ -126,8 +153,7 @@
           {
             "name": "Fuel Surcharge Waiver",
             "value": "1%",
-            "condition": "On transactions between ₹400 and ₹5,000",
-            "maxWaiver": "₹500 per statement cycle"
+            "condition": "On transactions between ₹400 and ₹5,000, maximum waiver of ₹500 per statement cycle"
           }
         ]
       }
@@ -135,21 +161,59 @@
     "eligibility": {
       "ageRequirement": {
         "minimum": 21,
-        "maximum": {
-          "salaried": 60,
-          "selfEmployed": 65
-        }
+        "maximum": 60
       },
       "incomeRequirement": [
         {
           "employmentType": "Salaried",
-          "minimumIncome": "₹1 lakh per month"
+          "minimumIncome": "₹1,00,000 per month",
+          "preferredIncomeLevel": "₹1,50,000+ per month"
         },
         {
           "employmentType": "Self-employed",
-          "minimumIncome": "₹12 lakhs per annum"
+          "minimumIncome": "₹12,00,000 per annum",
+          "preferredIncomeLevel": "₹15,00,000+ per annum"
         }
-      ]
+      ],
+      "creditScore": {
+        "minimum": "750+",
+        "recommended": "800+"
+      },
+      "requiredDocuments": [
+        {
+          "type": "Identity Proof",
+          "options": ["PAN Card", "Aadhaar Card"]
+        },
+        {
+          "type": "Address Proof",
+          "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]
+        },
+        {
+          "type": "Income Proof",
+          "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]
+        }
+      ],
+      "residentialStatus": ["Indian Resident"]
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Tata Neu App",
+          "isAvailable": true,
+          "url": "https://www.tataneu.com/credit-card"
+        },
+        {
+          "type": "HDFC Bank",
+          "isAvailable": true,
+          "details": "Visit any HDFC Bank branch with required documents"
+        }
+      ],
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through HDFC Bank website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing HDFC Bank customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [
@@ -161,5 +225,37 @@
         "Infrequent credit card users",
         "Those who rarely shop from Tata brands"
       ]
-    }
-  }
+    },
+    "customerSupport": {
+      "channels": [
+        {
+          "type": "Phone",
+          "value": "1800-266-4332",
+          "availability": "24x7"
+        },
+        {
+          "type": "Email",
+          "value": "support@hdfcbank.com",
+          "responseTime": "24-48 hours"
+        },
+        {
+          "type": "Chat",
+          "isAvailable": true,
+          "availability": "9AM - 6PM, Monday to Saturday"
+        }
+      ],
+      "dedicatedSupport": false
+    },
+    "changeLog": [
+      {
+        "date": "2024-04-20",
+        "type": "Enhancement",
+        "change": "Added more partner merchants for 5% rewards"
+      },
+      {
+        "date": "2024-02-15",
+        "type": "Policy Change",
+        "change": "Updated annual fee waiver condition to ₹3,00,000 (increased from ₹2,50,000)"
+      }
+    ]
+}

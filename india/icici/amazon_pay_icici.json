@@ -1,18 +1,23 @@
 {
-    "id": 1,
+    "id": "amazon_pay_icici_credit",
     "card": {
-      "id": "amazon_pay_icici_credit",
       "cardName": "Amazon Pay ICICI Bank Credit Card",
       "cardIssuer": "ICICI Bank",
-      "cobranded": {
-        "partner": "Amazon",
-        "network": "Visa"
-      },
       "ratings": "5/5",
       "categories": ["Shopping", "Cashback"],
-      "targetAudience": "Amazon shoppers, especially Prime members"
+      "networkType": "Visa",
+      "targetAudience": "Amazon shoppers, especially Prime members",
+      "applyLink": "https://www.icicibank.com/Personal-Banking/cards/credit-cards/amazon-pay-credit-card.page"
     },
     "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.icicibank.com/Personal-Banking/cards/credit-cards/amazon-pay-credit-card.page",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      },
       "description": "A co-branded shopping card offering high cashback on Amazon purchases and partner merchants",
       "highlightFeatures": [
         "Lifetime free card",
@@ -26,27 +31,36 @@
       "fees": {
         "joining": {
           "amount": "₹0",
-          "details": "Lifetime free card"
+          "tax": "Not applicable",
+          "waiverConditions": ["Lifetime free card"]
         },
         "renewal": {
           "amount": "₹0",
-          "details": "Lifetime free card"
+          "tax": "Not applicable",
+          "waiverConditions": ["Lifetime free card"]
+        },
+        "additionalCards": {
+          "amount": "₹0",
+          "tax": "Not applicable"
         }
       },
       "charges": [
         {
           "type": "Interest Rate",
           "value": "3.5% to 3.8% per month",
-          "annualizedValue": "42% to 45.6% annually"
+          "annualizedValue": "42% to 45.6% annually",
+          "details": "Charged on revolving credit and cash advances"
         },
         {
           "type": "Cash Advance Fee",
-          "value": "2.5% of transaction amount",
-          "minimum": "₹500"
+          "value": "2.5%",
+          "condition": "Minimum of ₹500",
+          "details": "On cash withdrawals from ATMs"
         },
         {
-          "type": "Foreign Currency Mark-Up",
-          "value": "3.5% of transaction amount"
+          "type": "Foreign Currency Markup",
+          "value": "3.5%",
+          "details": "On international transactions"
         }
       ]
     },
@@ -55,32 +69,38 @@
       "structure": [
         {
           "category": "Amazon Purchases (Prime members)",
-          "rate": "5%"
+          "rate": "5%",
+          "details": "On all eligible Amazon purchases"
         },
         {
           "category": "Amazon Purchases (Non-Prime members)",
-          "rate": "3%"
+          "rate": "3%",
+          "details": "On all eligible Amazon purchases"
         },
         {
           "category": "Partner Merchants",
           "rate": "2%",
-          "condition": "When using Amazon Pay option"
+          "details": "When using Amazon Pay option"
         },
         {
           "category": "Other Eligible Transactions",
-          "rate": "1%"
+          "rate": "1%",
+          "details": "On all other eligible transactions"
         }
       ],
-      "exceptions": [
-        "E-books, gift cards, utility bill payments, loading Amazon Pay balance, DTH, and mobile recharge earn 2% instead of 5% on Amazon",
-        "No rewards on gold, silver, precious metals, tax payments, EMI purchases on Amazon, rent transactions, and fuel purchases"
-      ],
+      "caps": {
+        "overall": "No cap on total cashback earned",
+        "categorySpecific": [
+          "E-books, gift cards, utility bill payments, loading Amazon Pay balance, DTH, and mobile recharge earn 2% instead of 5% on Amazon"
+        ]
+      },
       "redemptionOptions": [
         {
           "method": "Amazon Pay Balance",
           "description": "Automatically credited at the end of each billing cycle"
         }
-      ]
+      ],
+      "excludedCategories": ["Gold", "Silver", "Precious metals", "Tax payments", "EMI purchases", "Rent transactions", "Fuel purchases"]
     },
     "benefits": [
       {
@@ -93,9 +113,11 @@
           },
           {
             "name": "EazyDiner Membership",
-            "value": "One month free"
+            "value": "One month free",
+            "condition": "On card activation"
           }
-        ]
+        ],
+        "totalValue": "₹2,500"
       },
       {
         "type": "Fuel",
@@ -119,43 +141,61 @@
       }
     ],
     "eligibility": {
+      "ageRequirement": {
+        "minimum": 21,
+        "maximum": 60
+      },
       "incomeRequirement": [
         {
-          "customerType": "ICICI Bank Customers",
-          "minimumIncome": "₹25,000 per month"
+          "employmentType": "ICICI Bank Customers",
+          "minimumIncome": "₹25,000 per month",
+          "preferredIncomeLevel": "₹35,000+ per month"
         },
         {
-          "customerType": "Other Applicants",
-          "minimumIncome": "₹35,000 per month"
+          "employmentType": "Other Applicants",
+          "minimumIncome": "₹35,000 per month",
+          "preferredIncomeLevel": "₹50,000+ per month"
         }
-      ]
+      ],
+      "creditScore": {
+        "minimum": "700+",
+        "recommended": "750+"
+      },
+      "requiredDocuments": [
+        {
+          "type": "Identity Proof",
+          "options": ["PAN Card", "Aadhaar Card"]
+        },
+        {
+          "type": "Address Proof",
+          "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]
+        },
+        {
+          "type": "Income Proof",
+          "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]
+        }
+      ],
+      "residentialStatus": ["Indian Resident"]
     },
     "applicationProcess": {
       "channels": [
         {
           "type": "Amazon Website",
-          "isAvailable": true
+          "isAvailable": true,
+          "url": "https://www.amazon.in/credit-card"
         },
         {
           "type": "ICICI Bank Website",
-          "isAvailable": true
+          "isAvailable": true,
+          "url": "https://www.icicibank.com/Personal-Banking/cards/credit-cards/amazon-pay-credit-card.page"
         }
       ],
-      "kycOptions": [
-        {
-          "type": "Video KYC",
-          "details": "PAN and Aadhar verification through video call"
-        },
-        {
-          "type": "Offline KYC",
-          "details": "Bank official visits for document verification"
-        }
-      ]
-    },
-    "customerSupport": {
-      "phoneNumber": "18601207777",
-      "email": "customer.care@icicibank.com",
-      "escalationEmail": "headservicequality@icicibank.com"
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through ICICI Bank website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing ICICI Bank customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [
@@ -168,5 +208,37 @@
         "Those who prefer offline shopping",
         "Users looking for premium lifestyle benefits"
       ]
-    }
-  }
+    },
+    "customerSupport": {
+      "channels": [
+        {
+          "type": "Phone",
+          "value": "18601207777",
+          "availability": "24x7"
+        },
+        {
+          "type": "Email",
+          "value": "customer.care@icicibank.com",
+          "responseTime": "24-48 hours"
+        },
+        {
+          "type": "Chat",
+          "isAvailable": true,
+          "availability": "9AM - 6PM, Monday to Saturday"
+        }
+      ],
+      "dedicatedSupport": false
+    },
+    "changeLog": [
+      {
+        "date": "2024-04-20",
+        "type": "Enhancement",
+        "change": "Added more partner merchants for 2% cashback"
+      },
+      {
+        "date": "2024-02-15",
+        "type": "Policy Change",
+        "change": "Updated cashback rates for non-Prime members"
+      }
+    ]
+}

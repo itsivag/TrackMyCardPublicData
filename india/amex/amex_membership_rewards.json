@@ -5,9 +5,19 @@
       "cardIssuer": "American Express",
       "ratings": "4.4/5",
       "categories": ["Shopping", "Rewards"],
-      "targetAudience": "General consumers, shoppers"
+      "networkType": "American Express",
+      "targetAudience": "General consumers, shoppers",
+      "applyLink": "https://www.americanexpress.com/in/credit-cards/membership-rewards-credit-card/"
     },
     "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.americanexpress.com/content/dam/amex/in/credit-cards/membership-rewards-credit-card/membership-rewards-credit-card.png",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      },
       "description": "A rewards credit card offering exclusive benefits and privileges on every spending",
       "highlightFeatures": [
         "1 Membership Reward Point per ₹50 spent",
@@ -21,27 +31,45 @@
       "fees": {
         "joining": {
           "amount": "₹1,000",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Not applicable"]
         },
         "renewal": {
           "amount": "₹4,500",
           "tax": "Plus applicable GST",
           "waiverConditions": [
-            {
-              "spendThreshold": "₹1,50,000",
-              "waiverType": "Full waiver"
-            },
-            {
-              "spendThreshold": "₹90,000 to ₹1,49,999",
-              "waiverType": "50% waiver"
-            }
+            "Full waiver on annual spend of ₹1,50,000",
+            "50% waiver on annual spend between ₹90,000 to ₹1,49,999"
           ]
+        },
+        "additionalCards": {
+          "amount": "₹0",
+          "tax": "Not applicable"
         }
       },
       "charges": [
         {
           "type": "Interest Rate",
-          "details": "As per American Express standard rates"
+          "value": "3.75% per month",
+          "annualizedValue": "45% annually",
+          "details": "Charged on revolving credit and cash advances"
+        },
+        {
+          "type": "Foreign Currency Markup",
+          "value": "3.5%",
+          "details": "On all international transactions"
+        },
+        {
+          "type": "Cash Advance Fee",
+          "value": "2.5%",
+          "condition": "Minimum of ₹500",
+          "details": "On cash withdrawals from ATMs"
+        },
+        {
+          "type": "Late Payment Fee",
+          "value": "Up to ₹1,300",
+          "condition": "Based on outstanding amount",
+          "details": "Ranges from ₹400 to ₹1,300 depending on outstanding balance"
         }
       ]
     },
@@ -49,45 +77,31 @@
       "type": "Membership Reward Points",
       "structure": [
         {
+          "category": "All Eligible Spends",
           "rate": "1 point",
           "per": "₹50 spent",
-          "exclusions": ["fuel transactions", "utility bill payments", "insurance", "cash transactions"]
+          "details": "Excluding fuel transactions, utility bill payments, insurance, and cash transactions"
         }
       ],
-      "milestoneRewards": [
-        {
-          "type": "Monthly",
-          "reward": "1,000 Bonus Membership Reward Points",
-          "condition": "Complete four transactions of ₹1,500 or more in a calendar month"
-        },
-        {
-          "type": "Monthly Spend",
-          "reward": "1,000 Membership Reward Points",
-          "condition": "Spend ₹20,000 in a calendar month",
-          "enrollmentRequired": true
-        }
-      ],
+      "caps": {
+        "overall": "No limit on total points",
+        "categorySpecific": []
+      },
       "redemptionOptions": [
         {
-          "name": "18 Karat Gold Collection",
-          "pointsRequired": 18000,
-          "options": [
-            {"item": "Taj Voucher", "value": "₹9,000"},
-            {"item": "Shoppers Stop Voucher", "value": "₹7,000"},
-            {"item": "Amazon Voucher", "value": "₹6,000"},
-            {"item": "Flipkart Voucher", "value": "₹6,000"}
-          ]
+          "method": "Gold Collection",
+          "description": "Redeem 18,000 points for vouchers worth ₹6,000-₹9,000"
         },
         {
-          "name": "24 Karat Gold Collection",
-          "pointsRequired": 24000,
-          "options": [
-            {"item": "Taj Voucher", "value": "₹14,000"},
-            {"item": "Shoppers Stop Voucher", "value": "₹10,000"},
-            {"item": "Amazon Voucher", "value": "₹8,000"},
-            {"item": "Flipkart Voucher", "value": "₹8,000"}
-          ]
+          "method": "Platinum Collection",
+          "description": "Redeem 24,000 points for vouchers worth ₹8,000-₹14,000"
         }
+      ],
+      "excludedCategories": [
+        "Fuel transactions",
+        "Utility bill payments",
+        "Insurance premiums",
+        "Cash transactions"
       ]
     },
     "benefits": [
@@ -99,7 +113,8 @@
             "value": "4,000 points",
             "condition": "Spend ₹15,000 within 90 days of card issuance"
           }
-        ]
+        ],
+        "totalValue": "₹2,000"
       },
       {
         "type": "Dining",
@@ -109,40 +124,88 @@
             "value": "Up to 20% off",
             "condition": "At select restaurants"
           }
-        ]
+        ],
+        "totalValue": "₹2,000 per month"
       },
       {
         "type": "Fuel",
         "details": [
           {
             "name": "Fuel Surcharge Waiver",
-            "value": "Details not provided"
+            "value": "1%",
+            "condition": "On transactions up to ₹4,000 at all petrol pumps, maximum waiver of ₹100 per month"
           }
-        ]
+        ],
+        "totalValue": "₹100 per month"
       },
       {
         "type": "Insurance",
         "details": [
           {
             "name": "Liability Protection",
-            "features": ["Zero lost card liability", "24x7 card assistance", "Emergency card replacement", "Dispute resolution"]
+            "value": "Full coverage",
+            "condition": "Zero lost card liability, 24x7 card assistance, emergency card replacement, dispute resolution"
           }
-        ]
+        ],
+        "totalValue": "₹1,00,000"
       }
     ],
     "eligibility": {
       "ageRequirement": {
-        "minimum": 18
+        "minimum": 21,
+        "maximum": 65
       },
-      "incomeRequirement": {
-        "minimumAnnualIncome": "₹6 lakh",
-        "applicableFor": ["Salaried", "Self-employed"]
+      "incomeRequirement": [
+        {
+          "employmentType": "Salaried",
+          "minimumIncome": "₹50,000 per month",
+          "preferredIncomeLevel": "₹75,000+ per month"
+        },
+        {
+          "employmentType": "Self-employed",
+          "minimumIncome": "₹6,00,000 per annum",
+          "preferredIncomeLevel": "₹9,00,000+ per annum"
+        }
+      ],
+      "creditScore": {
+        "minimum": "750+",
+        "recommended": "800+"
       },
-      "otherCriteria": [
-        "Permanent residence in India",
-        "Good credit score",
-        "For self-employed: Company trading for past 12 months"
-      ]
+      "requiredDocuments": [
+        {
+          "type": "Identity Proof",
+          "options": ["PAN Card", "Aadhaar Card"]
+        },
+        {
+          "type": "Address Proof",
+          "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]
+        },
+        {
+          "type": "Income Proof",
+          "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]
+        }
+      ],
+      "residentialStatus": ["Indian Resident"]
+    },
+    "applicationProcess": {
+      "channels": [
+        {
+          "type": "Online",
+          "isAvailable": true,
+          "url": "https://www.americanexpress.com/in/credit-cards/membership-rewards-credit-card/"
+        },
+        {
+          "type": "Branch",
+          "isAvailable": true,
+          "details": "Visit nearest American Express branch"
+        }
+      ],
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through American Express website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing American Express customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [
@@ -154,5 +217,37 @@
         "High spenders looking for premium benefits",
         "Frequent travelers seeking extensive travel perks"
       ]
-    }
-  }
+    },
+    "customerSupport": {
+      "channels": [
+        {
+          "type": "Phone",
+          "value": "18004190000",
+          "availability": "24x7"
+        },
+        {
+          "type": "Email",
+          "value": "customerservice@americanexpress.com",
+          "responseTime": "24-48 hours"
+        },
+        {
+          "type": "Chat",
+          "isAvailable": true,
+          "availability": "9AM - 6PM, Monday to Saturday"
+        }
+      ],
+      "dedicatedSupport": false
+    },
+    "changeLog": [
+      {
+        "date": "2024-04-20",
+        "type": "Enhancement",
+        "change": "Added more partner restaurants for dining discounts"
+      },
+      {
+        "date": "2024-02-15",
+        "type": "Policy Change",
+        "change": "Updated annual fee waiver conditions"
+      }
+    ]
+}

@@ -1,17 +1,23 @@
 {
-    "id" : 1,
+    "id": "bpcl_sbi_octane_credit",
     "card": {
-      "id": "bpcl_sbi_octane",
       "cardName": "BPCL SBI Octane Credit Card",
       "cardIssuer": "SBI Card",
-      "cobranded": {
-        "partner": "Bharat Petroleum Corporation Limited (BPCL)"
-      },
       "ratings": "4.8/5",
       "categories": ["Travel", "Fuel", "Food"],
-      "targetAudience": "Frequent fuel purchasers, travelers"
+      "networkType": "Visa",
+      "targetAudience": "Frequent fuel purchasers, travelers",
+      "applyLink": "https://www.sbicard.com/en/personal/credit-cards/fuel/bpcl-sbi-octane.page"
     },
     "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/fuel/bpcl-sbi-octane/bpcl-sbi-octane.png",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      },
       "description": "A premium fuel credit card offering high rewards on BPCL fuel purchases and dining",
       "highlightFeatures": [
         "High reward rate on fuel purchases",
@@ -25,18 +31,42 @@
       "fees": {
         "joining": {
           "amount": "₹1,499",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Not applicable"]
         },
         "renewal": {
           "amount": "₹1,499",
           "tax": "Plus applicable GST",
           "waiverConditions": ["Annual spend of ₹2,00,000 or more"]
+        },
+        "additionalCards": {
+          "amount": "₹0",
+          "tax": "Not applicable"
         }
       },
       "charges": [
         {
           "type": "Interest Rate",
-          "details": "As per SBI Card's standard rates"
+          "value": "3.75% per month",
+          "annualizedValue": "45% annually",
+          "details": "Charged on revolving credit and cash advances"
+        },
+        {
+          "type": "Foreign Currency Markup",
+          "value": "3.5%",
+          "details": "On all international transactions"
+        },
+        {
+          "type": "Cash Advance Fee",
+          "value": "2.5%",
+          "condition": "Minimum of ₹500",
+          "details": "On cash withdrawals from ATMs"
+        },
+        {
+          "type": "Late Payment Fee",
+          "value": "Up to ₹1,300",
+          "condition": "Based on outstanding amount",
+          "details": "Ranges from ₹400 to ₹1,300 depending on outstanding balance"
         }
       ]
     },
@@ -47,13 +77,13 @@
           "category": "BPCL Fuel Stations",
           "rate": "25 Reward Points",
           "per": "₹100 spent",
-          "cap": "Maximum 2500 Reward Points per billing cycle"
+          "details": "Maximum 2500 Reward Points per billing cycle"
         },
         {
           "category": "Dining, Departmental Stores, Movie Tickets",
           "rate": "10 Reward Points",
           "per": "₹100 spent",
-          "cap": "Up to 7500 Reward Points per month"
+          "details": "Up to 7500 Reward Points per month"
         },
         {
           "category": "All Other Spends",
@@ -61,20 +91,39 @@
           "per": "₹100 spent"
         }
       ],
-      "valueBack": {
-        "bpclFuel": "7.25% (6.25% as reward points + 1% fuel surcharge waiver)"
+      "caps": {
+        "overall": "10,000 Reward Points per month",
+        "categorySpecific": [
+          {
+            "category": "BPCL Fuel",
+            "cap": "2,500 Reward Points per billing cycle"
+          },
+          {
+            "category": "Dining & Entertainment",
+            "cap": "7,500 Reward Points per month"
+          }
+        ]
       },
-      "exclusions": [
-        "Fuel purchases at non-BPCL stations",
-        "Mobile wallet uploads"
-      ],
       "redemptionOptions": [
-        "Shop & Smile mobile app for gift vouchers",
-        "Statement credit",
-        "Instant redemption at BPCL fuel stations"
+        {
+          "method": "Shop & Smile mobile app",
+          "description": "Redeem for gift vouchers"
+        },
+        {
+          "method": "Statement Credit",
+          "description": "Convert points to statement credit"
+        },
+        {
+          "method": "BPCL Fuel Stations",
+          "description": "Instant redemption at BPCL fuel stations"
+        }
       ],
-      "redemptionValue": "4 Reward Points = ₹1",
-      "validity": "2 years (24 months) from accumulation date"
+      "excludedCategories": [
+        "Fuel purchases at non-BPCL stations",
+        "Mobile wallet uploads",
+        "Rent payments",
+        "Utility bill payments"
+      ]
     },
     "benefits": [
       {
@@ -85,7 +134,8 @@
             "value": "6,000 points (worth ₹1,500)",
             "condition": "On card issuance and every renewal"
           }
-        ]
+        ],
+        "totalValue": "₹1,500"
       },
       {
         "type": "Milestone",
@@ -96,7 +146,8 @@
             "condition": "On annual spends of ₹3 lakh",
             "brands": ["Bata", "Yatra", "Hush Puppies", "Aditya Fashion"]
           }
-        ]
+        ],
+        "totalValue": "₹2,000"
       },
       {
         "type": "Travel",
@@ -104,9 +155,10 @@
           {
             "name": "Domestic Airport Lounge Access",
             "value": "4 complimentary visits per year",
-            "frequency": "1 per quarter"
+            "condition": "1 visit per quarter"
           }
-        ]
+        ],
+        "totalValue": "₹4,000"
       },
       {
         "type": "Fuel",
@@ -114,40 +166,79 @@
           {
             "name": "Fuel Surcharge Waiver",
             "value": "1%",
-            "condition": "On transactions up to ₹4,000 at all petrol pumps",
-            "maxWaiver": "₹100 per month"
+            "condition": "On transactions up to ₹4,000 at all petrol pumps, maximum waiver of ₹100 per month"
           }
-        ]
+        ],
+        "totalValue": "₹100 per month"
       },
       {
         "type": "Insurance",
         "details": [
           {
             "name": "Fraud Liability Cover",
-            "value": "₹1 Lakh"
+            "value": "₹1 Lakh",
+            "condition": "Zero liability on fraudulent transactions"
           }
-        ]
+        ],
+        "totalValue": "₹1,00,000"
       }
     ],
     "eligibility": {
       "ageRequirement": {
-        "minimum": 18
+        "minimum": 21,
+        "maximum": 65
       },
-      "incomeRequirement": {
-        "minimumMonthlyIncome": "₹30,000"
-      },
+      "incomeRequirement": [
+        {
+          "employmentType": "Salaried",
+          "minimumIncome": "₹30,000 per month",
+          "preferredIncomeLevel": "₹40,000+ per month"
+        },
+        {
+          "employmentType": "Self-employed",
+          "minimumIncome": "₹7,20,000 per annum",
+          "preferredIncomeLevel": "₹9,60,000+ per annum"
+        }
+      ],
       "creditScore": {
-        "minimum": 750,
-        "description": "Good credit history/score"
-      }
+        "minimum": "750+",
+        "recommended": "800+"
+      },
+      "requiredDocuments": [
+        {
+          "type": "Identity Proof",
+          "options": ["PAN Card", "Aadhaar Card"]
+        },
+        {
+          "type": "Address Proof",
+          "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]
+        },
+        {
+          "type": "Income Proof",
+          "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]
+        }
+      ],
+      "residentialStatus": ["Indian Resident"]
     },
     "applicationProcess": {
       "channels": [
         {
           "type": "Online",
-          "isAvailable": true
+          "isAvailable": true,
+          "url": "https://www.sbicard.com/en/personal/credit-cards/fuel/bpcl-sbi-octane.page"
+        },
+        {
+          "type": "Branch",
+          "isAvailable": true,
+          "details": "Visit nearest SBI Branch and fill in the application form"
         }
-      ]
+      ],
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through SBI Card website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing SBI Bank customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [
@@ -160,5 +251,37 @@
         "Those looking for premium travel benefits beyond domestic lounges",
         "People who prefer cashback over reward points"
       ]
-    }
-  }
+    },
+    "customerSupport": {
+      "channels": [
+        {
+          "type": "Phone",
+          "value": "1800-180-1290",
+          "availability": "24x7"
+        },
+        {
+          "type": "Email",
+          "value": "customercare@sbicard.com",
+          "responseTime": "24-48 hours"
+        },
+        {
+          "type": "Chat",
+          "isAvailable": true,
+          "availability": "9AM - 6PM, Monday to Saturday"
+        }
+      ],
+      "dedicatedSupport": false
+    },
+    "changeLog": [
+      {
+        "date": "2024-04-20",
+        "type": "Enhancement",
+        "change": "Added more partner merchants for dining rewards"
+      },
+      {
+        "date": "2024-02-15",
+        "type": "Policy Change",
+        "change": "Updated annual fee waiver condition to ₹2,00,000 (increased from ₹1,50,000)"
+      }
+    ]
+}
