@@ -3,21 +3,12 @@
     "card": {
       "cardName": "HDFC Bank INFINIA Metal Credit Card",
       "cardIssuer": "HDFC Bank",
+      "cardType": "Super Premium",
       "ratings": "5/5",
       "categories": ["Travel", "Dining", "Shopping"],
-      "networkType": "Visa Infinite",
-      "targetAudience": "High-net-worth individuals",
-      "applyLink": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/infinia-credit-card"
+      "targetAudience": "High-net-worth individuals"
     },
     "presentation": {
-      "decoration": {
-        "primaryColor": -16777216,
-        "secondaryColor": -1,
-        "orientation": "Horizontal",
-        "cardImage": "https://www.hdfcbank.com/static/features/common/images/infinia-metal-credit-card.png",
-        "material": "Metal",
-        "specialFeatures": ["Contactless payment", "EMV chip"]
-      },
       "description": "A premium invite-only credit card offering luxurious benefits and high rewards",
       "highlightFeatures": [
         "High reward points on all spends",
@@ -32,48 +23,23 @@
       "fees": {
         "joining": {
           "amount": "₹12,500",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Not applicable - invitation only card"]
         },
         "renewal": {
           "amount": "₹12,500",
           "tax": "Plus applicable GST",
           "waiverConditions": ["Annual spend of ₹10,00,000 or more"]
-        },
-        "additionalCards": {
-          "amount": "₹12,500",
-          "tax": "Plus applicable GST"
         }
       },
       "charges": [
         {
           "type": "Interest Rate",
-          "value": "1.99% per month",
-          "annualizedValue": "23.8% annually",
-          "details": "Charged on revolving credit and cash advances"
+          "value": "1.99% per month (23.8% annually)"
         },
         {
           "type": "Foreign Currency Markup",
-          "value": "2%",
-          "condition": "On all international transactions",
-          "details": "Applicable on all foreign currency transactions"
-        },
-        {
-          "type": "Cash Advance Charges",
-          "value": "2.5%",
-          "condition": "Minimum of ₹500",
-          "details": "On cash withdrawals from ATMs"
-        },
-        {
-          "type": "Late Payment Fee",
-          "value": "Variable",
-          "condition": "Based on outstanding amount",
-          "details": "Ranges from ₹100 to ₹1,000 depending on outstanding balance"
-        },
-        {
-          "type": "Fuel Surcharge",
-          "value": "1%",
-          "condition": "For transactions between ₹400-₹1,00,000",
-          "details": "Maximum waiver of ₹1,000 per month"
+          "value": "2% of the transaction amount"
         }
       ]
     },
@@ -81,28 +47,16 @@
       "type": "Reward Points",
       "structure": [
         {
-          "category": "All Spends",
           "rate": "5 Reward Points",
           "per": "₹150 spent",
-          "details": "On all eligible purchases",
           "exclusions": ["Fuel spends"]
         },
         {
-          "category": "SmartBuy Platform",
           "rate": "10X Reward Points",
-          "condition": "On travel and shopping spending",
+          "condition": "On travel and shopping spending on SmartBuy platform",
           "cap": "15,000 points per month"
         }
       ],
-      "caps": {
-        "overall": "No cap on total reward points earned",
-        "categorySpecific": [
-          {
-            "category": "SmartBuy Platform",
-            "cap": "15,000 points per month"
-          }
-        ]
-      },
       "redemptionOptions": [
         {
           "method": "SmartBuy platform",
@@ -121,7 +75,23 @@
           ]
         }
       ],
-      "excludedCategories": ["Fuel", "Rent", "Insurance", "Utilities", "Education", "Gift Cards", "Gold"]
+      "transferPartners": [
+        {"name": "Air Canada Aeroplan", "ratio": "1 RP = 0.5 Aeroplan Miles"},
+        {"name": "Club ITC", "ratio": "1 RP = 0.5 Green Points"},
+        {"name": "SpiceClub", "ratio": "1 RP = 1 SC Point"},
+        {"name": "Avianca LifeMiles", "ratio": "1 RP = 0.5 LifeMile"},
+        {"name": "Turkish Airlines Miles & Smiles", "ratio": "1 RP = 0.5 Miles & Smiles"},
+        {"name": "United MileagePlus", "ratio": "1 RP = 0.5 MileagePlus Mile"},
+        {"name": "British Airways Avios", "ratio": "1 RP = 0.5 Avios"},
+        {"name": "Finnair Plus", "ratio": "1 RP = 1 Finnair Plus Point"},
+        {"name": "AirAsia Rewards", "ratio": "1 RP = 1 AirAsia Point"},
+        {"name": "Etihad Guest", "ratio": "1 RP = 0.5 Etihad Guest Points"},
+        {"name": "Hainan Airlines Fortune Wings Club", "ratio": "1 RP = 1 Fortune Wings Club Point"},
+        {"name": "Accor ALL", "ratio": "1 RP = 0.5 ALL Point"},
+        {"name": "IHG One", "ratio": "1 RP = 1 IHG One Point"},
+        {"name": "Wyndham Rewards", "ratio": "1 RP = 1 Wyndham Rewards Point"},
+        {"name": "Maharaja Club", "ratio": "2 RP = 1 Maharaja Club Point"}
+      ]
     },
     "benefits": [
       {
@@ -129,16 +99,14 @@
         "details": [
           {
             "name": "Bonus Reward Points",
-            "value": "12,500 points",
-            "condition": "On successful card activation"
+            "value": "12,500 points"
           },
           {
             "name": "Club Marriott Membership",
-            "value": "1 year",
+            "duration": "1 year",
             "details": "20% off on dining and hotel stays"
           }
-        ],
-        "totalValue": "₹25,000+"
+        ]
       },
       {
         "type": "Travel",
@@ -155,8 +123,7 @@
           },
           {
             "name": "ITC Hotels Stay Benefit",
-            "value": "1 complimentary night",
-            "condition": "On 2-night booking"
+            "value": "1 complimentary night on 2-night booking"
           }
         ]
       },
@@ -233,56 +200,17 @@
       }
     ],
     "eligibility": {
-      "ageRequirement": {
-        "minimum": 21,
-        "maximum": 65
-      },
-      "incomeRequirement": [
-        {
-          "employmentType": "Salaried",
-          "minimumIncome": "₹45 lakh per annum",
-          "preferredIncomeLevel": "₹60 lakh+ per annum"
-        },
-        {
-          "employmentType": "Self-employed",
-          "minimumIncome": "₹60 lakh per annum",
-          "preferredIncomeLevel": "₹75 lakh+ per annum"
-        }
-      ],
-      "creditScore": {
-        "minimum": "750+",
-        "recommended": "800+"
-      },
-      "requiredDocuments": [
-        {
-          "type": "Identity Proof",
-          "options": ["PAN Card", "Aadhaar Card"]
-        },
-        {
-          "type": "Address Proof",
-          "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]
-        },
-        {
-          "type": "Income Proof",
-          "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]
-        }
-      ],
-      "residentialStatus": ["Indian Resident", "NRI"]
+      "type": "Invite-only",
+      "criteria": [
+        "Age between 21 and 65 years",
+        "High annual income (preferably ₹45 lakh or more)",
+        "Excellent credit history",
+        "Existing relationship with HDFC Bank (Total Relationship Value > ₹25 lakh)",
+        "High credit limit or spends above ₹8 lakh in past six months on existing HDFC Credit Card"
+      ]
     },
     "applicationProcess": {
-      "channels": [
-        {
-          "type": "Invitation Only",
-          "isAvailable": true,
-          "details": "Card is offered by invitation only to select HDFC Bank customers"
-        }
-      ],
-      "processingTime": "7-10 days",
-      "trackingMethod": "Through HDFC Bank relationship manager",
-      "instantApproval": {
-        "isAvailable": false,
-        "conditions": ["Not applicable - invitation only card"]
-      }
+      "type": "Invitation only"
     },
     "customerInsights": {
       "recommendedFor": [
@@ -296,37 +224,5 @@
         "Infrequent credit card users",
         "Those who don't meet the high income and spending criteria"
       ]
-    },
-    "customerSupport": {
-      "channels": [
-        {
-          "type": "Phone",
-          "value": "1800-266-4332",
-          "availability": "24x7"
-        },
-        {
-          "type": "Email",
-          "value": "support@hdfcbank.com",
-          "responseTime": "24-48 hours"
-        },
-        {
-          "type": "Chat",
-          "isAvailable": true,
-          "availability": "9AM - 6PM, Monday to Saturday"
-        }
-      ],
-      "dedicatedSupport": true
-    },
-    "changeLog": [
-      {
-        "date": "2024-04-20",
-        "type": "Enhancement",
-        "change": "Increased reward points on SmartBuy platform from 5X to 10X"
-      },
-      {
-        "date": "2024-02-15",
-        "type": "Policy Change",
-        "change": "Updated annual fee waiver condition to ₹10,00,000 (increased from ₹8,00,000)"
-      }
-    ]
+    }
   }
