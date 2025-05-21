@@ -10,6 +10,14 @@
       "applyLink": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/infinia-credit-card"
     },
     "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.hdfcbank.com/static/features/common/images/infinia-metal-credit-card.png",
+        "material": "Metal",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      },
       "description": "A premium invite-only credit card offering luxurious benefits and high rewards",
       "highlightFeatures": [
         "High reward points on all spends",
