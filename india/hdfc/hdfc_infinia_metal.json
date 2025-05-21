@@ -5,7 +5,9 @@
       "cardIssuer": "HDFC Bank",
       "ratings": "5/5",
       "categories": ["Travel", "Dining", "Shopping"],
-      "targetAudience": "High-net-worth individuals"
+      "targetAudience": "High-net-worth individuals",
+      "networkType": "Visa Infinite",
+      "applyLink": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/infinia-credit-card"
     },
     "presentation": {
       "description": "A premium invite-only credit card offering luxurious benefits and high rewards",
