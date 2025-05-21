@@ -113,16 +113,17 @@
           {
             "name": "Airport Lounge Access",
             "value": "Unlimited complimentary access",
-            "condition": "For primary and add-on cardholders",
-            "locations": "Domestic and international lounges worldwide"
+            "condition": "For primary and add-on cardholders"
           },
           {
             "name": "Priority Pass Membership",
-            "value": "Complimentary"
+            "value": "Complimentary",
+            "condition": "For primary cardholder"
           },
           {
             "name": "ITC Hotels Stay Benefit",
-            "value": "1 complimentary night on 2-night booking"
+            "value": "1 complimentary night",
+            "condition": "On 2-night booking"
           }
         ]
       },
@@ -132,7 +133,7 @@
           {
             "name": "ITC Hotels Buffet Offer",
             "value": "1+1 complimentary buffet",
-            "frequency": "Once per month"
+            "condition": "Once per month"
           },
           {
             "name": "Swiggy Dineout Offer",
@@ -147,25 +148,53 @@
           {
             "name": "Complimentary Golf Games",
             "value": "Unlimited",
-            "locations": "Leading courses in India and select international courses"
+            "condition": "At leading courses in India and select international courses"
           },
           {
             "name": "Golf Coaching",
             "value": "Unlimited complimentary",
-            "locations": "Select golf courses in India"
+            "condition": "At select golf courses in India"
           }
         ]
       },
       {
         "type": "Concierge",
         "details": [
-          "24/7 concierge services",
-          "Golf booking",
-          "Private dining assistance",
-          "Airport VIP service",
-          "Itinerary planning",
-          "International gift delivery",
-          "Event planning and referrals"
+          {
+            "name": "24/7 Concierge Services",
+            "value": "Available",
+            "condition": "For all cardholders"
+          },
+          {
+            "name": "Golf Booking",
+            "value": "Available",
+            "condition": "For all cardholders"
+          },
+          {
+            "name": "Private Dining Assistance",
+            "value": "Available",
+            "condition": "For all cardholders"
+          },
+          {
+            "name": "Airport VIP Service",
+            "value": "Available",
+            "condition": "For all cardholders"
+          },
+          {
+            "name": "Itinerary Planning",
+            "value": "Available",
+            "condition": "For all cardholders"
+          },
+          {
+            "name": "International Gift Delivery",
+            "value": "Available",
+            "condition": "For all cardholders"
+          },
+          {
+            "name": "Event Planning and Referrals",
+            "value": "Available",
+            "condition": "For all cardholders"
+          }
         ]
       },
       {
@@ -173,7 +202,8 @@
         "details": [
           {
             "name": "Air Accident Cover",
-            "value": "₹3 crores"
+            "value": "₹3 crores",
+            "condition": "During air travel"
           },
           {
             "name": "Medical Emergency Cover",
@@ -182,7 +212,8 @@
           },
           {
             "name": "Credit Shield Cover",
-            "value": "₹9 lakhs"
+            "value": "₹9 lakhs",
+            "condition": "For all cardholders"
           }
         ]
       },
@@ -192,8 +223,7 @@
           {
             "name": "Fuel Surcharge Waiver",
             "value": "1%",
-            "condition": "On transactions between ₹400 and ₹1,00,000",
-            "maxWaiver": "₹1,000 per month"
+            "condition": "On transactions between ₹400 and ₹1,00,000, maximum waiver of ₹1,000 per month"
           }
         ]
       }
