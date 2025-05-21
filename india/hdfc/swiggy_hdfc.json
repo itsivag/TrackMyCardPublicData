@@ -10,6 +10,14 @@
       "applyLink": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/swiggy-hdfc-bank-credit-card"
     },
     "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.hdfcbank.com/static/features/common/images/swiggy-credit-card.png",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      },
       "description": "A co-branded cashback card offering high rewards on Swiggy and online spends",
       "highlightFeatures": [
         "10% cashback on Swiggy app purchases",
@@ -22,9 +30,15 @@
       "fees": {
         "joining": {
           "amount": "₹500",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Not applicable"]
         },
         "renewal": {
+          "amount": "₹500",
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Spend ₹50,000 or more in an anniversary year"]
+        },
+        "additionalCards": {
           "amount": "₹500",
           "tax": "Plus applicable GST"
         }
@@ -32,7 +46,21 @@
       "charges": [
         {
           "type": "Interest Rate",
-          "details": "As per HDFC Bank's standard rates"
+          "value": "3.49% per month",
+          "annualizedValue": "41.88% annually",
+          "details": "Charged on revolving credit and cash advances"
+        },
+        {
+          "type": "Cash Advance Fee",
+          "value": "2.5%",
+          "condition": "Minimum of ₹500",
+          "details": "On cash withdrawals from ATMs"
+        },
+        {
+          "type": "Late Payment Fee",
+          "value": "Up to ₹950",
+          "condition": "Based on outstanding amount",
+          "details": "Ranges from ₹100 to ₹950 depending on outstanding balance"
         }
       ]
     },
@@ -42,28 +70,34 @@
         {
           "category": "Swiggy App Purchases",
           "rate": "10%",
-          "details": "Including food orders, Instamart, Dineout, and Genie",
-          "cap": "₹1,500 per billing cycle"
+          "details": "Including food orders, Instamart, Dineout, and Genie"
         },
         {
           "category": "Online Spends",
           "rate": "5%",
-          "details": "On select brands and categories",
-          "cap": "₹1,500 per billing cycle"
+          "details": "On select brands and categories"
         },
         {
           "category": "Other Spends",
           "rate": "1%",
-          "cap": "₹500 per billing cycle"
+          "details": "On all other eligible transactions"
         }
       ],
+      "caps": {
+        "overall": "No cap on total cashback earned",
+        "categorySpecific": [
+          "₹1,500 per billing cycle for Swiggy purchases",
+          "₹1,500 per billing cycle for online spends",
+          "₹500 per billing cycle for other spends"
+        ]
+      },
       "redemptionOptions": [
         {
           "method": "Statement Credit",
           "description": "Automatically applied to the credit card statement in the following month"
         }
       ],
-      "excludedCategories": ["fuel", "rent", "wallet", "EMI", "jewellery", "government transactions"]
+      "excludedCategories": ["Fuel", "Rent", "Wallet", "EMI", "Jewellery", "Government transactions"]
     },
     "benefits": [
       {
@@ -74,14 +108,16 @@
             "value": "3 months complimentary",
             "condition": "On card activation"
           }
-        ]
+        ],
+        "totalValue": "₹1,500"
       },
       {
         "type": "Golf",
         "details": [
           {
             "name": "Golf Benefits",
-            "value": "12 free golf lessons, 4 free rounds of green fees, 50% off on golf services"
+            "value": "12 free golf lessons, 4 free rounds of green fees, 50% off on golf services",
+            "condition": "Valid at select golf courses"
           }
         ]
       },
@@ -90,11 +126,13 @@
         "details": [
           {
             "name": "Agoda Discount",
-            "value": "Up to 12% off"
+            "value": "Up to 12% off",
+            "condition": "On hotel bookings through Agoda"
           },
           {
             "name": "Mastercard Dine & Stay",
-            "value": "Complimentary stay and dinner for one person at select locations"
+            "value": "Complimentary stay and dinner for one person",
+            "condition": "At select locations, once per year"
           }
         ]
       },
@@ -103,7 +141,8 @@
         "details": [
           {
             "name": "IndiGo BluChips",
-            "value": "1 BluChip per ₹100 spent on Swiggy platforms"
+            "value": "1 BluChip per ₹100 spent",
+            "condition": "On Swiggy platforms only"
           }
         ]
       }
@@ -111,37 +150,59 @@
     "eligibility": {
       "ageRequirement": {
         "minimum": 21,
-        "maximum": {
-          "salaried": 60,
-          "selfEmployed": 65
-        }
+        "maximum": 60
       },
       "incomeRequirement": [
         {
           "employmentType": "Salaried",
-          "minimumIncome": "₹15,000 per month"
+          "minimumIncome": "₹15,000 per month",
+          "preferredIncomeLevel": "₹25,000+ per month"
         },
         {
           "employmentType": "Self-employed",
-          "minimumIncome": "₹6 Lakhs per annum (ITR)"
+          "minimumIncome": "₹6,00,000 per annum",
+          "preferredIncomeLevel": "₹8,00,000+ per annum"
         }
       ],
-      "otherCriteria": [
-        "Indian citizen",
-        "Existing HDFC Credit Card holders can apply"
-      ]
+      "creditScore": {
+        "minimum": "700+",
+        "recommended": "750+"
+      },
+      "requiredDocuments": [
+        {
+          "type": "Identity Proof",
+          "options": ["PAN Card", "Aadhaar Card"]
+        },
+        {
+          "type": "Address Proof",
+          "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]
+        },
+        {
+          "type": "Income Proof",
+          "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]
+        }
+      ],
+      "residentialStatus": ["Indian Resident"]
     },
     "applicationProcess": {
       "channels": [
         {
           "type": "Swiggy App",
-          "isAvailable": true
+          "isAvailable": true,
+          "url": "https://www.swiggy.com/credit-card"
         },
         {
           "type": "HDFC Bank",
-          "isAvailable": true
+          "isAvailable": true,
+          "details": "Visit any HDFC Bank branch with required documents"
         }
-      ]
+      ],
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through HDFC Bank website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing HDFC Bank customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [
@@ -153,5 +214,37 @@
         "Primarily offline shoppers",
         "Those who rarely use food delivery services"
       ]
-    }
-  }
+    },
+    "customerSupport": {
+      "channels": [
+        {
+          "type": "Phone",
+          "value": "1800-266-4332",
+          "availability": "24x7"
+        },
+        {
+          "type": "Email",
+          "value": "support@hdfcbank.com",
+          "responseTime": "24-48 hours"
+        },
+        {
+          "type": "Chat",
+          "isAvailable": true,
+          "availability": "9AM - 6PM, Monday to Saturday"
+        }
+      ],
+      "dedicatedSupport": false
+    },
+    "changeLog": [
+      {
+        "date": "2024-04-20",
+        "type": "Enhancement",
+        "change": "Added more partner merchants for 5% cashback"
+      },
+      {
+        "date": "2024-02-15",
+        "type": "Policy Change",
+        "change": "Updated annual fee waiver condition to ₹50,000 (increased from ₹40,000)"
+      }
+    ]
+}

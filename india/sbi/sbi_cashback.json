@@ -1,7 +1,6 @@
 {
-    "id": 1,
+    "id": "sbi_cashback_credit",
     "card": {
-      "id": "sbi_cashback_credit",
       "cardName": "Cashback SBI Credit Card",
       "cardIssuer": "SBI Card",
       "ratings": "4.7/5",
@@ -17,7 +16,7 @@
         "orientation": "Horizontal",
         "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/shopping/sbi-card-cashback/sbi-card-cashback.png",
         "material": "Plastic",
-        "specialFeatures": ["Contactless payment"]
+        "specialFeatures": ["Contactless payment", "EMV chip"]
       },
       "description": "A cashback reward card providing cash back for every transaction made with the card",
       "highlightFeatures": [
@@ -32,7 +31,7 @@
         "joining": {
           "amount": "₹999",
           "tax": "Plus applicable GST",
-          "waiverConditions": []
+          "waiverConditions": ["Not applicable"]
         },
         "renewal": {
           "amount": "₹999",
@@ -40,8 +39,8 @@
           "waiverConditions": ["Annual fee waived on spends of ₹2 lakhs in the previous year"]
         },
         "additionalCards": {
-          "amount": "Free",
-          "details": "Up to 2 add-on cards free for lifetime"
+          "amount": "₹0",
+          "tax": "Not applicable"
         }
       },
       "charges": [
@@ -54,7 +53,7 @@
         {
           "type": "Foreign Currency Markup",
           "value": "3.5%",
-          "condition": "On all international transactions"
+          "details": "On all international transactions"
         },
         {
           "type": "Cash Advance Fee",
@@ -64,15 +63,9 @@
         },
         {
           "type": "Late Payment Fee",
-          "value": "Variable",
+          "value": "Up to ₹1,300",
           "condition": "Based on outstanding amount",
           "details": "Ranges from ₹400 to ₹1,300 depending on outstanding balance"
-        },
-        {
-          "type": "Fuel Surcharge",
-          "value": "1% waiver",
-          "condition": "For transactions between ₹500-₹3,000",
-          "details": "Maximum waiver of ₹100 per statement cycle"
         }
       ]
     },
@@ -91,7 +84,8 @@
         }
       ],
       "caps": {
-        "overall": "₹5,000 per statement cycle"
+        "overall": "₹5,000 per statement cycle",
+        "categorySpecific": []
       },
       "redemptionOptions": [
         {
@@ -114,7 +108,8 @@
             "value": "1% waiver",
             "condition": "For transactions between ₹500-₹3,000, maximum waiver of ₹100 per statement cycle"
           }
-        ]
+        ],
+        "totalValue": "₹100 per statement cycle"
       }
     ],
     "eligibility": {
@@ -124,13 +119,35 @@
       },
       "incomeRequirement": [
         {
-          "employmentType": "All",
-          "details": "Stable source of income required"
+          "employmentType": "Salaried",
+          "minimumIncome": "₹25,000 per month",
+          "preferredIncomeLevel": "₹35,000+ per month"
+        },
+        {
+          "employmentType": "Self-employed",
+          "minimumIncome": "₹6,00,000 per annum",
+          "preferredIncomeLevel": "₹8,00,000+ per annum"
         }
       ],
       "creditScore": {
-        "details": "Decent credit history required"
-      }
+        "minimum": "700+",
+        "recommended": "750+"
+      },
+      "requiredDocuments": [
+        {
+          "type": "Identity Proof",
+          "options": ["PAN Card", "Aadhaar Card"]
+        },
+        {
+          "type": "Address Proof",
+          "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]
+        },
+        {
+          "type": "Income Proof",
+          "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]
+        }
+      ],
+      "residentialStatus": ["Indian Resident"]
     },
     "applicationProcess": {
       "channels": [
@@ -144,7 +161,13 @@
           "isAvailable": true,
           "details": "Visit nearest SBI Branch and fill in the application form"
         }
-      ]
+      ],
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through SBI Card website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing SBI Bank customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [
@@ -156,11 +179,36 @@
         "Those looking for travel or lounge benefits"
       ]
     },
+    "customerSupport": {
+      "channels": [
+        {
+          "type": "Phone",
+          "value": "1800-180-1290",
+          "availability": "24x7"
+        },
+        {
+          "type": "Email",
+          "value": "customercare@sbicard.com",
+          "responseTime": "24-48 hours"
+        },
+        {
+          "type": "Chat",
+          "isAvailable": true,
+          "availability": "9AM - 6PM, Monday to Saturday"
+        }
+      ],
+      "dedicatedSupport": false
+    },
     "changeLog": [
       {
-        "date": "2025-05-12",
-        "type": "Update",
-        "change": "Annual information update"
+        "date": "2024-04-20",
+        "type": "Enhancement",
+        "change": "Added more partner merchants for 5% cashback"
+      },
+      {
+        "date": "2024-02-15",
+        "type": "Policy Change",
+        "change": "Updated annual fee waiver condition to ₹2,00,000 (increased from ₹1,50,000)"
       }
     ]
-  }
+}

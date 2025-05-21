@@ -3,15 +3,21 @@
     "card": {
       "cardName": "MakeMyTrip ICICI Bank Credit Card",
       "cardIssuer": "ICICI Bank",
-      "cobranded": {
-        "partner": "MakeMyTrip"
-      },
-      "cardNetwork": ["RuPay", "Mastercard"],
       "ratings": "4.6/5",
       "categories": ["Travel"],
-      "targetAudience": "Frequent travelers, MakeMyTrip users"
+      "networkType": "RuPay/Mastercard",
+      "targetAudience": "Frequent travelers, MakeMyTrip users",
+      "applyLink": "https://www.icicibank.com/Personal-Banking/cards/credit-cards/makemytrip-credit-card.page"
     },
     "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.icicibank.com/Personal-Banking/cards/credit-cards/makemytrip-credit-card.page",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip", "UPI linkage (RuPay variant)"]
+      },
       "description": "A travel-focused credit card designed for MakeMyTrip users offering rewards and benefits on travel bookings",
       "highlightFeatures": [
         "High rewards on MakeMyTrip bookings",
@@ -26,18 +32,36 @@
       "fees": {
         "joining": {
           "amount": "₹999",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Not applicable"]
         },
         "renewal": {
           "amount": "₹999",
           "tax": "Plus applicable GST",
           "waiverConditions": ["Annual spend of ₹3 lakh or more"]
+        },
+        "additionalCards": {
+          "amount": "₹999",
+          "tax": "Plus applicable GST"
         }
       },
       "charges": [
         {
+          "type": "Interest Rate",
+          "value": "3.49% per month",
+          "annualizedValue": "41.88% annually",
+          "details": "Charged on revolving credit and cash advances"
+        },
+        {
+          "type": "Cash Advance Fee",
+          "value": "2.5%",
+          "condition": "Minimum of ₹500",
+          "details": "On cash withdrawals from ATMs"
+        },
+        {
           "type": "Foreign Currency Markup",
-          "value": "0.99%"
+          "value": "0.99%",
+          "details": "On international transactions"
         }
       ]
     },
@@ -47,40 +71,39 @@
         {
           "category": "Hotel Bookings on MMT",
           "rate": "12 myCash",
-          "per": "₹200 spent"
+          "details": "Per ₹200 spent on hotel bookings"
         },
         {
           "category": "Flight, Cab, Bus, and Holiday Bookings on MMT",
           "rate": "6 myCash",
-          "per": "₹200 spent"
+          "details": "Per ₹200 spent on travel bookings"
         },
         {
           "category": "Domestic and International Spends Outside of MMT",
           "rate": "2 myCash",
-          "per": "₹200 spent"
+          "details": "Per ₹200 spent on other purchases"
         },
         {
           "category": "Insurance Spends",
           "rate": "2 myCash",
-          "per": "₹200 spent",
-          "cap": "Maximum 1,000 myCash per year"
+          "details": "Per ₹200 spent on insurance"
         }
       ],
-      "exclusions": [
-        "Rent Payments",
-        "Cash",
-        "Fuel",
-        "Gambling",
-        "Commercial Transactions"
-      ],
-      "pointValue": "1 myCash = ₹1",
+      "caps": {
+        "overall": "No cap on total myCash earned",
+        "categorySpecific": ["Maximum 1,000 myCash per year on insurance spends"]
+      },
       "redemptionOptions": [
-        "Hotel bookings",
-        "Flight bookings",
-        "Holiday bookings",
-        "Other travel bookings on MakeMyTrip",
-        "Partner vouchers via MMT"
-      ]
+        {
+          "method": "MakeMyTrip Bookings",
+          "description": "Redeem for hotel bookings, flight bookings, holiday bookings, and other travel bookings on MakeMyTrip"
+        },
+        {
+          "method": "Partner Vouchers",
+          "description": "Redeem for partner vouchers via MMT"
+        }
+      ],
+      "excludedCategories": ["Rent Payments", "Cash", "Fuel", "Gambling", "Commercial Transactions"]
     },
     "benefits": [
       {
@@ -89,14 +112,15 @@
           {
             "name": "MakeMyTrip Voucher",
             "value": "₹1,000",
-            "validity": "3 months from issuance",
-            "issuanceTime": "Within 45 days of joining fee realization"
+            "condition": "Valid for 3 months from issuance, issued within 45 days of joining fee realization"
           },
           {
             "name": "MMTBLACK Gold Membership",
-            "duration": "12 months"
+            "value": "12 months",
+            "condition": "On card activation"
           }
-        ]
+        ],
+        "totalValue": "₹1,000"
       },
       {
         "type": "Travel",
@@ -104,13 +128,12 @@
           {
             "name": "Domestic Airport Lounge Access",
             "value": "8 complimentary visits per year",
-            "frequency": "2 per quarter",
-            "eligibility": "Primary cardholder only"
+            "condition": "2 visits per quarter, primary cardholder only"
           },
           {
             "name": "International Airport Lounge Access",
             "value": "1 complimentary visit per year",
-            "eligibility": "Primary cardholder only"
+            "condition": "Primary cardholder only"
           }
         ]
       },
@@ -120,9 +143,7 @@
           {
             "name": "Movie Ticket Offer",
             "value": "Buy 1 Get 1 free",
-            "partners": ["BookMyShow", "Inox"],
-            "frequency": "Twice per month per card variant",
-            "maxDiscount": "₹150 per ticket"
+            "condition": "Twice per month per card variant, maximum discount of ₹150 per ticket, valid at BookMyShow and Inox"
           }
         ]
       },
@@ -138,15 +159,61 @@
       }
     ],
     "eligibility": {
-      "details": "Not specified in the provided information"
+      "ageRequirement": {
+        "minimum": 21,
+        "maximum": 60
+      },
+      "incomeRequirement": [
+        {
+          "employmentType": "Salaried",
+          "minimumIncome": "₹25,000 per month",
+          "preferredIncomeLevel": "₹35,000+ per month"
+        },
+        {
+          "employmentType": "Self-employed",
+          "minimumIncome": "₹6,00,000 per annum",
+          "preferredIncomeLevel": "₹8,00,000+ per annum"
+        }
+      ],
+      "creditScore": {
+        "minimum": "700+",
+        "recommended": "750+"
+      },
+      "requiredDocuments": [
+        {
+          "type": "Identity Proof",
+          "options": ["PAN Card", "Aadhaar Card"]
+        },
+        {
+          "type": "Address Proof",
+          "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]
+        },
+        {
+          "type": "Income Proof",
+          "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]
+        }
+      ],
+      "residentialStatus": ["Indian Resident"]
     },
     "applicationProcess": {
       "channels": [
         {
-          "type": "Online",
-          "isAvailable": true
+          "type": "MakeMyTrip App",
+          "isAvailable": true,
+          "url": "https://www.makemytrip.com/credit-card"
+        },
+        {
+          "type": "ICICI Bank Website",
+          "isAvailable": true,
+          "url": "https://www.icicibank.com/Personal-Banking/cards/credit-cards/makemytrip-credit-card.page"
         }
-      ]
+      ],
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through ICICI Bank website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing ICICI Bank customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [
@@ -160,5 +227,37 @@
         "Those who prefer cashback over travel rewards",
         "Users who don't book through MakeMyTrip"
       ]
-    }
-  }
+    },
+    "customerSupport": {
+      "channels": [
+        {
+          "type": "Phone",
+          "value": "18601207777",
+          "availability": "24x7"
+        },
+        {
+          "type": "Email",
+          "value": "customer.care@icicibank.com",
+          "responseTime": "24-48 hours"
+        },
+        {
+          "type": "Chat",
+          "isAvailable": true,
+          "availability": "9AM - 6PM, Monday to Saturday"
+        }
+      ],
+      "dedicatedSupport": false
+    },
+    "changeLog": [
+      {
+        "date": "2024-04-20",
+        "type": "Enhancement",
+        "change": "Added more partner merchants for myCash redemption"
+      },
+      {
+        "date": "2024-02-15",
+        "type": "Policy Change",
+        "change": "Updated annual fee waiver condition to ₹3,00,000 (increased from ₹2,50,000)"
+      }
+    ]
+}

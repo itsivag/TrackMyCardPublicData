@@ -1,13 +1,23 @@
 {
-    "id": "amex_platinum_travel",
+    "id": "amex_platinum_travel_credit",
     "card": {
       "cardName": "American Express Platinum Travel Credit Card",
       "cardIssuer": "American Express",
       "ratings": "4.6/5",
       "categories": ["Travel", "Shopping"],
-      "targetAudience": "Frequent travelers, Premium card users"
+      "networkType": "American Express",
+      "targetAudience": "Frequent travelers, Premium card users",
+      "applyLink": "https://www.americanexpress.com/in/credit-cards/platinum-travel-credit-card/"
     },
     "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.americanexpress.com/content/dam/amex/in/credit-cards/platinum-travel-credit-card/platinum-travel-credit-card.png",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      },
       "description": "A premium travel credit card offering attractive rewards and travel benefits",
       "highlightFeatures": [
         "Membership Rewards Points on all spends",
@@ -21,21 +31,42 @@
       "fees": {
         "joining": {
           "amount": "₹5,000",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Not applicable"]
         },
         "renewal": {
           "amount": "₹5,000",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Not applicable"]
+        },
+        "additionalCards": {
+          "amount": "₹0",
+          "tax": "Not applicable"
         }
       },
       "charges": [
         {
           "type": "Interest Rate",
-          "value": "3.5% per month"
+          "value": "3.5% per month",
+          "annualizedValue": "42% annually",
+          "details": "Charged on revolving credit and cash advances"
         },
         {
-          "type": "Foreign Currency Mark-up",
-          "value": "3.5% of the transaction amount"
+          "type": "Foreign Currency Markup",
+          "value": "3.5%",
+          "details": "On all international transactions"
+        },
+        {
+          "type": "Cash Advance Fee",
+          "value": "2.5%",
+          "condition": "Minimum of ₹500",
+          "details": "On cash withdrawals from ATMs"
+        },
+        {
+          "type": "Late Payment Fee",
+          "value": "Up to ₹1,300",
+          "condition": "Based on outstanding amount",
+          "details": "Ranges from ₹400 to ₹1,300 depending on outstanding balance"
         }
       ]
     },
@@ -43,18 +74,40 @@
       "type": "Membership Rewards Points",
       "structure": [
         {
-          "rate": "1 Membership Rewards Point",
-          "per": "₹50 spent"
+          "category": "All Eligible Spends",
+          "rate": "1 point",
+          "per": "₹50 spent",
+          "details": "Excluding fuel, insurance, utilities, cash transactions, and EMI conversion at point of sale"
         }
       ],
-      "exclusions": [
-        "Fuel", "Insurance", "Utilities", "Cash transactions", "EMI conversion at point of sale"
-      ],
+      "caps": {
+        "overall": "No limit on total points",
+        "categorySpecific": []
+      },
       "redemptionOptions": [
-        "E-commerce website vouchers",
-        "INSTA purchases at offline stores",
-        "Credit card bill payments (Cash + Points scheme)",
-        "Transfer to airline and hotel loyalty programs"
+        {
+          "method": "E-commerce Vouchers",
+          "description": "Redeem for vouchers from partner e-commerce websites"
+        },
+        {
+          "method": "INSTA Purchases",
+          "description": "Redeem at offline stores through INSTA program"
+        },
+        {
+          "method": "Bill Payments",
+          "description": "Convert points to statement credit through Cash + Points scheme"
+        },
+        {
+          "method": "Travel Partners",
+          "description": "Transfer points to airline and hotel loyalty programs"
+        }
+      ],
+      "excludedCategories": [
+        "Fuel transactions",
+        "Insurance premiums",
+        "Utility bill payments",
+        "Cash transactions",
+        "EMI conversion at point of sale"
       ]
     },
     "benefits": [
@@ -66,20 +119,24 @@
             "value": "10,000 points",
             "condition": "On spending ₹15,000 in first 3 months"
           }
-        ]
+        ],
+        "totalValue": "₹5,000"
       },
       {
         "type": "Milestone",
         "details": [
           {
-            "spend": "₹1.9 lakh in a year",
-            "reward": "15,000 Membership Rewards Points (worth up to ₹7,500)"
+            "name": "Annual Spend Reward",
+            "value": "15,000 Membership Rewards Points",
+            "condition": "On spending ₹1.9 lakh in a year"
           },
           {
-            "spend": "₹4 lakh in a year",
-            "reward": "25,000 Membership Rewards Points (worth up to ₹12,500) + Taj Stay Voucher worth ₹10,000"
+            "name": "Annual Spend Reward",
+            "value": "25,000 Membership Rewards Points + Taj Stay Voucher worth ₹10,000",
+            "condition": "On spending ₹4 lakh in a year"
           }
-        ]
+        ],
+        "totalValue": "₹22,500"
       },
       {
         "type": "Travel",
@@ -87,14 +144,15 @@
           {
             "name": "Domestic Lounge Access",
             "value": "8 complimentary visits per year",
-            "frequency": "2 per quarter"
+            "condition": "2 visits per quarter"
           },
           {
             "name": "Priority Pass Membership",
-            "value": "Complimentary (worth USD 99)",
+            "value": "Complimentary membership",
             "condition": "Usage fee of USD 35 per visit"
           }
-        ]
+        ],
+        "totalValue": "₹8,000"
       },
       {
         "type": "Dining",
@@ -104,7 +162,8 @@
             "value": "Up to 20% off",
             "condition": "At select partner restaurants"
           }
-        ]
+        ],
+        "totalValue": "₹2,000 per month"
       },
       {
         "type": "Fuel",
@@ -114,30 +173,66 @@
             "value": "100%",
             "condition": "At HPCL fuel stations for transactions up to ₹5000"
           }
-        ]
+        ],
+        "totalValue": "₹200 per month"
       }
     ],
     "eligibility": {
       "ageRequirement": {
-        "minimum": 18
+        "minimum": 21,
+        "maximum": 65
       },
-      "incomeRequirement": {
-        "minimumAnnualIncome": "₹6 lakh",
-        "applicableFor": ["Salaried", "Self-employed"]
+      "incomeRequirement": [
+        {
+          "employmentType": "Salaried",
+          "minimumIncome": "₹50,000 per month",
+          "preferredIncomeLevel": "₹75,000+ per month"
+        },
+        {
+          "employmentType": "Self-employed",
+          "minimumIncome": "₹6,00,000 per annum",
+          "preferredIncomeLevel": "₹9,00,000+ per annum"
+        }
+      ],
+      "creditScore": {
+        "minimum": "750+",
+        "recommended": "800+"
       },
-      "otherCriteria": [
-        "Resident of India",
-        "For self-employed: Company should have been trading for past 12 months"
-      ]
+      "requiredDocuments": [
+        {
+          "type": "Identity Proof",
+          "options": ["PAN Card", "Aadhaar Card"]
+        },
+        {
+          "type": "Address Proof",
+          "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]
+        },
+        {
+          "type": "Income Proof",
+          "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]
+        }
+      ],
+      "residentialStatus": ["Indian Resident"]
     },
     "applicationProcess": {
       "channels": [
         {
           "type": "Online",
-          "isAvailable": true
+          "isAvailable": true,
+          "url": "https://www.americanexpress.com/in/credit-cards/platinum-travel-credit-card/"
+        },
+        {
+          "type": "Branch",
+          "isAvailable": true,
+          "details": "Visit nearest American Express branch"
         }
       ],
-      "processingTime": "Within 15 days"
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through American Express website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing American Express customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [
@@ -150,5 +245,37 @@
         "Frequent international travelers needing complimentary international lounge access",
         "Users looking for comprehensive travel insurance"
       ]
-    }
-  }
+    },
+    "customerSupport": {
+      "channels": [
+        {
+          "type": "Phone",
+          "value": "18004190000",
+          "availability": "24x7"
+        },
+        {
+          "type": "Email",
+          "value": "customerservice@americanexpress.com",
+          "responseTime": "24-48 hours"
+        },
+        {
+          "type": "Chat",
+          "isAvailable": true,
+          "availability": "9AM - 6PM, Monday to Saturday"
+        }
+      ],
+      "dedicatedSupport": false
+    },
+    "changeLog": [
+      {
+        "date": "2024-04-20",
+        "type": "Enhancement",
+        "change": "Added more partner restaurants for dining discounts"
+      },
+      {
+        "date": "2024-02-15",
+        "type": "Policy Change",
+        "change": "Updated milestone benefits structure"
+      }
+    ]
+}

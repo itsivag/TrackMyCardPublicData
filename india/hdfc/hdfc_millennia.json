@@ -10,6 +10,14 @@
       "applyLink": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/millennia-credit-card"
     },
     "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.hdfcbank.com/static/features/common/images/millennia-credit-card.png",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      },
       "description": "A cashback credit card targeting millennials with rewards on popular online merchants",
       "highlightFeatures": [
         "5% cashback on popular online merchants",
@@ -22,26 +30,37 @@
       "fees": {
         "joining": {
           "amount": "₹1,000",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Not applicable"]
         },
         "renewal": {
           "amount": "₹1,000",
           "tax": "Plus applicable GST",
           "waiverConditions": ["Spend ₹1,00,000 or more in an anniversary year"]
+        },
+        "additionalCards": {
+          "amount": "₹1,000",
+          "tax": "Plus applicable GST"
         }
       },
       "charges": [
         {
           "type": "Interest Rate",
-          "details": "As per HDFC Bank's standard rates"
+          "value": "3.49% per month",
+          "annualizedValue": "41.88% annually",
+          "details": "Charged on revolving credit and cash advances"
         },
         {
           "type": "Cash Advance Fee",
-          "details": "2.5% of the amount withdrawn or ₹500, whichever is higher"
+          "value": "2.5%",
+          "condition": "Minimum of ₹500",
+          "details": "On cash withdrawals from ATMs"
         },
         {
           "type": "Late Payment Fee",
-          "details": "Up to ₹950 depending on the outstanding amount"
+          "value": "Up to ₹950",
+          "condition": "Based on outstanding amount",
+          "details": "Ranges from ₹100 to ₹950 depending on outstanding balance"
         }
       ]
     },
@@ -51,32 +70,33 @@
         {
           "category": "Partner Online Merchants",
           "rate": "5%",
-          "merchants": ["Amazon", "BookMyShow", "Cult.fit", "Flipkart", "Myntra", "Sony LIV", "Swiggy", "Tata CLiQ", "Uber", "Zomato"],
-          "cap": "1,000 CashPoints per statement cycle"
+          "details": "On Amazon, BookMyShow, Cult.fit, Flipkart, Myntra, Sony LIV, Swiggy, Tata CLiQ, Uber, Zomato"
         },
         {
           "category": "Other Eligible Spends",
           "rate": "1%",
-          "cap": "1,000 CashPoints per statement cycle"
+          "details": "On all other eligible transactions"
         }
       ],
+      "caps": {
+        "overall": "No cap on total cashback earned",
+        "categorySpecific": ["1,000 CashPoints per statement cycle for each category"]
+      },
       "redemptionOptions": [
         {
           "method": "Statement Credit",
-          "rate": "1 CashPoint = ₹1",
-          "minimumPoints": 500,
-          "fee": "₹50 per redemption"
+          "description": "1 CashPoint = ₹1, minimum 500 points required, ₹50 redemption fee"
         },
         {
           "method": "Product Catalog / Flights / Hotels",
-          "rate": "1 CashPoint = ₹0.30"
+          "description": "1 CashPoint = ₹0.30"
         },
         {
           "method": "Airmiles",
-          "rate": "1 CashPoint = 0.30 Airmiles"
+          "description": "1 CashPoint = 0.30 Airmiles"
         }
       ],
-      "pointsValidity": "2 years"
+      "excludedCategories": ["Fuel", "Rent", "Insurance", "Utilities", "Education", "Gift Cards", "Gold"]
     },
     "benefits": [
       {
@@ -87,7 +107,8 @@
             "value": "1,000 CashPoints",
             "condition": "On successful realization of joining fee"
           }
-        ]
+        ],
+        "totalValue": "₹1,000"
       },
       {
         "type": "Dining",
@@ -128,13 +149,34 @@
       "incomeRequirement": [
         {
           "employmentType": "Salaried",
-          "minimumIncome": "₹35,000 per month"
+          "minimumIncome": "₹35,000 per month",
+          "preferredIncomeLevel": "₹50,000+ per month"
         },
         {
           "employmentType": "Self-employed",
-          "minimumIncome": "₹6,00,000 per annum (as per ITR)"
+          "minimumIncome": "₹6,00,000 per annum",
+          "preferredIncomeLevel": "₹10,00,000+ per annum"
         }
-      ]
+      ],
+      "creditScore": {
+        "minimum": "700+",
+        "recommended": "750+"
+      },
+      "requiredDocuments": [
+        {
+          "type": "Identity Proof",
+          "options": ["PAN Card", "Aadhaar Card"]
+        },
+        {
+          "type": "Address Proof",
+          "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]
+        },
+        {
+          "type": "Income Proof",
+          "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]
+        }
+      ],
+      "residentialStatus": ["Indian Resident", "NRI"]
     },
     "applicationProcess": {
       "channels": [
@@ -145,9 +187,16 @@
         },
         {
           "type": "Branch",
-          "isAvailable": true
+          "isAvailable": true,
+          "details": "Visit any HDFC Bank branch with required documents"
         }
-      ]
+      ],
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through HDFC Bank website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing HDFC Bank customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [
@@ -160,5 +209,37 @@
         "Those who primarily make offline purchases",
         "Users seeking travel-specific rewards"
       ]
-    }
-  }
+    },
+    "customerSupport": {
+      "channels": [
+        {
+          "type": "Phone",
+          "value": "1800-266-4332",
+          "availability": "24x7"
+        },
+        {
+          "type": "Email",
+          "value": "support@hdfcbank.com",
+          "responseTime": "24-48 hours"
+        },
+        {
+          "type": "Chat",
+          "isAvailable": true,
+          "availability": "9AM - 6PM, Monday to Saturday"
+        }
+      ],
+      "dedicatedSupport": false
+    },
+    "changeLog": [
+      {
+        "date": "2024-04-20",
+        "type": "Enhancement",
+        "change": "Added more partner merchants for 5% cashback"
+      },
+      {
+        "date": "2024-02-15",
+        "type": "Policy Change",
+        "change": "Updated annual fee waiver condition to ₹1,00,000 (increased from ₹80,000)"
+      }
+    ]
+}
