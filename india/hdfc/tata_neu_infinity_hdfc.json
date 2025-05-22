@@ -105,12 +105,12 @@
         "type": "Welcome",
         "details": [
           {
-            "name": "Bonus NeuCoins",
+            "name": "NeuCoins on Activation",
             "value": "1,499 NeuCoins",
-            "condition": "On first transaction within 30 days of card issuance"
+            "condition": "On first transaction within 30 days"
           }
         ],
-        "totalValue": "₹1,499"
+        "totalValue": ""
       },
       {
         "type": "Travel",
@@ -125,7 +125,8 @@
             "value": "4 complimentary visits per year",
             "condition": "1 visit per quarter, via Priority Pass for Visa variant, direct access for RuPay variant"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Insurance",
@@ -145,17 +146,19 @@
             "value": "₹9 Lakhs",
             "condition": "Valid from the time of reporting the loss"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Fuel",
         "details": [
           {
             "name": "Fuel Surcharge Waiver",
-            "value": "1%",
-            "condition": "On transactions between ₹400 and ₹5,000, maximum waiver of ₹500 per statement cycle"
+            "value": "1% waiver",
+            "condition": "On transactions between ₹400 and ₹5,000"
           }
-        ]
+        ],
+        "totalValue": ""
       }
     ],
     "eligibility": {

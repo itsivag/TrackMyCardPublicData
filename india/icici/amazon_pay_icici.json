@@ -127,7 +127,8 @@
             "value": "1%",
             "condition": "For transactions up to ₹4,000"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Dining",
@@ -137,7 +138,52 @@
             "value": "Minimum 15% off",
             "condition": "At restaurants participating in the Culinary Treats program"
           }
-        ]
+        ],
+        "totalValue": ""
+      },
+      {
+        "type": "Welcome",
+        "details": [
+          {
+            "name": "Amazon Pay Cashback",
+            "value": "₹300",
+            "condition": "On first transaction within 30 days"
+          }
+        ],
+        "totalValue": ""
+      },
+      {
+        "type": "Milestone",
+        "details": [
+          {
+            "name": "Annual Spend Benefit",
+            "value": "₹500 Amazon Pay Cashback",
+            "condition": "On spending ₹1,00,000 in an anniversary year"
+          }
+        ],
+        "totalValue": ""
+      },
+      {
+        "type": "Dining",
+        "details": [
+          {
+            "name": "Dining Discount",
+            "value": "Up to 15% off",
+            "condition": "At partner restaurants via EazyDiner"
+          }
+        ],
+        "totalValue": ""
+      },
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "1% waiver",
+            "condition": "On transactions between ₹400 and ₹4,000"
+          }
+        ],
+        "totalValue": ""
       }
     ],
     "eligibility": {

@@ -104,12 +104,45 @@
         "type": "Welcome",
         "details": [
           {
-            "name": "Swiggy One Membership",
-            "value": "3 months complimentary",
-            "condition": "On card activation"
+            "name": "Swiggy Voucher",
+            "value": "₹1,500",
+            "condition": "On first transaction within 30 days"
           }
         ],
-        "totalValue": "₹1,500"
+        "totalValue": ""
+      },
+      {
+        "type": "Milestone",
+        "details": [
+          {
+            "name": "Quarterly Spend Benefit",
+            "value": "₹500 Swiggy Voucher",
+            "condition": "On spending ₹1,00,000 in a quarter"
+          }
+        ],
+        "totalValue": ""
+      },
+      {
+        "type": "Dining",
+        "details": [
+          {
+            "name": "Dining Discount",
+            "value": "Up to 20% off",
+            "condition": "At partner restaurants via Swiggy Dineout"
+          }
+        ],
+        "totalValue": ""
+      },
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "1% waiver",
+            "condition": "On transactions between ₹400 and ₹5,000"
+          }
+        ],
+        "totalValue": ""
       },
       {
         "type": "Golf",
@@ -119,7 +152,8 @@
             "value": "12 free golf lessons, 4 free rounds of green fees, 50% off on golf services",
             "condition": "Valid at select golf courses"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Travel",
@@ -134,7 +168,8 @@
             "value": "Complimentary stay and dinner for one person",
             "condition": "At select locations, once per year"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Airline",
@@ -144,7 +179,8 @@
             "value": "1 BluChip per ₹100 spent",
             "condition": "On Swiggy platforms only"
           }
-        ]
+        ],
+        "totalValue": ""
       }
     ],
     "eligibility": {

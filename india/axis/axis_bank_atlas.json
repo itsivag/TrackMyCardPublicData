@@ -1,14 +1,23 @@
 {
-    "id": "axis_bank_atlas",
+    "id": "axis_bank_atlas_credit",
     "card": {
       "cardName": "Axis Bank Atlas Credit Card",
       "cardIssuer": "Axis Bank",
-      "cardType": "Premium Travel",
       "ratings": "4.5/5",
       "categories": ["Travel"],
-      "targetAudience": "Frequent travelers"
+      "networkType": "Visa",
+      "targetAudience": "Frequent travelers",
+      "applyLink": "https://www.axisbank.com/retail/cards/credit-card/atlas"
     },
     "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.axisbank.com/images/default-source/revamp_new/cards/credit-cards/atlas-card.png",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      },
       "description": "A premium travel credit card offering exclusive EDGE Miles and travel benefits",
       "highlightFeatures": [
         "EDGE Miles rewards program",
@@ -22,17 +31,24 @@
       "fees": {
         "joining": {
           "amount": "₹5,000",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Not applicable"]
         },
         "renewal": {
           "amount": "₹5,000",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["Annual spend of ₹7,50,000"]
+        },
+        "additionalCards": {
+          "amount": "₹0",
+          "tax": "Not applicable"
         }
       },
       "charges": [
         {
           "type": "Interest Rate",
-          "details": "As per Axis Bank's standard rates"
+          "value": "As per Axis Bank's standard rates",
+          "details": "Refer to bank website for latest rates"
         }
       ]
     },
@@ -42,33 +58,26 @@
         {
           "category": "Travel spends (Axis Bank Travel Edge, hotels, flight bookings)",
           "rate": "5 EDGE Miles",
-          "per": "₹100 spent",
-          "cap": "On cumulative spends up to ₹2,00,000 per month"
+          "details": "Earn 5 EDGE Miles per ₹100 spent on travel spends (up to ₹2,00,000 per month)"
         },
         {
           "category": "All other transactions",
           "rate": "2 EDGE Miles",
-          "per": "₹100 spent"
+          "details": "Earn 2 EDGE Miles per ₹100 spent on all other transactions"
         }
       ],
-      "exclusions": [
-        "Gold/Jewellery", "Rent", "Wallet", "Government Institution", "Insurance", "Fuel", "Utilities"
-      ],
+      "caps": {
+        "overall": "No limit on total points",
+        "categorySpecific": [
+          {"category": "Travel spends", "cap": "Up to ₹2,00,000 per month"}
+        ]
+      },
       "redemptionOptions": [
-        {
-          "method": "Axis Bank Travel Edge Portal",
-          "options": ["Flight bookings", "Hotel reservations"]
-        },
-        {
-          "method": "Transfer to partner airlines' frequent flyer programs",
-          "partners": [
-            "Accor Hotels", "Air France – KLM (Flying Blue)", "Air Canada", "Air India (Maharaja Club)",
-            "Ethiopian Airlines", "Air Asia", "Etihad", "ITC", "Japan Airlines", "IHG Hotels & Resorts",
-            "Marriott International", "Qantas Airways", "Qatar Airways", "SpiceJet", "Singapore Airlines",
-            "Turkish Airlines", "Thai Airways", "United Airlines", "Wyndham Hotels"
-          ],
-          "annualTransferLimit": "150,000 EDGE Miles"
-        }
+        {"method": "Axis Bank Travel Edge Portal", "description": "Redeem for flight bookings and hotel reservations"},
+        {"method": "Transfer to partner airlines' frequent flyer programs", "description": "Transfer EDGE Miles to partner airlines and hotels"}
+      ],
+      "excludedCategories": [
+        "Gold/Jewellery", "Rent", "Wallet", "Government Institution", "Insurance", "Fuel", "Utilities"
       ]
     },
     "benefits": [
@@ -80,30 +89,24 @@
             "value": "2,500 EDGE Miles",
             "condition": "On completing 1 transaction within 30 days of card issuance"
           }
-        ]
+        ],
+        "totalValue": "2,500 EDGE Miles"
       },
       {
         "type": "Travel",
         "details": [
           {
             "name": "Domestic Lounge Access",
-            "tiers": [
-              {"tier": "Silver", "visits": 8},
-              {"tier": "Gold", "visits": 12},
-              {"tier": "Platinum", "visits": 18}
-            ],
-            "frequency": "Per annum"
+            "value": "Up to 18 visits per annum",
+            "condition": "Tier-based: Silver (8), Gold (12), Platinum (18)"
           },
           {
             "name": "International Lounge Access",
-            "tiers": [
-              {"tier": "Silver", "visits": 4},
-              {"tier": "Gold", "visits": 6},
-              {"tier": "Platinum", "visits": 12}
-            ],
-            "frequency": "Per annum"
+            "value": "Up to 12 visits per annum",
+            "condition": "Tier-based: Silver (4), Gold (6), Platinum (12)"
           }
-        ]
+        ],
+        "totalValue": "₹50,000"
       },
       {
         "type": "Dining",
@@ -111,45 +114,31 @@
           {
             "name": "Restaurant Discount",
             "value": "Up to 25% off up to ₹800",
-            "partner": "EazyDiner",
-            "frequency": "Twice per month",
-            "condition": "Minimum order value of ₹2,000"
+            "condition": "Twice per month via EazyDiner, min order ₹2,000"
           }
-        ]
+        ],
+        "totalValue": "₹9,600"
       },
       {
         "type": "Milestone",
         "details": [
           {
-            "spendMilestone": "₹3 Lakh",
-            "reward": "2,500 EDGE Miles"
+            "name": "Spend Milestone",
+            "value": "2,500 EDGE Miles",
+            "condition": "On ₹3 Lakh annual spend"
           },
           {
-            "spendMilestone": "₹7.5 Lakh",
-            "reward": "Additional 2,500 EDGE Miles"
+            "name": "Spend Milestone",
+            "value": "Additional 2,500 EDGE Miles",
+            "condition": "On ₹7.5 Lakh annual spend"
           },
           {
-            "spendMilestone": "₹15 Lakh",
-            "reward": "Additional 5,000 EDGE Miles"
+            "name": "Spend Milestone",
+            "value": "Additional 5,000 EDGE Miles",
+            "condition": "On ₹15 Lakh annual spend"
           }
-        ]
-      }
-    ],
-    "tiers": [
-      {
-        "name": "Silver",
-        "annualSpendRange": "Less than ₹7.5 Lakh",
-        "annualBenefit": "N/A"
-      },
-      {
-        "name": "Gold",
-        "annualSpendRange": "Between ₹7.5 Lakh and ₹15 Lakh",
-        "annualBenefit": "2,500 EDGE Miles"
-      },
-      {
-        "name": "Platinum",
-        "annualSpendRange": "More than ₹15 Lakh",
-        "annualBenefit": "5,000 EDGE Miles"
+        ],
+        "totalValue": "10,000 EDGE Miles"
       }
     ],
     "eligibility": {
@@ -160,30 +149,54 @@
       "incomeRequirement": [
         {
           "employmentType": "Salaried",
-          "minimumIncome": "₹12 Lakhs per annum"
+          "minimumIncome": "₹12,00,000 per annum",
+          "preferredIncomeLevel": "₹15,00,000+ per annum"
         },
         {
-          "employmentType": "Self-Employed",
-          "minimumIncome": "₹15 Lakhs per annum"
+          "employmentType": "Self-employed",
+          "minimumIncome": "₹15,00,000 per annum",
+          "preferredIncomeLevel": "₹18,00,000+ per annum"
         }
       ],
       "creditScore": {
-        "minimum": 750,
-        "description": "Decent credit score"
-      }
+        "minimum": "750+",
+        "recommended": "800+"
+      },
+      "requiredDocuments": [
+        {
+          "type": "Identity Proof",
+          "options": ["PAN Card", "Aadhaar Card"]
+        },
+        {
+          "type": "Address Proof",
+          "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]
+        },
+        {
+          "type": "Income Proof",
+          "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]
+        }
+      ],
+      "residentialStatus": ["Indian Resident"]
     },
     "applicationProcess": {
       "channels": [
         {
           "type": "Online",
-          "isAvailable": true
+          "isAvailable": true,
+          "url": "https://www.axisbank.com/retail/cards/credit-card/atlas"
         },
         {
-          "type": "Offline",
+          "type": "Branch",
           "isAvailable": true,
           "details": "Visit nearest Axis Bank branch"
         }
-      ]
+      ],
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through Axis Bank website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing Axis Bank customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [
@@ -196,5 +209,37 @@
         "Those looking for cashback rewards",
         "Budget-conscious consumers"
       ]
-    }
+    },
+    "customerSupport": {
+      "channels": [
+        {
+          "type": "Phone",
+          "value": "18604195555",
+          "availability": "24x7"
+        },
+        {
+          "type": "Email",
+          "value": "customer.services@axisbank.com",
+          "responseTime": "24-48 hours"
+        },
+        {
+          "type": "Chat",
+          "isAvailable": true,
+          "availability": "9AM - 6PM, Monday to Saturday"
+        }
+      ],
+      "dedicatedSupport": false
+    },
+    "changeLog": [
+      {
+        "date": "2024-04-20",
+        "type": "Enhancement",
+        "change": "Added tier-based lounge access and milestone benefits"
+      },
+      {
+        "date": "2024-02-15",
+        "type": "Policy Change",
+        "change": "Updated annual fee waiver condition"
+      }
+    ]
   }

@@ -103,42 +103,45 @@
         "type": "Welcome",
         "details": [
           {
-            "name": "Bonus CashPoints",
-            "value": "1,000 CashPoints",
-            "condition": "On successful realization of joining fee"
+            "name": "Welcome Benefit",
+            "value": "₹1,000 Gift Voucher",
+            "condition": "On spending ₹1,00,000 in first 90 days"
           }
         ],
-        "totalValue": "₹1,000"
+        "totalValue": ""
+      },
+      {
+        "type": "Milestone",
+        "details": [
+          {
+            "name": "Annual Spend Benefit",
+            "value": "₹1,000 Gift Voucher",
+            "condition": "On spending ₹1,00,000 in an anniversary year"
+          }
+        ],
+        "totalValue": ""
       },
       {
         "type": "Dining",
         "details": [
           {
-            "name": "Swiggy Dineout Discount",
-            "value": "₹200 off",
-            "condition": "Minimum order value of ₹2,000, valid twice per month"
+            "name": "Dining Discount",
+            "value": "Up to 20% off",
+            "condition": "At partner restaurants via Swiggy Dineout"
           }
-        ]
-      },
-      {
-        "type": "Quarterly Spend",
-        "details": [
-          {
-            "name": "Gift Vouchers",
-            "value": "₹1,000",
-            "condition": "On spends of ₹1 lakh or more each quarter"
-          }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Fuel",
         "details": [
           {
             "name": "Fuel Surcharge Waiver",
-            "value": "1%",
-            "condition": "Minimum payment of ₹400, maximum waiver of ₹250 per statement cycle"
+            "value": "1% waiver",
+            "condition": "On transactions between ₹400 and ₹5,000"
           }
-        ]
+        ],
+        "totalValue": ""
       }
     ],
     "eligibility": {

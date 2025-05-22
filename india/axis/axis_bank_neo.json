@@ -3,10 +3,12 @@
     "card": {
       "cardName": "Axis Bank Neo Credit Card",
       "cardIssuer": "Axis Bank",
-      "cardNetwork": "RuPay",
+      "cardNetwork": ["Visa", "Mastercard"],
+      "networkType": "Visa/Mastercard",
       "ratings": "4.2/5",
-      "categories": ["Shopping", "Food"],
-      "targetAudience": "Millennials, entry-level credit card users"
+      "categories": ["Shopping", "Dining", "Entertainment"],
+      "targetAudience": "Young professionals, online shoppers",
+      "applyLink": "https://www.axisbank.com/retail/cards/credit-card/neo-credit-card"
     },
     "presentation": {
       "description": "An entry-level credit card offering discounts and cashback on shopping and dining",
@@ -16,7 +18,15 @@
         "Cashback on utility bill payments",
         "UPI functionality"
       ],
-      "marketingTagline": "The perfect starter card for young shoppers!"
+      "marketingTagline": "The perfect starter card for young shoppers!",
+      "decoration": {
+        "primaryColor": -16776961,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.axisbank.com/images/neo-card.png",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      }
     },
     "financials": {
       "fees": {
@@ -25,21 +35,27 @@
         },
         "renewal": {
           "amount": "Nil"
+        },
+        "additionalCards": {
+          "amount": "Nil"
         }
       },
       "charges": [
         {
           "type": "Interest Rate",
-          "value": "3.75% per month"
+          "value": "3.75% per month",
+          "details": "As per Axis Bank's standard rates"
         },
         {
           "type": "Foreign Currency Markup",
-          "value": "3.5% of the transaction amount"
+          "value": "3.5% of the transaction amount",
+          "details": "On all international transactions"
         },
         {
           "type": "Cash Advance Fee",
           "value": "2.5% of the withdrawn amount",
-          "minimum": "₹500"
+          "minimum": "₹500",
+          "details": "On cash withdrawals from ATMs"
         }
       ]
     },
@@ -52,16 +68,23 @@
           "rewardRate": "0.10%"
         }
       ],
-      "exclusions": [
-        "Fuel", "Utilities", "Insurance", "EMI", "Wallet reloads", "Rent", "Government", "Education transactions"
-      ],
+      "caps": {
+        "overall": "No cap on total EDGE REWARD Points earned",
+        "categorySpecific": ["1000 points per month on utility bill payments"]
+      },
       "redemptionOptions": [
-        "Vouchers", "Mobile & accessories", "Home decor items", "Other products"
+        {
+          "method": "Vouchers",
+          "description": "Redeem for shopping vouchers"
+        },
+        {
+          "method": "Products",
+          "description": "Redeem for mobile & accessories, home decor, and other products"
+        }
       ],
-      "redemptionValue": {
-        "amount": "₹0.20",
-        "per": "1 Edge Reward Point"
-      }
+      "excludedCategories": [
+        "Fuel", "Utilities", "Insurance", "EMI", "Wallet reloads", "Rent", "Government", "Education transactions"
+      ]
     },
     "benefits": [
       {
@@ -72,7 +95,8 @@
             "value": "100% cashback up to ₹300",
             "condition": "On first utility bill payment within 30 days of card setup"
           }
-        ]
+        ],
+        "totalValue": "₹300"
       },
       {
         "type": "Dining",
@@ -84,34 +108,33 @@
           },
           {
             "name": "Zomato Offer",
-            "value": "40% off",
-            "condition": "On food orders worth ₹200 and above, twice a month",
-            "maxDiscount": "₹120 per order",
-            "couponCode": "AXISNEO"
+            "value": "40% off (max ₹120 per order)",
+            "condition": "On food orders worth ₹200 and above, twice a month, coupon code: AXISNEO"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Entertainment",
         "details": [
           {
             "name": "BookMyShow Offer",
-            "value": "10% off",
-            "maxBenefit": "₹100 per month",
+            "value": "10% off (max ₹100 per month)",
             "condition": "On movie ticket bookings"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Utility Bills",
         "details": [
           {
             "name": "Paytm Recharge Offer",
-            "value": "5% off",
-            "maxDiscount": "₹150 per month",
+            "value": "5% off (max ₹150 per month)",
             "condition": "On mobile/broadband and DTH recharge through Paytm, once per month"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Shopping",
@@ -126,7 +149,8 @@
             "value": "₹150 off",
             "condition": "On minimum shopping of ₹999"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Fuel",
@@ -134,10 +158,10 @@
           {
             "name": "Fuel Surcharge Waiver",
             "value": "1%",
-            "condition": "On transactions between ₹400 and ₹4,000",
-            "maxBenefit": "₹400 per month"
+            "condition": "On transactions between ₹400 and ₹4,000, max ₹400 per month"
           }
-        ]
+        ],
+        "totalValue": ""
       }
     ],
     "eligibility": {
@@ -145,6 +169,28 @@
         "minimum": 18,
         "maximum": 70
       },
+      "incomeRequirement": [
+        {
+          "employmentType": "Salaried",
+          "minimumIncome": "₹2,40,000 per annum",
+          "preferredIncomeLevel": "₹3,00,000+ per annum"
+        },
+        {
+          "employmentType": "Self-employed",
+          "minimumIncome": "₹3,00,000 per annum",
+          "preferredIncomeLevel": "₹4,00,000+ per annum"
+        }
+      ],
+      "creditScore": {
+        "minimum": "700+",
+        "recommended": "750+"
+      },
+      "requiredDocuments": [
+        {"type": "Identity Proof", "options": ["PAN Card", "Aadhaar Card"]},
+        {"type": "Address Proof", "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]},
+        {"type": "Income Proof", "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]}
+      ],
+      "residentialStatus": ["Indian Resident"],
       "otherCriteria": [
         "Stable source of income",
         "Resident of India or Non-Resident Indian"
@@ -161,7 +207,13 @@
           "isAvailable": true,
           "details": "Visit nearest Axis Bank branch"
         }
-      ]
+      ],
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through Axis Bank website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing Axis Bank customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [
