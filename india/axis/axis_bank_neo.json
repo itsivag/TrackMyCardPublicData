@@ -58,8 +58,7 @@
         {
           "type": "Cash Advance Fee",
           "value": "2.5% of the withdrawn amount",
-          "minimum": "₹500",
-          "details": "On cash withdrawals from ATMs"
+          "details": "On cash withdrawals from ATMs, minimum ₹500"
         }
       ]
     },
