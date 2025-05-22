@@ -41,8 +41,7 @@
         },
         "additionalCards": {
           "amount": "Nil",
-          "tax": "Not applicable",
-          "waiverConditions": ["No waiver required as fee is Nil"]
+          "tax": "Not applicable"
         }
       },
       "charges": [

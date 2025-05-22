@@ -41,8 +41,7 @@
         },
         "additionalCards": {
           "amount": "₹500",
-          "tax": "Plus applicable GST",
-          "waiverConditions": ["No waiver available"]
+          "tax": "Plus applicable GST"
         }
       },
       "charges": [
