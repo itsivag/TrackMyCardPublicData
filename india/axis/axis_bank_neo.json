@@ -1,229 +1,267 @@
 {
-    "id": "axis_bank_neo",
-    "card": {
-      "cardName": "Axis Bank Neo Credit Card",
-      "cardIssuer": "Axis Bank",
-      "networkType": "Visa/Mastercard",
-      "ratings": "4.2/5",
-      "categories": ["Shopping", "Dining", "Entertainment"],
-      "targetAudience": "Young professionals, online shoppers",
-      "applyLink": "https://www.axisbank.com/retail/cards/credit-card/neo-credit-card"
-    },
-    "presentation": {
-      "description": "An entry-level credit card offering discounts and cashback on shopping and dining",
-      "highlightFeatures": [
-        "No joining or annual fee",
-        "Discounts on partner brands",
-        "Cashback on utility bill payments",
-        "UPI functionality"
-      ],
-      "marketingTagline": "The perfect starter card for young shoppers!",
-      "decoration": {
-        "primaryColor": -16776961,
-        "secondaryColor": -1,
-        "orientation": "Horizontal",
-        "cardImage": "https://www.axisbank.com/images/neo-card.png",
-        "material": "Plastic",
-        "specialFeatures": ["Contactless payment", "EMV chip"]
+  "id": "axis_bank_neo",
+  "card": {
+    "cardName": "Axis Bank Neo Credit Card",
+    "cardIssuer": "Axis Bank",
+    "networkType": "Visa/Mastercard",
+    "ratings": "4.2/5",
+    "categories": ["Shopping", "Dining", "Entertainment"],
+    "targetAudience": "Young professionals, online shoppers",
+    "applyLink": "https://www.axisbank.com/retail/cards/credit-card/neo-credit-card"
+  },
+  "presentation": {
+    "description": "An entry-level credit card offering discounts and cashback on shopping and dining",
+    "highlightFeatures": [
+      "No joining or annual fee",
+      "Discounts on partner brands",
+      "Cashback on utility bill payments",
+      "UPI functionality"
+    ],
+    "marketingTagline": "The perfect starter card for young shoppers!",
+    "decoration": {
+      "primaryColor": -16776961,
+      "secondaryColor": -1,
+      "orientation": "Horizontal",
+      "cardImage": "https://www.axisbank.com/images/neo-card.png",
+      "material": "Plastic",
+      "specialFeatures": ["Contactless payment", "EMV chip"]
+    }
+  },
+  "financials": {
+    "fees": {
+      "joining": {
+        "amount": "Nil",
+        "tax": "Not applicable",
+        "waiverConditions": ["No waiver required as fee is Nil"]
+      },
+      "renewal": {
+        "amount": "Nil",
+        "tax": "Not applicable",
+        "waiverConditions": ["No waiver required as fee is Nil"]
+      },
+      "additionalCards": {
+        "amount": "Nil",
+        "tax": "Not applicable"
       }
     },
-    "financials": {
-      "fees": {
-        "joining": {
-          "amount": "Nil",
-          "tax": "Not applicable",
-          "waiverConditions": ["No waiver required as fee is Nil"]
-        },
-        "renewal": {
-          "amount": "Nil",
-          "tax": "Not applicable",
-          "waiverConditions": ["No waiver required as fee is Nil"]
-        },
-        "additionalCards": {
-          "amount": "Nil",
-          "tax": "Not applicable"
-        }
-      },
-      "charges": [
-        {
-          "type": "Interest Rate",
-          "value": "3.75% per month",
-          "details": "As per Axis Bank's standard rates"
-        },
-        {
-          "type": "Foreign Currency Markup",
-          "value": "3.5% of the transaction amount",
-          "details": "On all international transactions"
-        },
-        {
-          "type": "Cash Advance Fee",
-          "value": "2.5% of the withdrawn amount",
-          "details": "On cash withdrawals from ATMs, minimum ₹500"
-        }
-      ]
-    },
-    "rewards": {
-      "type": "EDGE REWARD Points",
-      "structure": [
-        {
-          "category": "All Spends",
-          "rate": "1 EDGE REWARD Point",
-          "details": "Earn 1 EDGE REWARD Point for every ₹200 spent (0.10% reward rate)"
-        }
-      ],
-      "caps": {
-        "overall": "No cap on total EDGE REWARD Points earned",
-        "categorySpecific": ["1000 points per month on utility bill payments"]
-      },
-      "redemptionOptions": [
-        {
-          "method": "Vouchers",
-          "description": "Redeem for shopping vouchers"
-        },
-        {
-          "method": "Products",
-          "description": "Redeem for mobile & accessories, home decor, and other products"
-        }
-      ],
-      "excludedCategories": [
-        "Fuel", "Utilities", "Insurance", "EMI", "Wallet reloads", "Rent", "Government", "Education transactions"
-      ]
-    },
-    "benefits": [
+    "charges": [
       {
-        "type": "Welcome",
-        "details": [
-          {
-            "name": "Utility Bill Payment Cashback",
-            "value": "100% cashback up to ₹300",
-            "condition": "On first utility bill payment within 30 days of card setup"
-          }
-        ],
-        "totalValue": "₹300"
+        "type": "Interest Rate",
+        "value": "3.75% per month",
+        "details": "As per Axis Bank's standard rates"
       },
       {
-        "type": "Dining",
-        "details": [
-          {
-            "name": "Restaurant Discount",
-            "value": "15% off",
-            "condition": "At partner restaurants"
-          },
-          {
-            "name": "Zomato Offer",
-            "value": "40% off (max ₹120 per order)",
-            "condition": "On food orders worth ₹200 and above, twice a month, coupon code: AXISNEO"
-          }
-        ],
-        "totalValue": ""
+        "type": "Foreign Currency Markup",
+        "value": "3.5% of the transaction amount",
+        "details": "On all international transactions"
       },
       {
-        "type": "Entertainment",
-        "details": [
-          {
-            "name": "BookMyShow Offer",
-            "value": "10% off (max ₹100 per month)",
-            "condition": "On movie ticket bookings"
-          }
-        ],
-        "totalValue": ""
-      },
+        "type": "Cash Advance Fee",
+        "value": "2.5% of the withdrawn amount",
+        "details": "On cash withdrawals from ATMs, minimum ₹500"
+      }
+    ]
+  },
+  "rewards": {
+    "type": "EDGE REWARD Points",
+    "structure": [
       {
-        "type": "Utility Bills",
-        "details": [
-          {
-            "name": "Paytm Recharge Offer",
-            "value": "5% off (max ₹150 per month)",
-            "condition": "On mobile/broadband and DTH recharge through Paytm, once per month"
-          }
-        ],
-        "totalValue": ""
-      },
-      {
-        "type": "Shopping",
-        "details": [
-          {
-            "name": "Blinkit Offer",
-            "value": "10% off up to ₹250",
-            "condition": "On minimum spend of ₹750, once a month"
-          },
-          {
-            "name": "Myntra Offer",
-            "value": "₹150 off",
-            "condition": "On minimum shopping of ₹999"
-          }
-        ],
-        "totalValue": ""
-      },
-      {
-        "type": "Fuel",
-        "details": [
-          {
-            "name": "Fuel Surcharge Waiver",
-            "value": "1%",
-            "condition": "On transactions between ₹400 and ₹4,000, max ₹400 per month"
-          }
-        ],
-        "totalValue": ""
+        "category": "All Spends",
+        "rate": "1 EDGE REWARD Point",
+        "details": "Earn 1 EDGE REWARD Point for every ₹200 spent (0.10% reward rate)"
       }
     ],
-    "eligibility": {
-      "ageRequirement": {
-        "minimum": 18,
-        "maximum": 70
-      },
-      "incomeRequirement": [
-        {
-          "employmentType": "Salaried",
-          "minimumIncome": "₹2,40,000 per annum",
-          "preferredIncomeLevel": "₹3,00,000+ per annum"
-        },
-        {
-          "employmentType": "Self-employed",
-          "minimumIncome": "₹3,00,000 per annum",
-          "preferredIncomeLevel": "₹4,00,000+ per annum"
-        }
-      ],
-      "creditScore": {
-        "minimum": "700+",
-        "recommended": "750+"
-      },
-      "requiredDocuments": [
-        {"type": "Identity Proof", "options": ["PAN Card", "Aadhaar Card"]},
-        {"type": "Address Proof", "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]},
-        {"type": "Income Proof", "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]}
-      ],
-      "residentialStatus": ["Indian Resident"]
+    "caps": {
+      "overall": "No cap on total EDGE REWARD Points earned",
+      "categorySpecific": ["1000 points per month on utility bill payments"]
     },
-    "applicationProcess": {
-      "channels": [
-        {
-          "type": "Online",
-          "isAvailable": true
-        },
-        {
-          "type": "Offline",
-          "isAvailable": true,
-          "details": "Visit nearest Axis Bank branch"
-        }
-      ],
-      "processingTime": "7-10 days",
-      "trackingMethod": "Online through Axis Bank website or mobile app",
-      "instantApproval": {
-        "isAvailable": true,
-        "conditions": ["For existing Axis Bank customers with good credit history"]
+    "redemptionOptions": [
+      {
+        "method": "Vouchers",
+        "description": "Redeem for shopping vouchers"
+      },
+      {
+        "method": "Products",
+        "description": "Redeem for mobile & accessories, home decor, and other products"
       }
-    },
-    "customerInsights": {
-      "recommendedFor": [
-        "Young individuals starting their credit journey",
-        "Frequent online shoppers",
-        "Those who often order food or book movie tickets"
+    ],
+    "excludedCategories": [
+      "Fuel", "Utilities", "Insurance", "EMI", "Wallet reloads", "Rent", "Government", "Education transactions"
+    ]
+  },
+  "benefits": [
+    {
+      "type": "Welcome",
+      "details": [
+        {
+          "name": "Utility Bill Payment Cashback",
+          "value": "100% cashback up to ₹300",
+          "condition": "On first utility bill payment within 30 days of card setup"
+        }
       ],
-      "notRecommendedFor": [
-        "High spenders looking for premium benefits",
-        "Frequent travelers seeking lounge access or travel rewards",
-        "Those looking for high reward rates on all spends"
-      ]
+      "totalValue": "₹300"
+    },
+    {
+      "type": "Dining",
+      "details": [
+        {
+          "name": "Restaurant Discount",
+          "value": "15% off",
+          "condition": "At partner restaurants"
+        },
+        {
+          "name": "Zomato Offer",
+          "value": "40% off (max ₹120 per order)",
+          "condition": "On food orders worth ₹200 and above, twice a month, coupon code: AXISNEO"
+        }
+      ],
+      "totalValue": ""
+    },
+    {
+      "type": "Entertainment",
+      "details": [
+        {
+          "name": "BookMyShow Offer",
+          "value": "10% off (max ₹100 per month)",
+          "condition": "On movie ticket bookings"
+        }
+      ],
+      "totalValue": ""
+    },
+    {
+      "type": "Utility Bills",
+      "details": [
+        {
+          "name": "Paytm Recharge Offer",
+          "value": "5% off (max ₹150 per month)",
+          "condition": "On mobile/broadband and DTH recharge through Paytm, once per month"
+        }
+      ],
+      "totalValue": ""
+    },
+    {
+      "type": "Shopping",
+      "details": [
+        {
+          "name": "Blinkit Offer",
+          "value": "10% off up to ₹250",
+          "condition": "On minimum spend of ₹750, once a month"
+        },
+        {
+          "name": "Myntra Offer",
+          "value": "₹150 off",
+          "condition": "On minimum shopping of ₹999"
+        }
+      ],
+      "totalValue": ""
+    },
+    {
+      "type": "Fuel",
+      "details": [
+        {
+          "name": "Fuel Surcharge Waiver",
+          "value": "1%",
+          "condition": "On transactions between ₹400 and ₹4,000, max ₹400 per month"
+        }
+      ],
+      "totalValue": ""
     }
-  }
+  ],
+  "eligibility": {
+    "ageRequirement": {
+      "minimum": 18,
+      "maximum": 70
+    },
+    "incomeRequirement": [
+      {
+        "employmentType": "Salaried",
+        "minimumIncome": "₹2,40,000 per annum",
+        "preferredIncomeLevel": "₹3,00,000+ per annum"
+      },
+      {
+        "employmentType": "Self-employed",
+        "minimumIncome": "₹3,00,000 per annum",
+        "preferredIncomeLevel": "₹4,00,000+ per annum"
+      }
+    ],
+    "creditScore": {
+      "minimum": "700+",
+      "recommended": "750+"
+    },
+    "requiredDocuments": [
+      {"type": "Identity Proof", "options": ["PAN Card", "Aadhaar Card"]},
+      {"type": "Address Proof", "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]},
+      {"type": "Income Proof", "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]}
+    ],
+    "residentialStatus": ["Indian Resident"]
+  },
+  "applicationProcess": {
+    "channels": [
+      {
+        "type": "Online",
+        "isAvailable": true
+      },
+      {
+        "type": "Offline",
+        "isAvailable": true,
+        "details": "Visit nearest Axis Bank branch"
+      }
+    ],
+    "processingTime": "7-10 days",
+    "trackingMethod": "Online through Axis Bank website or mobile app",
+    "instantApproval": {
+      "isAvailable": true,
+      "conditions": ["For existing Axis Bank customers with good credit history"]
+    }
+  },
+  "customerInsights": {
+    "recommendedFor": [
+      "Young individuals starting their credit journey",
+      "Frequent online shoppers",
+      "Those who often order food or book movie tickets"
+    ],
+    "notRecommendedFor": [
+      "High spenders looking for premium benefits",
+      "Frequent travelers seeking lounge access or travel rewards",
+      "Those looking for high reward rates on all spends"
+    ]
+  },
+  "customerSupport": {
+    "channels": [
+      {
+        "type": "Phone",
+        "value": "1800-419-8888",
+        "availability": "24x7",
+        "responseTime": "5-10 minutes",
+        "isAvailable": true
+      },
+      {
+        "type": "Email",
+        "value": "customer.service@axisbank.com",
+        "availability": "24x7",
+        "responseTime": "24-48 hours",
+        "isAvailable": true
+      },
+      {
+        "type": "Chat",
+        "value": null,
+        "availability": "10 AM - 7 PM",
+        "responseTime": "Instant",
+        "isAvailable": true
+      }
+    ],
+    "dedicatedSupport": false
+  },
+  "changeLog": [
+    {
+      "date": "2023-09-01",
+      "type": "Feature Update",
+      "change": "Added UPI functionality to the card"
+    },
+    {
+      "date": "2023-06-15",
+      "type": "Offer Update",
+      "change": "Introduced Blinkit discount offer"
+    }
+  ]
+}
