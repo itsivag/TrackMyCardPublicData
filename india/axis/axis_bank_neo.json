@@ -30,13 +30,19 @@
     "financials": {
       "fees": {
         "joining": {
-          "amount": "Nil"
+          "amount": "Nil",
+          "tax": "Not applicable",
+          "waiverConditions": ["No waiver required as fee is Nil"]
         },
         "renewal": {
-          "amount": "Nil"
+          "amount": "Nil",
+          "tax": "Not applicable",
+          "waiverConditions": ["No waiver required as fee is Nil"]
         },
         "additionalCards": {
-          "amount": "Nil"
+          "amount": "Nil",
+          "tax": "Not applicable",
+          "waiverConditions": ["No waiver required as fee is Nil"]
         }
       },
       "charges": [

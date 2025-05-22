@@ -31,7 +31,8 @@
       "fees": {
         "joining": {
           "amount": "₹500",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["No waiver available"]
         },
         "renewal": {
           "amount": "₹500",
@@ -40,7 +41,8 @@
         },
         "additionalCards": {
           "amount": "₹500",
-          "tax": "Plus applicable GST"
+          "tax": "Plus applicable GST",
+          "waiverConditions": ["No waiver available"]
         }
       },
       "charges": [
