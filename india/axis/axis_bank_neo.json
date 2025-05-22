@@ -3,7 +3,6 @@
     "card": {
       "cardName": "Axis Bank Neo Credit Card",
       "cardIssuer": "Axis Bank",
-      "cardNetwork": ["Visa", "Mastercard"],
       "networkType": "Visa/Mastercard",
       "ratings": "4.2/5",
       "categories": ["Shopping", "Dining", "Entertainment"],

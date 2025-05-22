@@ -7,6 +7,7 @@
       "categories": ["Travel", "Dining", "Shopping"],
       "targetAudience": "High-net-worth individuals",
       "networkType": "Visa Infinite",
+      "cardNetwork": ["Visa"],
       "applyLink": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/infinia-credit-card"
     },
     "presentation": {

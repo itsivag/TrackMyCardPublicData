@@ -69,7 +69,7 @@
       "caps": {
         "overall": "No limit on total points",
         "categorySpecific": [
-          {"category": "Travel spends", "cap": "Up to ₹2,00,000 per month"}
+          "Travel spends: Up to ₹2,00,000 per month"
         ]
       },
       "redemptionOptions": [

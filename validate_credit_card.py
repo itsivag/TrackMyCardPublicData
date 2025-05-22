@@ -109,16 +109,44 @@ class CreditCardValidator:
     def validate_card_info(self) -> bool:
         card = self.data["card"]
         required_fields = ["cardName", "cardIssuer", "ratings", "categories", 
-                         "networkType", "targetAudience", "applyLink"]
+                         "networkType", "cardNetwork", "targetAudience", "applyLink"]
         
         for field in required_fields:
             if field not in card:
                 self.errors.append(f"Missing required field in card: {field}")
                 return False
 
+        # Validate networkType
         if card["networkType"] not in [t.value for t in CardNetworkType]:
             self.errors.append(f"Invalid network type: {card['networkType']}")
             return False
+
+        # Validate cardNetwork
+        if not isinstance(card["cardNetwork"], list):
+            self.errors.append("cardNetwork must be a list")
+            return False
+
+        valid_networks = ["Visa", "Mastercard", "RuPay", "American Express"]
+        for network in card["cardNetwork"]:
+            if network not in valid_networks:
+                self.errors.append(f"Invalid card network: {network}")
+                return False
+
+        # Validate networkType matches cardNetwork
+        network_type = card["networkType"]
+        networks = card["cardNetwork"]
+        
+        if "/" in network_type:
+            # For combined network types
+            expected_networks = network_type.split("/")
+            if not all(network in networks for network in expected_networks):
+                self.errors.append(f"networkType '{network_type}' does not match cardNetwork {networks}")
+                return False
+        else:
+            # For single network types
+            if network_type not in networks:
+                self.errors.append(f"networkType '{network_type}' does not match cardNetwork {networks}")
+                return False
 
         return True
 
@@ -129,6 +157,16 @@ class CreditCardValidator:
         for field in required_fields:
             if field not in presentation:
                 self.errors.append(f"Missing required field in presentation: {field}")
+                return False
+
+        # Validate description for co-branded cards
+        description = presentation["description"].lower()
+        card_name = self.data["card"]["cardName"].lower()
+        
+        # Check if card is co-branded by looking for multiple issuers in card name
+        if " and " in card_name or "&" in card_name:
+            if "co-branded" not in description:
+                self.errors.append("Description should mention co-branding for co-branded cards")
                 return False
 
         decoration = presentation["decoration"]
