@@ -193,11 +193,7 @@
         {"type": "Address Proof", "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]},
         {"type": "Income Proof", "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]}
       ],
-      "residentialStatus": ["Indian Resident"],
-      "otherCriteria": [
-        "Stable source of income",
-        "Resident of India or Non-Resident Indian"
-      ]
+      "residentialStatus": ["Indian Resident"]
     },
     "applicationProcess": {
       "channels": [
