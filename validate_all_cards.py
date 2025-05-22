@@ -1,5 +1,5 @@
 import os
-from validate_credit_card import validate_file
+from validate_credit_card import CreditCardValidator
 
 def find_json_files(directory):
     json_files = []
@@ -21,15 +21,16 @@ def main():
     
     for json_file in json_files:
         print(f"\nValidating {json_file}...")
-        is_valid, errors = validate_file(json_file)
+        validator = CreditCardValidator(json_file)
+        errors = validator.validate()
         
-        if is_valid:
+        if not errors:
             print(f"✓ {json_file} is valid")
             valid_files += 1
         else:
             print(f"✗ {json_file} has validation errors:")
             for error in errors:
-                print(f"  - {error}")
+                print(f"  - {error.message}")
             invalid_files += 1
     
     print(f"\nValidation Summary:")
