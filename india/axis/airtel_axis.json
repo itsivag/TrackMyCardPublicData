@@ -3,9 +3,6 @@
     "card": {
       "cardName": "Airtel Axis Bank Credit Card",
       "cardIssuer": "Axis Bank",
-      "cobranded": {
-        "partner": "Bharti Airtel"
-      },
       "cardNetwork": ["Visa", "RuPay"],
       "networkType": "Visa/RuPay",
       "ratings": "4.8/5",
@@ -14,7 +11,7 @@
       "applyLink": "https://www.axisbank.com/retail/cards/credit-card/airtel-axis-bank-credit-card"
     },
     "presentation": {
-      "description": "A co-branded credit card offering high cashback on Airtel services and partner brands",
+      "description": "A co-branded credit card by Axis Bank and Bharti Airtel offering high cashback on Airtel services and partner brands",
       "highlightFeatures": [
         "Up to 25% cashback on Airtel services",
         "10% cashback on utility bill payments and partner brands",
