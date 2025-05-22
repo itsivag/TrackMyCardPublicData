@@ -79,8 +79,7 @@
         {
           "category": "All Eligible Spends",
           "rate": "1 point",
-          "per": "₹50 spent",
-          "details": "Excluding fuel transactions, utility bill payments, insurance, and cash transactions"
+          "details": "1 point per ₹50 spent. Excluding fuel transactions, utility bill payments, insurance, and cash transactions"
         }
       ],
       "caps": {
