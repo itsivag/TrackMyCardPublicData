@@ -3,7 +3,6 @@
     "card": {
       "cardName": "Airtel Axis Bank Credit Card",
       "cardIssuer": "Axis Bank",
-      "cardNetwork": ["Visa", "RuPay"],
       "networkType": "Visa/RuPay",
       "ratings": "4.8/5",
       "categories": ["Travel", "Food", "Utility Bill Payment"],
