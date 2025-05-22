@@ -7,9 +7,11 @@
         "partner": "Bharti Airtel"
       },
       "cardNetwork": ["Visa", "RuPay"],
+      "networkType": "Visa/RuPay",
       "ratings": "4.8/5",
       "categories": ["Travel", "Food", "Utility Bill Payment"],
-      "targetAudience": "Airtel customers, frequent online shoppers"
+      "targetAudience": "Airtel customers, frequent online shoppers",
+      "applyLink": "https://www.axisbank.com/retail/cards/credit-card/airtel-axis-bank-credit-card"
     },
     "presentation": {
       "description": "A co-branded credit card offering high cashback on Airtel services and partner brands",
@@ -19,7 +21,15 @@
         "Complimentary airport lounge access",
         "Amazon voucher as welcome benefit"
       ],
-      "marketingTagline": "Maximize your savings on Airtel services and everyday spends!"
+      "marketingTagline": "Maximize your savings on Airtel services and everyday spends!",
+      "decoration": {
+        "primaryColor": -16711681,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.axisbank.com/images/airtel-axis-card.png",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      }
     },
     "financials": {
       "fees": {
@@ -31,11 +41,16 @@
           "amount": "₹500",
           "tax": "Plus applicable GST",
           "waiverConditions": ["Annual spend of ₹2 lakhs or more in the previous year"]
+        },
+        "additionalCards": {
+          "amount": "₹500",
+          "tax": "Plus applicable GST"
         }
       },
       "charges": [
         {
           "type": "Interest Rate",
+          "value": "3.6% per month",
           "details": "As per Axis Bank's standard rates"
         }
       ]
@@ -66,7 +81,21 @@
           "details": "Unlimited cashback"
         }
       ],
-      "exclusions": [
+      "caps": {
+        "overall": "₹1,000 per billing cycle",
+        "categorySpecific": [
+          "₹250 per month for Airtel services",
+          "₹250 per month for utility bill payments",
+          "₹500 per month for partner brands"
+        ]
+      },
+      "redemptionOptions": [
+        {
+          "method": "Direct Bill Adjustment",
+          "description": "Cashback is directly adjusted against next card bill"
+        }
+      ],
+      "excludedCategories": [
         "Utility bill payments not made through Airtel Thanks app",
         "Fuel purchases",
         "EMI transactions",
@@ -78,8 +107,7 @@
         "Wallet loading transactions",
         "Jewelry purchases",
         "Cash advances"
-      ],
-      "redemption": "Directly adjusted against next card bill"
+      ]
     },
     "benefits": [
       {
@@ -90,7 +118,8 @@
             "value": "₹500",
             "condition": "On first transaction within 30 days of card issuance"
           }
-        ]
+        ],
+        "totalValue": "₹500"
       },
       {
         "type": "Travel",
@@ -100,7 +129,8 @@
             "value": "4 complimentary visits per year",
             "condition": "On quarterly spends of ₹50,000 or more in the previous quarter"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Dining",
@@ -110,7 +140,8 @@
             "value": "15% off up to ₹500",
             "condition": "At 4000+ participating restaurants, minimum order value ₹2,500"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Fuel",
@@ -118,10 +149,10 @@
           {
             "name": "Fuel Surcharge Waiver",
             "value": "1%",
-            "condition": "On transactions between ₹400 and ₹4,000",
-            "maxWaiver": "₹500 per month"
+            "condition": "On transactions between ₹400 and ₹4,000, max ₹500 per month"
           }
-        ]
+        ],
+        "totalValue": ""
       }
     ],
     "eligibility": {
@@ -129,6 +160,28 @@
         "minimum": 18,
         "maximum": 70
       },
+      "incomeRequirement": [
+        {
+          "employmentType": "Salaried",
+          "minimumIncome": "₹3,00,000 per annum",
+          "preferredIncomeLevel": "₹5,00,000+ per annum"
+        },
+        {
+          "employmentType": "Self-employed",
+          "minimumIncome": "₹4,00,000 per annum",
+          "preferredIncomeLevel": "₹6,00,000+ per annum"
+        }
+      ],
+      "creditScore": {
+        "minimum": "700+",
+        "recommended": "750+"
+      },
+      "requiredDocuments": [
+        {"type": "Identity Proof", "options": ["PAN Card", "Aadhaar Card"]},
+        {"type": "Address Proof", "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]},
+        {"type": "Income Proof", "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]}
+      ],
+      "residentialStatus": ["Indian Resident"],
       "otherCriteria": [
         "Stable source of income",
         "Resident of India"
@@ -144,7 +197,13 @@
           "type": "Axis Bank Website",
           "isAvailable": true
         }
-      ]
+      ],
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through Axis Bank website or mobile app",
+      "instantApproval": {
+        "isAvailable": true,
+        "conditions": ["For existing Axis Bank customers with good credit history"]
+      }
     },
     "customerInsights": {
       "recommendedFor": [

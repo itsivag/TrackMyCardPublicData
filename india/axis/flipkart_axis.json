@@ -151,7 +151,8 @@
           "value": "5% cashback",
           "condition": "On flights and hotel bookings"
         }
-      ]
+      ],
+      "totalValue": ""
     },
     {
       "type": "Dining",
@@ -167,7 +168,8 @@
           "value": "4% cashback",
           "condition": "Not valid for Instamart or Genie"
         }
-      ]
+      ],
+      "totalValue": ""
     },
     {
       "type": "Lifestyle",
@@ -182,7 +184,8 @@
           "value": "4% cashback",
           "condition": "On eligible transactions"
         }
-      ]
+      ],
+      "totalValue": ""
     },
     {
       "type": "Fuel",
@@ -192,7 +195,8 @@
           "value": "1% waiver",
           "condition": "For transactions between ₹400-₹4,000, maximum waiver of ₹400 per month"
         }
-      ]
+      ],
+      "totalValue": ""
     }
   ],
   "eligibility": {

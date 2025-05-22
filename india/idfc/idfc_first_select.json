@@ -1,14 +1,23 @@
 {
-    "id": 1,
+    "id": "idfc_first_select_credit",
     "card": {
-      "id": "idfc_first_select",
       "cardName": "IDFC FIRST Select Credit Card",
       "cardIssuer": "IDFC First Bank",
       "ratings": "4.6/5",
       "categories": ["Travel", "Shopping"],
-      "targetAudience": "Premium card users"
+      "networkType": "Visa",
+      "targetAudience": "Premium card users",
+      "applyLink": "https://www.idfcfirstbank.com/credit-cards/select"
     },
     "presentation": {
+      "decoration": {
+        "primaryColor": -16777216,
+        "secondaryColor": -1,
+        "orientation": "Horizontal",
+        "cardImage": "https://www.idfcfirstbank.com/images/select-card.png",
+        "material": "Plastic",
+        "specialFeatures": ["Contactless payment", "EMV chip"]
+      },
       "description": "A premium credit card offering diverse benefits across travel, shopping, and dining",
       "highlightFeatures": [
         "Lifetime free card",
@@ -21,28 +30,40 @@
     "financials": {
       "fees": {
         "joining": {
-          "amount": "Nil"
+          "amount": "Nil",
+          "tax": "Not applicable",
+          "waiverConditions": ["Not applicable"]
         },
         "renewal": {
-          "amount": "Nil"
+          "amount": "Nil",
+          "tax": "Not applicable",
+          "waiverConditions": ["Not applicable"]
+        },
+        "additionalCards": {
+          "amount": "₹0",
+          "tax": "Not applicable"
         }
       },
       "charges": [
         {
           "type": "Interest Rate",
-          "value": "0.75% to 3.5% per month"
+          "value": "0.75% to 3.5% per month",
+          "details": "Based on payment behavior"
         },
         {
           "type": "Foreign Currency Markup",
-          "value": "1.99% of the transaction amount"
+          "value": "1.99% of the transaction amount",
+          "details": "On all international transactions"
         },
         {
           "type": "Cash Advance Fee",
-          "value": "₹199 per transaction"
+          "value": "₹199 per transaction",
+          "details": "On cash withdrawals from ATMs"
         },
         {
           "type": "Reward Redemption Fee",
-          "value": "₹99 plus taxes"
+          "value": "₹99 plus taxes",
+          "details": "Applicable on each redemption"
         }
       ]
     },
@@ -50,28 +71,37 @@
       "type": "Reward Points",
       "structure": [
         {
+          "category": "Purchases above ₹20,000",
           "rate": "10 Reward Points",
-          "per": "₹150 spent",
-          "condition": "On purchases above ₹20,000"
+          "details": "Earn 10 Reward Points per ₹150 spent on purchases above ₹20,000 in a statement cycle"
         },
         {
+          "category": "Purchases up to ₹20,000",
           "rate": "3 Reward Points",
-          "per": "₹150 spent",
-          "condition": "On purchases up to ₹20,000"
+          "details": "Earn 3 Reward Points per ₹150 spent on purchases up to ₹20,000 in a statement cycle"
         },
         {
+          "category": "Utility bills and insurance premium payments",
           "rate": "1 Reward Point",
-          "per": "₹150 spent",
-          "condition": "On utility bills and insurance premium payments"
+          "details": "Earn 1 Reward Point per ₹150 spent on utility bills and insurance premium payments"
         }
       ],
-      "birthdayBonus": "Up to 10x Reward points on every ₹150 spent",
-      "redemptionValue": "1 Reward Point = ₹0.25",
+      "caps": {
+        "overall": "No limit on total points",
+        "categorySpecific": []
+      },
       "redemptionOptions": [
-        "Poshvine reward portal",
-        "Exclusive merchant stores"
+        {"method": "Poshvine reward portal", "description": "Redeem for a wide range of products and vouchers"},
+        {"method": "Exclusive merchant stores", "description": "Redeem at select merchant stores"}
       ],
-      "validity": "No expiry, can be carried forward"
+      "excludedCategories": [
+        "Fuel",
+        "EMI transactions",
+        "Fees or charges",
+        "Loan on card",
+        "Balance transfer",
+        "Cash withdrawal"
+      ]
     },
     "benefits": [
       {
@@ -87,7 +117,8 @@
             "value": "5% up to ₹1,000",
             "condition": "On EMI transactions within 30 days of card issuance"
           }
-        ]
+        ],
+        "totalValue": "₹1,500"
       },
       {
         "type": "Travel",
@@ -99,13 +130,16 @@
           },
           {
             "name": "Railway Lounge Access",
-            "value": "4 complimentary visits per quarter"
+            "value": "4 complimentary visits per quarter",
+            "condition": ""
           },
           {
             "name": "Complimentary Roadside Assistance",
-            "value": "Worth ₹1,399"
+            "value": "Worth ₹1,399",
+            "condition": ""
           }
-        ]
+        ],
+        "totalValue": "₹5,000"
       },
       {
         "type": "Entertainment",
@@ -113,10 +147,10 @@
           {
             "name": "Movie Ticket Offer",
             "value": "Buy 1 Get 1 up to ₹125",
-            "partner": "District mobile app",
-            "frequency": "Twice every month"
+            "condition": "Twice every month via District mobile app"
           }
-        ]
+        ],
+        "totalValue": "₹3,000"
       },
       {
         "type": "Dining",
@@ -126,20 +160,22 @@
             "value": "Up to 20% off",
             "condition": "At 1500+ participating restaurants"
           }
-        ]
+        ],
+        "totalValue": "₹2,000 per month"
       },
       {
         "type": "Insurance",
         "details": [
-          {"name": "Travel Insurance Cover", "value": "Up to ₹22,500"},
-          {"name": "Air Accident Cover", "value": "₹1 Crore"},
-          {"name": "Personal Accident Cover", "value": "Up to ₹5,00,000"},
-          {"name": "Lost Card Liability Cover", "value": "₹50,000"},
-          {"name": "Loss of Checked-in Baggage", "value": "USD 500"},
-          {"name": "Delay in Checked-in Baggage", "value": "USD 100"},
-          {"name": "Loss of Passport", "value": "USD 300"},
-          {"name": "Delay in Flight", "value": "USD 300"}
-        ]
+          {"name": "Travel Insurance Cover", "value": "Up to ₹22,500", "condition": ""},
+          {"name": "Air Accident Cover", "value": "₹1 Crore", "condition": ""},
+          {"name": "Personal Accident Cover", "value": "Up to ₹5,00,000", "condition": ""},
+          {"name": "Lost Card Liability Cover", "value": "₹50,000", "condition": ""},
+          {"name": "Loss of Checked-in Baggage", "value": "USD 500", "condition": ""},
+          {"name": "Delay in Checked-in Baggage", "value": "USD 100", "condition": ""},
+          {"name": "Loss of Passport", "value": "USD 300", "condition": ""},
+          {"name": "Delay in Flight", "value": "USD 300", "condition": ""}
+        ],
+        "totalValue": "₹1,27,900"
       },
       {
         "type": "Fuel",
@@ -147,35 +183,34 @@
           {
             "name": "Fuel Surcharge Waiver",
             "value": "1%",
-            "maxDiscount": "₹300"
+            "condition": "Max discount ₹300"
           }
-        ]
+        ],
+        "totalValue": "₹300"
       }
     ],
     "eligibility": {
-      "ageRequirement": {
-        "minimum": 21
-      },
-      "incomeRequirement": {
-        "minimumAnnualIncome": "₹12 Lakh",
-        "applicableFor": ["Salaried", "Self-employed"]
-      },
-      "otherCriteria": [
-        "Decent credit score"
-      ]
+      "ageRequirement": {"minimum": 21, "maximum": 65},
+      "incomeRequirement": [
+        {"employmentType": "Salaried", "minimumIncome": "₹12,00,000 per annum", "preferredIncomeLevel": "₹15,00,000+ per annum"},
+        {"employmentType": "Self-employed", "minimumIncome": "₹12,00,000 per annum", "preferredIncomeLevel": "₹15,00,000+ per annum"}
+      ],
+      "creditScore": {"minimum": "750+", "recommended": "800+"},
+      "requiredDocuments": [
+        {"type": "Identity Proof", "options": ["PAN Card", "Aadhaar Card"]},
+        {"type": "Address Proof", "options": ["Aadhaar Card", "Passport", "Voter ID", "Driving License"]},
+        {"type": "Income Proof", "options": ["Salary Slips", "Form 16", "ITR", "Bank Statements"]}
+      ],
+      "residentialStatus": ["Indian Resident"]
     },
     "applicationProcess": {
       "channels": [
-        {
-          "type": "Online",
-          "isAvailable": true
-        },
-        {
-          "type": "Offline",
-          "isAvailable": true,
-          "details": "Visit nearest IDFC First Bank branch"
-        }
-      ]
+        {"type": "Online", "isAvailable": true, "url": "https://www.idfcfirstbank.com/credit-cards/select"},
+        {"type": "Branch", "isAvailable": true, "details": "Visit nearest IDFC First Bank branch"}
+      ],
+      "processingTime": "7-10 days",
+      "trackingMethod": "Online through IDFC First Bank website or mobile app",
+      "instantApproval": {"isAvailable": true, "conditions": ["For existing IDFC First Bank customers with good credit history"]}
     },
     "customerInsights": {
       "recommendedFor": [
@@ -188,5 +223,17 @@
         "Those who rarely travel",
         "Users looking for specific category-based rewards"
       ]
-    }
+    },
+    "customerSupport": {
+      "channels": [
+        {"type": "Phone", "value": "18004194332", "availability": "24x7"},
+        {"type": "Email", "value": "customercare@idfcfirstbank.com", "responseTime": "24-48 hours"},
+        {"type": "Chat", "isAvailable": true, "availability": "9AM - 6PM, Monday to Saturday"}
+      ],
+      "dedicatedSupport": false
+    },
+    "changeLog": [
+      {"date": "2024-04-20", "type": "Enhancement", "change": "Added new travel and insurance benefits"},
+      {"date": "2024-02-15", "type": "Policy Change", "change": "Updated eligibility and fee structure"}
+    ]
   }

@@ -125,7 +125,8 @@
             "value": "1 complimentary night",
             "condition": "On 2-night booking"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Dining",
@@ -140,7 +141,8 @@
             "value": "Up to ₹750 off",
             "condition": "Twice per month on minimum bill of ₹8,000"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Golf",
@@ -155,7 +157,8 @@
             "value": "Unlimited complimentary",
             "condition": "At select golf courses in India"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Concierge",
@@ -195,7 +198,8 @@
             "value": "Available",
             "condition": "For all cardholders"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Insurance",
@@ -215,7 +219,8 @@
             "value": "₹9 lakhs",
             "condition": "For all cardholders"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Fuel",
@@ -225,7 +230,8 @@
             "value": "1%",
             "condition": "On transactions between ₹400 and ₹1,00,000, maximum waiver of ₹1,000 per month"
           }
-        ]
+        ],
+        "totalValue": ""
       }
     ],
     "eligibility": {

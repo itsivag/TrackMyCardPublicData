@@ -110,17 +110,12 @@
         "type": "Welcome",
         "details": [
           {
-            "name": "MakeMyTrip Voucher",
-            "value": "₹1,000",
-            "condition": "Valid for 3 months from issuance, issued within 45 days of joining fee realization"
-          },
-          {
-            "name": "MMTBLACK Gold Membership",
-            "value": "12 months",
-            "condition": "On card activation"
+            "name": "Welcome Benefit",
+            "value": "₹1,500 MakeMyTrip Voucher",
+            "condition": "On first transaction within 30 days"
           }
         ],
-        "totalValue": "₹1,000"
+        "totalValue": ""
       },
       {
         "type": "Travel",
@@ -135,7 +130,8 @@
             "value": "1 complimentary visit per year",
             "condition": "Primary cardholder only"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Entertainment",
@@ -145,17 +141,41 @@
             "value": "Buy 1 Get 1 free",
             "condition": "Twice per month per card variant, maximum discount of ₹150 per ticket, valid at BookMyShow and Inox"
           }
-        ]
+        ],
+        "totalValue": ""
       },
       {
         "type": "Annual",
         "details": [
           {
-            "name": "MakeMyTrip Voucher on Fee Payment",
-            "value": "₹1,000",
-            "condition": "On realization of annual fee"
+            "name": "Annual Spend Benefit",
+            "value": "₹2,000 MakeMyTrip Voucher",
+            "condition": "On spending ₹2,50,000 in an anniversary year"
           }
-        ]
+        ],
+        "totalValue": ""
+      },
+      {
+        "type": "Dining",
+        "details": [
+          {
+            "name": "Dining Discount",
+            "value": "Up to 15% off",
+            "condition": "At partner restaurants via EazyDiner"
+          }
+        ],
+        "totalValue": ""
+      },
+      {
+        "type": "Fuel",
+        "details": [
+          {
+            "name": "Fuel Surcharge Waiver",
+            "value": "1% waiver",
+            "condition": "On transactions between ₹400 and ₹4,000"
+          }
+        ],
+        "totalValue": ""
       }
     ],
     "eligibility": {
