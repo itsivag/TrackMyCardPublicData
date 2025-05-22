@@ -66,9 +66,9 @@
       "type": "EDGE REWARD Points",
       "structure": [
         {
+          "category": "All Spends",
           "rate": "1 EDGE REWARD Point",
-          "per": "₹200 spent",
-          "rewardRate": "0.10%"
+          "details": "Earn 1 EDGE REWARD Point for every ₹200 spent (0.10% reward rate)"
         }
       ],
       "caps": {

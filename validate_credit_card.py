@@ -1,360 +1,373 @@
 import json
 import argparse
-from typing import Dict, List, Any, Optional
+import sys
+from typing import Dict, List, Union, Any, Optional, Set
 from dataclasses import dataclass
-from enum import Enum
-import os
-
-class CardNetworkType(Enum):
-    VISA = "Visa"
-    VISA_INFINITE = "Visa Infinite"
-    MASTERCARD = "Mastercard"
-    MASTERCARD_WORLD = "Mastercard World"
-    RUPAY = "RuPay"
-    AMEX = "American Express"
-    VISA_MASTERCARD = "Visa/Mastercard"
-    VISA_RUPAY = "Visa/RuPay"
-    RUPAY_MASTERCARD = "RuPay/Mastercard"
+from pathlib import Path
 
 @dataclass
-class CardFees:
-    amount: str
-    tax: str
-    waiverConditions: List[str]
-
-@dataclass
-class CardCharge:
-    type: str
-    value: str
-    details: str
-    annualizedValue: Optional[str] = None
-    condition: Optional[str] = None
-
-@dataclass
-class RewardStructure:
-    category: str
-    rate: str
-    details: str
-
-@dataclass
-class RewardCap:
-    category: str
-    cap: str
-
-@dataclass
-class RedemptionOption:
-    method: str
-    description: str
-
-@dataclass
-class BenefitDetail:
-    name: str
-    value: str
-    condition: str
-
-@dataclass
-class Benefit:
-    type: str
-    details: List[BenefitDetail]
-    totalValue: str
-
-@dataclass
-class IncomeRequirement:
-    employmentType: str
-    minimumIncome: str
-    preferredIncomeLevel: str
-
-@dataclass
-class DocumentRequirement:
-    type: str
-    options: List[str]
-
-@dataclass
-class ApplicationChannel:
-    type: str
-    isAvailable: bool
-    url: Optional[str] = None
-    details: Optional[str] = None
-
-@dataclass
-class SupportChannel:
-    type: str
-    value: str
-    availability: Optional[str] = None
-    responseTime: Optional[str] = None
-    isAvailable: Optional[bool] = None
-
-@dataclass
-class ChangeLog:
-    date: str
-    type: str
-    change: str
+class ValidationError:
+    field: str
+    message: str
 
 class CreditCardValidator:
-    def __init__(self, json_data: Dict[str, Any]):
-        self.data = json_data
+    def __init__(self, file_path: str):
+        self.file_path = file_path
+        self.data = None
         self.errors = []
 
-    def validate_basic_structure(self) -> bool:
-        required_fields = ["id", "card", "presentation", "financials", "rewards", 
-                         "eligibility", "applicationProcess", 
-                         "customerInsights"]
-        
-        for field in required_fields:
-            if field not in self.data:
-                self.errors.append(f"Missing required field: {field}")
-                return False
-        return True
+    def load_json(self) -> bool:
+        """Load and parse the JSON file."""
+        try:
+            with open(self.file_path, 'r') as f:
+                self.data = json.load(f)
+            return True
+        except json.JSONDecodeError as e:
+            self.errors.append(ValidationError("JSON", f"Invalid JSON format: {str(e)}"))
+            return False
+        except FileNotFoundError:
+            self.errors.append(ValidationError("File", f"File not found: {self.file_path}"))
+            return False
+        except Exception as e:
+            self.errors.append(ValidationError("File", f"Error reading file: {str(e)}"))
+            return False
 
-    def validate_card_info(self) -> bool:
-        card = self.data["card"]
-        required_fields = ["cardName", "cardIssuer", "ratings", "categories", 
-                         "networkType", "cardNetwork", "targetAudience", "applyLink"]
+    def validate_card_section(self, card: Dict) -> None:
+        """Validate the card section according to the Kotlin model."""
+        required_fields = {
+            "cardName": str,
+            "cardIssuer": str,
+            "networkType": str,
+            "ratings": str,
+            "categories": list,
+            "targetAudience": str,
+            "applyLink": str
+        }
         
-        for field in required_fields:
+        for field, expected_type in required_fields.items():
             if field not in card:
-                self.errors.append(f"Missing required field in card: {field}")
-                return False
+                self.errors.append(ValidationError(f"card.{field}", "Field is missing"))
+            elif not isinstance(card[field], expected_type):
+                self.errors.append(ValidationError(f"card.{field}", f"Expected {expected_type.__name__}, got {type(card[field])}"))
 
-        # Validate networkType
-        if card["networkType"] not in [t.value for t in CardNetworkType]:
-            self.errors.append(f"Invalid network type: {card['networkType']}")
-            return False
-
-        # Validate cardNetwork
-        if not isinstance(card["cardNetwork"], list):
-            self.errors.append("cardNetwork must be a list")
-            return False
-
-        valid_networks = ["Visa", "Mastercard", "RuPay", "American Express"]
-        for network in card["cardNetwork"]:
-            if network not in valid_networks:
-                self.errors.append(f"Invalid card network: {network}")
-                return False
-
-        # Validate networkType matches cardNetwork
-        network_type = card["networkType"]
-        networks = card["cardNetwork"]
+    def validate_presentation_section(self, presentation: Dict) -> None:
+        """Validate the presentation section."""
+        required_fields = {
+            "description": str,
+            "highlightFeatures": list,
+            "marketingTagline": str,
+            "decoration": dict
+        }
         
-        if "/" in network_type:
-            # For combined network types
-            expected_networks = network_type.split("/")
-            if not all(network in networks for network in expected_networks):
-                self.errors.append(f"networkType '{network_type}' does not match cardNetwork {networks}")
-                return False
-        else:
-            # For single network types
-            if network_type not in networks:
-                self.errors.append(f"networkType '{network_type}' does not match cardNetwork {networks}")
-                return False
-
-        return True
-
-    def validate_presentation(self) -> bool:
-        presentation = self.data["presentation"]
-        required_fields = ["decoration", "description", "highlightFeatures", "marketingTagline"]
-        
-        for field in required_fields:
+        for field, expected_type in required_fields.items():
             if field not in presentation:
-                self.errors.append(f"Missing required field in presentation: {field}")
-                return False
-
-        # Validate description for co-branded cards
-        description = presentation["description"].lower()
-        card_name = self.data["card"]["cardName"].lower()
+                self.errors.append(ValidationError(f"presentation.{field}", "Field is missing"))
+            elif not isinstance(presentation[field], expected_type):
+                self.errors.append(ValidationError(f"presentation.{field}", f"Expected {expected_type.__name__}, got {type(presentation[field])}"))
         
-        # Check if card is co-branded by looking for multiple issuers in card name
-        if " and " in card_name or "&" in card_name:
-            if "co-branded" not in description:
-                self.errors.append("Description should mention co-branding for co-branded cards")
-                return False
+        if "decoration" in presentation:
+            decoration = presentation["decoration"]
+            required_decoration_fields = {
+                "primaryColor": int,
+                "secondaryColor": int,
+                "orientation": str,
+                "cardImage": str,
+                "material": str,
+                "specialFeatures": list
+            }
+            
+            for field, expected_type in required_decoration_fields.items():
+                if field not in decoration:
+                    self.errors.append(ValidationError(f"presentation.decoration.{field}", "Field is missing"))
+                elif not isinstance(decoration[field], expected_type):
+                    self.errors.append(ValidationError(f"presentation.decoration.{field}", f"Expected {expected_type.__name__}, got {type(decoration[field])}"))
 
-        decoration = presentation["decoration"]
-        required_decoration_fields = ["primaryColor", "secondaryColor", "orientation", 
-                                    "cardImage", "material", "specialFeatures"]
+    def validate_financials_section(self, financials: Dict) -> None:
+        """Validate the financials section."""
+        required_fields = {
+            "fees": dict,
+            "charges": list
+        }
         
-        for field in required_decoration_fields:
-            if field not in decoration:
-                self.errors.append(f"Missing required field in decoration: {field}")
-                return False
-
-        return True
-
-    def validate_financials(self) -> bool:
-        financials = self.data["financials"]
-        required_fields = ["fees", "charges"]
-        
-        for field in required_fields:
+        for field, expected_type in required_fields.items():
             if field not in financials:
-                self.errors.append(f"Missing required field in financials: {field}")
-                return False
-
-        fees = financials["fees"]
-        required_fee_types = ["joining", "renewal", "additionalCards"]
+                self.errors.append(ValidationError(f"financials.{field}", "Field is missing"))
+            elif not isinstance(financials[field], expected_type):
+                self.errors.append(ValidationError(f"financials.{field}", f"Expected {expected_type.__name__}, got {type(financials[field])}"))
         
-        for fee_type in required_fee_types:
-            if fee_type not in fees:
-                self.errors.append(f"Missing required fee type: {fee_type}")
-                return False
+        if "fees" in financials:
+            fees = financials["fees"]
+            required_fee_types = ["joining", "renewal", "additionalCards"]
+            for fee_type in required_fee_types:
+                if fee_type not in fees:
+                    self.errors.append(ValidationError(f"financials.fees.{fee_type}", "Fee type is missing"))
+                else:
+                    fee = fees[fee_type]
+                    required_fee_fields = ["amount", "tax"]
+                    if fee_type != "additionalCards":
+                        required_fee_fields.append("waiverConditions")
+                    for field in required_fee_fields:
+                        if field not in fee:
+                            self.errors.append(ValidationError(f"financials.fees.{fee_type}.{field}", "Field is missing"))
+                        elif not isinstance(fee[field], (str if field != "waiverConditions" else list)):
+                            self.errors.append(ValidationError(f"financials.fees.{fee_type}.{field}", f"Expected {'string' if field != 'waiverConditions' else 'list'}, got {type(fee[field])}"))
 
-        return True
+        if "charges" in financials:
+            for i, charge in enumerate(financials["charges"]):
+                required_fields = ["type", "value"]
+                optional_fields = ["details"]
+                
+                for field in required_fields:
+                    if field not in charge:
+                        self.errors.append(ValidationError(f"financials.charges[{i}].{field}", "Field is missing"))
+                    elif not isinstance(charge[field], str):
+                        self.errors.append(ValidationError(f"financials.charges[{i}].{field}", f"Expected string, got {type(charge[field])}"))
+                
+                for field in optional_fields:
+                    if field in charge and not isinstance(charge[field], str):
+                        self.errors.append(ValidationError(f"financials.charges[{i}].{field}", f"Expected string or null, got {type(charge[field])}"))
 
-    def validate_rewards(self) -> bool:
-        rewards = self.data["rewards"]
-        required_fields = ["type", "structure", "caps", "redemptionOptions", "excludedCategories"]
+    def validate_rewards_section(self, rewards: Dict) -> None:
+        """Validate the rewards section."""
+        required_fields = {
+            "type": str,
+            "structure": list,
+            "caps": dict,
+            "redemptionOptions": list,
+            "excludedCategories": list
+        }
         
-        for field in required_fields:
+        for field, expected_type in required_fields.items():
             if field not in rewards:
-                self.errors.append(f"Missing required field in rewards: {field}")
-                return False
+                self.errors.append(ValidationError(f"rewards.{field}", "Field is missing"))
+            elif not isinstance(rewards[field], expected_type):
+                self.errors.append(ValidationError(f"rewards.{field}", f"Expected {expected_type.__name__}, got {type(rewards[field])}"))
+        
+        if "structure" in rewards:
+            for i, structure in enumerate(rewards["structure"]):
+                required_fields = ["category", "rate", "details"]
+                for field in required_fields:
+                    if field not in structure:
+                        self.errors.append(ValidationError(f"rewards.structure[{i}].{field}", "Field is missing"))
+                    elif not isinstance(structure[field], str):
+                        self.errors.append(ValidationError(f"rewards.structure[{i}].{field}", f"Expected string, got {type(structure[field])}"))
 
-        return True
+        if "caps" in rewards:
+            caps = rewards["caps"]
+            required_fields = ["overall"]
+            for field in required_fields:
+                if field not in caps:
+                    self.errors.append(ValidationError(f"rewards.caps.{field}", "Field is missing"))
+                elif not isinstance(caps[field], str):
+                    self.errors.append(ValidationError(f"rewards.caps.{field}", f"Expected string, got {type(caps[field])}"))
+            
+            if "categorySpecific" in caps and not isinstance(caps["categorySpecific"], list):
+                self.errors.append(ValidationError("rewards.caps.categorySpecific", f"Expected list, got {type(caps['categorySpecific'])}"))
 
-    def validate_benefits(self) -> bool:
-        if "benefits" not in self.data:
-            return True  # Benefits are optional
+        if "redemptionOptions" in rewards:
+            for i, option in enumerate(rewards["redemptionOptions"]):
+                required_fields = ["method", "description"]
+                for field in required_fields:
+                    if field not in option:
+                        self.errors.append(ValidationError(f"rewards.redemptionOptions[{i}].{field}", "Field is missing"))
+                    elif not isinstance(option[field], str):
+                        self.errors.append(ValidationError(f"rewards.redemptionOptions[{i}].{field}", f"Expected string, got {type(option[field])}"))
 
-        benefits = self.data["benefits"]
+    def validate_benefits_section(self, benefits: List) -> None:
+        """Validate the benefits section."""
         if not isinstance(benefits, list):
-            self.errors.append("Benefits must be a list")
-            return False
-
-        for benefit in benefits:
+            self.errors.append(ValidationError("benefits", f"Expected list, got {type(benefits)}"))
+            return
+        
+        for i, benefit in enumerate(benefits):
             if not isinstance(benefit, dict):
-                self.errors.append("Each benefit must be an object")
-                return False
+                self.errors.append(ValidationError(f"benefits[{i}]", f"Expected dictionary, got {type(benefit)}"))
+                continue
+            
+            required_fields = ["type", "details"]
+            optional_fields = ["totalValue"]
+            
+            for field in required_fields:
+                if field not in benefit:
+                    self.errors.append(ValidationError(f"benefits[{i}].{field}", "Field is missing"))
+                elif not isinstance(benefit[field], (str if field == "type" else list)):
+                    self.errors.append(ValidationError(f"benefits[{i}].{field}", f"Expected {'string' if field == 'type' else 'list'}, got {type(benefit[field])}"))
+            
+            if "totalValue" in benefit and not isinstance(benefit["totalValue"], str):
+                self.errors.append(ValidationError(f"benefits[{i}].totalValue", f"Expected string or null, got {type(benefit['totalValue'])}"))
+            
+            if "details" in benefit:
+                for j, detail in enumerate(benefit["details"]):
+                    required_fields = ["name", "value"]
+                    optional_fields = ["condition"]
+                    
+                    for field in required_fields:
+                        if field not in detail:
+                            self.errors.append(ValidationError(f"benefits[{i}].details[{j}].{field}", "Field is missing"))
+                        elif not isinstance(detail[field], str):
+                            self.errors.append(ValidationError(f"benefits[{i}].details[{j}].{field}", f"Expected string, got {type(detail[field])}"))
+                    
+                    for field in optional_fields:
+                        if field in detail and not isinstance(detail[field], str):
+                            self.errors.append(ValidationError(f"benefits[{i}].details[{j}].{field}", f"Expected string or null, got {type(detail[field])}"))
 
-            if "type" not in benefit or "details" not in benefit or "totalValue" not in benefit:
-                self.errors.append("Invalid benefit structure")
-                return False
-
-            if not isinstance(benefit["details"], list):
-                self.errors.append("Benefit details must be a list")
-                return False
-
-            for detail in benefit["details"]:
-                if not isinstance(detail, dict):
-                    self.errors.append("Each benefit detail must be an object")
-                    return False
-
-                if "name" not in detail or "value" not in detail or "condition" not in detail:
-                    self.errors.append("Invalid benefit detail structure")
-                    return False
-
-        return True
-
-    def validate_eligibility(self) -> bool:
-        eligibility = self.data["eligibility"]
-        required_fields = ["ageRequirement", "incomeRequirement", "creditScore", 
-                         "requiredDocuments", "residentialStatus"]
+    def validate_eligibility_section(self, eligibility: Dict) -> None:
+        """Validate the eligibility section."""
+        required_fields = {
+            "ageRequirement": dict,
+            "incomeRequirement": list,
+            "creditScore": dict,
+            "requiredDocuments": list,
+            "residentialStatus": list,
+            "otherCriteria": list
+        }
         
-        for field in required_fields:
+        for field, expected_type in required_fields.items():
             if field not in eligibility:
-                self.errors.append(f"Missing required field in eligibility: {field}")
-                return False
-
-        return True
-
-    def validate_application_process(self) -> bool:
-        process = self.data["applicationProcess"]
-        required_fields = ["channels", "processingTime", "trackingMethod", "instantApproval"]
+                self.errors.append(ValidationError(f"eligibility.{field}", "Field is missing"))
+            elif not isinstance(eligibility[field], expected_type):
+                self.errors.append(ValidationError(f"eligibility.{field}", f"Expected {expected_type.__name__}, got {type(eligibility[field])}"))
         
-        for field in required_fields:
+        if "ageRequirement" in eligibility:
+            age_req = eligibility["ageRequirement"]
+            required_fields = ["minimum", "maximum"]
+            for field in required_fields:
+                if field not in age_req:
+                    self.errors.append(ValidationError(f"eligibility.ageRequirement.{field}", "Field is missing"))
+                elif not isinstance(age_req[field], int):
+                    self.errors.append(ValidationError(f"eligibility.ageRequirement.{field}", f"Expected integer, got {type(age_req[field])}"))
+        
+        if "creditScore" in eligibility:
+            credit_score = eligibility["creditScore"]
+            required_fields = ["minimum", "recommended"]
+            for field in required_fields:
+                if field not in credit_score:
+                    self.errors.append(ValidationError(f"eligibility.creditScore.{field}", "Field is missing"))
+                elif not isinstance(credit_score[field], str):
+                    self.errors.append(ValidationError(f"eligibility.creditScore.{field}", f"Expected string, got {type(credit_score[field])}"))
+
+    def validate_application_process_section(self, process: Dict) -> None:
+        """Validate the application process section."""
+        required_fields = {
+            "channels": list,
+            "processingTime": str,
+            "trackingMethod": str,
+            "instantApproval": dict
+        }
+        
+        for field, expected_type in required_fields.items():
             if field not in process:
-                self.errors.append(f"Missing required field in application process: {field}")
-                return False
-
-        return True
-
-    def validate_customer_insights(self) -> bool:
-        insights = self.data["customerInsights"]
-        required_fields = ["recommendedFor", "notRecommendedFor"]
+                self.errors.append(ValidationError(f"applicationProcess.{field}", "Field is missing"))
+            elif not isinstance(process[field], expected_type):
+                self.errors.append(ValidationError(f"applicationProcess.{field}", f"Expected {expected_type.__name__}, got {type(process[field])}"))
         
-        for field in required_fields:
+        if "channels" in process:
+            for i, channel in enumerate(process["channels"]):
+                required_fields = ["type", "isAvailable"]
+                optional_fields = ["details"]
+                
+                for field in required_fields:
+                    if field not in channel:
+                        self.errors.append(ValidationError(f"applicationProcess.channels[{i}].{field}", "Field is missing"))
+                    elif not isinstance(channel[field], (str if field == "type" else bool)):
+                        self.errors.append(ValidationError(f"applicationProcess.channels[{i}].{field}", f"Expected {'string' if field == 'type' else 'boolean'}, got {type(channel[field])}"))
+                
+                for field in optional_fields:
+                    if field in channel and not isinstance(channel[field], str):
+                        self.errors.append(ValidationError(f"applicationProcess.channels[{i}].{field}", f"Expected string or null, got {type(channel[field])}"))
+        
+        if "instantApproval" in process:
+            instant_approval = process["instantApproval"]
+            required_fields = ["isAvailable"]
+            optional_fields = ["conditions"]
+            
+            for field in required_fields:
+                if field not in instant_approval:
+                    self.errors.append(ValidationError(f"applicationProcess.instantApproval.{field}", "Field is missing"))
+                elif not isinstance(instant_approval[field], bool):
+                    self.errors.append(ValidationError(f"applicationProcess.instantApproval.{field}", f"Expected boolean, got {type(instant_approval[field])}"))
+            
+            for field in optional_fields:
+                if field in instant_approval and not isinstance(instant_approval[field], list):
+                    self.errors.append(ValidationError(f"applicationProcess.instantApproval.{field}", f"Expected list or null, got {type(instant_approval[field])}"))
+
+    def validate_customer_insights_section(self, insights: Dict) -> None:
+        """Validate the customer insights section."""
+        required_fields = {
+            "recommendedFor": list,
+            "notRecommendedFor": list
+        }
+        
+        for field, expected_type in required_fields.items():
             if field not in insights:
-                self.errors.append(f"Missing required field in customer insights: {field}")
-                return False
+                self.errors.append(ValidationError(f"customerInsights.{field}", "Field is missing"))
+            elif not isinstance(insights[field], expected_type):
+                self.errors.append(ValidationError(f"customerInsights.{field}", f"Expected {expected_type.__name__}, got {type(insights[field])}"))
 
-        return True
-
-    def validate_customer_support(self) -> bool:
-        if "customerSupport" not in self.data:
-            return True  # Customer support is optional
-
-        support = self.data["customerSupport"]
-        required_fields = ["channels", "dedicatedSupport"]
+    def validate(self) -> List[ValidationError]:
+        """Validate the entire card data structure."""
+        if not self.load_json():
+            return self.errors
         
-        for field in required_fields:
-            if field not in support:
-                self.errors.append(f"Missing required field in customer support: {field}")
-                return False
-
-        return True
-
-    def validate_change_log(self) -> bool:
-        if "changeLog" not in self.data:
-            return True  # Change log is optional
-
-        change_log = self.data["changeLog"]
-        if not isinstance(change_log, list):
-            self.errors.append("Change log must be a list")
-            return False
-
-        for entry in change_log:
-            if not isinstance(entry, dict):
-                self.errors.append("Each change log entry must be an object")
-                return False
-
-            if "date" not in entry or "type" not in entry or "change" not in entry:
-                self.errors.append("Invalid change log entry structure")
-                return False
-
-        return True
-
-    def validate(self) -> bool:
-        validation_methods = [
-            self.validate_basic_structure,
-            self.validate_card_info,
-            self.validate_presentation,
-            self.validate_financials,
-            self.validate_rewards,
-            self.validate_benefits,
-            self.validate_eligibility,
-            self.validate_application_process,
-            self.validate_customer_insights,
-            self.validate_customer_support,
-            self.validate_change_log
-        ]
-
-        return all(method() for method in validation_methods)
-
-def validate_file(file_path: str) -> tuple[bool, List[str]]:
-    try:
-        with open(file_path, 'r') as f:
-            json_data = json.load(f)
-    except FileNotFoundError:
-        return False, [f"Error: File {file_path} not found"]
-    except json.JSONDecodeError:
-        return False, [f"Error: {file_path} is not a valid JSON file"]
-
-    validator = CreditCardValidator(json_data)
-    is_valid = validator.validate()
-    return is_valid, validator.errors
+        required_sections = {
+            "id": str,
+            "card": dict,
+            "presentation": dict,
+            "financials": dict,
+            "rewards": dict,
+            "benefits": list,
+            "eligibility": dict,
+            "applicationProcess": dict,
+            "customerInsights": dict
+        }
+        
+        for field, expected_type in required_sections.items():
+            if field not in self.data:
+                self.errors.append(ValidationError(field, "Section is missing"))
+            elif not isinstance(self.data[field], expected_type):
+                self.errors.append(ValidationError(field, f"Expected {expected_type.__name__}, got {type(self.data[field])}"))
+        
+        if "card" in self.data:
+            self.validate_card_section(self.data["card"])
+        
+        if "presentation" in self.data:
+            self.validate_presentation_section(self.data["presentation"])
+        
+        if "financials" in self.data:
+            self.validate_financials_section(self.data["financials"])
+        
+        if "rewards" in self.data:
+            self.validate_rewards_section(self.data["rewards"])
+        
+        if "benefits" in self.data:
+            self.validate_benefits_section(self.data["benefits"])
+        
+        if "eligibility" in self.data:
+            self.validate_eligibility_section(self.data["eligibility"])
+        
+        if "applicationProcess" in self.data:
+            self.validate_application_process_section(self.data["applicationProcess"])
+        
+        if "customerInsights" in self.data:
+            self.validate_customer_insights_section(self.data["customerInsights"])
+        
+        return self.errors
 
 def main():
-    parser = argparse.ArgumentParser(description='Validate credit card JSON data')
-    parser.add_argument('json_file', help='Path to the JSON file to validate')
+    parser = argparse.ArgumentParser(description="Validate credit card JSON data")
+    parser.add_argument("file", help="Path to the JSON file to validate")
     args = parser.parse_args()
-
-    is_valid, errors = validate_file(args.json_file)
-    if is_valid:
-        print(f"Validation successful! The JSON data in {args.json_file} is valid.")
-        return 0
-    else:
-        print(f"Validation failed for {args.json_file}. The following errors were found:")
+    
+    validator = CreditCardValidator(args.file)
+    errors = validator.validate()
+    
+    if errors:
+        print(f"\n{args.file} has validation errors:")
         for error in errors:
-            print(f"- {error}")
-        return 1
+            print(f"  - {error.message}")
+        sys.exit(1)
+    else:
+        print(f"✓ {args.file} is valid")
 
 if __name__ == "__main__":
-    exit(main()) 
+    main() 
