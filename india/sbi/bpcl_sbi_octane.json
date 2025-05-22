@@ -76,19 +76,17 @@
         {
           "category": "BPCL Fuel Stations",
           "rate": "25 Reward Points",
-          "per": "₹100 spent",
-          "details": "Maximum 2500 Reward Points per billing cycle"
+          "details": "25 Reward Points per ₹100 spent. Maximum 2500 Reward Points per billing cycle"
         },
         {
           "category": "Dining, Departmental Stores, Movie Tickets",
           "rate": "10 Reward Points",
-          "per": "₹100 spent",
-          "details": "Up to 7500 Reward Points per month"
+          "details": "10 Reward Points per ₹100 spent. Up to 7500 Reward Points per month"
         },
         {
           "category": "All Other Spends",
           "rate": "1 Reward Point",
-          "per": "₹100 spent"
+          "details": "1 Reward Point per ₹100 spent"
         }
       ],
       "caps": {

@@ -76,8 +76,7 @@
         {
           "category": "All Eligible Spends",
           "rate": "1 point",
-          "per": "₹50 spent",
-          "details": "Excluding fuel, insurance, utilities, cash transactions, and EMI conversion at point of sale"
+          "details": "1 point per ₹50 spent. Excluding fuel, insurance, utilities, cash transactions, and EMI conversion at point of sale"
         }
       ],
       "caps": {

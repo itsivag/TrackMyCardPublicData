@@ -77,13 +77,12 @@
         {
           "category": "Travel, Dining, International Spends",
           "rate": "15 Reward Points",
-          "per": "₹100 spent",
-          "details": "Maximum 5,000 points per statement cycle"
+          "details": "15 Reward Points per ₹100 spent. Maximum 5,000 points per statement cycle"
         },
         {
           "category": "All Other Eligible Spends",
           "rate": "3 Reward Points",
-          "per": "₹100 spent"
+          "details": "3 Reward Points per ₹100 spent"
         }
       ],
       "caps": {
