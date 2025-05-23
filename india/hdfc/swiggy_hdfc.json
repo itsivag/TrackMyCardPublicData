@@ -11,8 +11,8 @@
     },
     "presentation": {
       "decoration": {
-        "primaryColor": -16777216,
-        "secondaryColor": -1,
+       "primaryColor": -16746496,
+        "secondaryColor": -39424,
         "orientation": "Horizontal",
         "cardImage": "https://www.hdfcbank.com/static/features/common/images/swiggy-credit-card.png",
         "material": "Plastic",

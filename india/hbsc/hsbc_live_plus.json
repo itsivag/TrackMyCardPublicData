@@ -11,9 +11,9 @@
     },
     "presentation": {
       "decoration": {
-        "primaryColor": -16777216,
-        "secondaryColor": -1,
-        "orientation": "Horizontal",
+        "primaryColor": -16737793,
+        "secondaryColor": -3407872,
+        "orientation": "Vertical",
         "cardImage": "https://www.hsbc.co.in/content/dam/hsbc/in/en/credit-cards/products/live-plus/live-plus-credit-card.png",
         "material": "Plastic",
         "specialFeatures": ["Contactless payment", "EMV chip"]

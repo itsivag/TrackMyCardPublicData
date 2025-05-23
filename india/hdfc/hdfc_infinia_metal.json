@@ -12,8 +12,8 @@
     },
     "presentation": {
       "decoration": {
-        "primaryColor": -16777216,
-        "secondaryColor": -1,
+       "primaryColor": -16777088,
+      "secondaryColor": -1,
         "orientation": "Horizontal",
         "cardImage": "https://www.hdfcbank.com/static/features/common/images/infinia-metal-credit-card.png",
         "material": "Metal",

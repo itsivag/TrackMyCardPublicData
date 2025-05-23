@@ -11,9 +11,9 @@
     },
     "presentation": {
       "decoration": {
-        "primaryColor": -16777216,
-        "secondaryColor": -1,
-        "orientation": "Horizontal",
+        "primaryColor": -8388480,
+        "secondaryColor": -22016,
+        "orientation": "Vertical",
         "cardImage": "https://www.bobcard.in/assets/images/credit-cards/bobcard-tiara.png",
         "material": "Plastic",
         "specialFeatures": ["Contactless payment", "EMV chip", "UPI enabled"]

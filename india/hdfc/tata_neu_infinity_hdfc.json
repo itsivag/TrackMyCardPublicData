@@ -11,9 +11,9 @@
     },
     "presentation": {
       "decoration": {
-        "primaryColor": -16777216,
-        "secondaryColor": -1,
-        "orientation": "Horizontal",
+        "primaryColor": -10092544,
+        "secondaryColor": -5636096,
+        "orientation": "Vertical",
         "cardImage": "https://www.hdfcbank.com/static/features/common/images/tata-neu-infinity-credit-card.png",
         "material": "Plastic",
         "specialFeatures": ["Contactless payment", "EMV chip"]

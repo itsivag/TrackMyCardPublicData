@@ -12,8 +12,8 @@
     "presentation": {
       "decoration": {
         "primaryColor": -16777216,
-        "secondaryColor": -1,
-        "orientation": "Horizontal",
+        "secondaryColor": -4342339,
+        "orientation": "Vertical",
         "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/shopping/sbi-card-cashback/sbi-card-cashback.png",
         "material": "Plastic",
         "specialFeatures": ["Contactless payment", "EMV chip"]
