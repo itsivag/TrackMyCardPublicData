@@ -19,8 +19,8 @@
     ],
     "marketingTagline": "Maximize your savings on Airtel services and everyday spends!",
     "decoration": {
-      "primaryColor": -16711681,
-      "secondaryColor": -1,
+      "primaryColor": -1,
+      "secondaryColor": -39936,
       "orientation": "Horizontal",
       "cardImage": "https://www.axisbank.com/images/airtel-axis-card.png",
       "material": "Plastic",

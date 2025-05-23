@@ -21,8 +21,8 @@
       ],
       "marketingTagline": "Choose your benefits, pay only for what you use!",
       "decoration": {
-        "primaryColor": -16711936,
-        "secondaryColor": -1,
+        "primaryColor": -1,
+        "secondaryColor": -39936,
         "orientation": "Horizontal",
         "cardImage": "https://www.aubank.in/images/lit-card.png",
         "material": "Plastic",

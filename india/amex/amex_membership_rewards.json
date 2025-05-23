@@ -11,8 +11,8 @@
     },
     "presentation": {
       "decoration": {
-        "primaryColor": -16777216,
-        "secondaryColor": -1,
+        "primaryColor": -4342339,   
+        "secondaryColor": -16777216, 
         "orientation": "Horizontal",
         "cardImage": "https://www.americanexpress.com/content/dam/amex/in/credit-cards/membership-rewards-credit-card/membership-rewards-credit-card.png",
         "material": "Plastic",

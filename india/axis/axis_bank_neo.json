@@ -19,8 +19,8 @@
     ],
     "marketingTagline": "The perfect starter card for young shoppers!",
     "decoration": {
-      "primaryColor": -16776961,
-      "secondaryColor": -1,
+      "primaryColor": -1,
+      "secondaryColor": -39936,
       "orientation": "Horizontal",
       "cardImage": "https://www.axisbank.com/images/neo-card.png",
       "material": "Plastic",
