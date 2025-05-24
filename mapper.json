@@ -10,13 +10,13 @@
       "id": "tata_neu_infinity_hdfc",
       "name": "Tata Neu Infinity HDFC Bank Credit Card",
       "file": "hdfc/tata_neu_infinity_hdfc.json",
-      "img_url": "https://trackmycard.in/images/cards/tata_neu_infinity_hdfc.webp"
+      "img_url": "/assets/card_bg/tata_neu_infinity_hdfc.png"
     },
     {
       "id": "hdfc_millennia_credit",
       "name": "HDFC Bank Millennia Credit Card",
       "file": "hdfc/hdfc_millennia.json",
-      "img_url": "https://trackmycard.in/images/cards/hdfc_millennia.webp"
+      "img_url": "/assets/card_bg/hdfc_millennia.png"
     },
     {
       "id": "swiggy_hdfc_credit",
@@ -28,7 +28,7 @@
       "id": "flipkart_axis_credit",
       "name": "Flipkart Axis Bank Credit Card",
       "file": "axis/flipkart_axis.json",
-      "img_url": "https://trackmycard.in/images/cards/flipkart_axis.webp"
+      "img_url": "/assets/card_bg/flipkart_axis.webp"
     },
     {
       "id": "axis_bank_atlas",
@@ -40,7 +40,7 @@
       "id": "axis_bank_neo",
       "name": "Axis Bank Neo Credit Card",
       "file": "axis/axis_bank_neo.json",
-      "img_url": "https://trackmycard.in/images/cards/axis_bank_neo.webp"
+      "img_url": "/assets/card_bg/axis_bank_neo.png"
     },
     {
       "id": "airtel_axis_credit",
@@ -52,19 +52,19 @@
       "id": "amex_platinum_travel",
       "name": "American Express Platinum Travel Credit Card",
       "file": "amex/amex_platinum_travel.json",
-      "img_url": "https://trackmycard.in/images/cards/amex_platinum_travel.webp"
+      "img_url": "/assets/card_bg/amex_platinum_travel.png"
     },
     {
       "id": "amex_membership_rewards_credit",
       "name": "American Express Membership Rewards Credit Card",
       "file": "amex/amex_membership_rewards.json",
-      "img_url": "https://trackmycard.in/images/cards/amex_membership_rewards.webp"
+      "img_url": "/assets/card_bg/amex_membership_rewards.png"
     },
     {
       "id": "hsbc_live_plus",
       "name": "HSBC Live+ Credit Card",
       "file": "hbsc/hsbc_live_plus.json",
-      "img_url": "https://trackmycard.in/images/cards/hsbc_live_plus.webp"
+      "img_url": "/assets/card_bg/hsbc_live_plus.png"
     },
     {
       "id": "makemytrip_icici",
